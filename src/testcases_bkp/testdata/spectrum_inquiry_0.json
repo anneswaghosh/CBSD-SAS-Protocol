@@ -1,0 +1,6 @@
+{
+  "inquiredSpectrum": [{
+    "lowFrequency":3550000000,
+    "highFrequency":3650000000
+  }]
+}

@@ -1,0 +1,25 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+RegistrationTestcase	WINNF_FT_S_REG_testcase.py	/^class RegistrationTestcase(sas_testcase.SasTestCase):$/;"	c
+setUp	WINNF_FT_S_REG_testcase.py	/^  def setUp(self):$/;"	m	class:RegistrationTestcase
+tearDown	WINNF_FT_S_REG_testcase.py	/^  def tearDown(self):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_1	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_1(self):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_2	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_2(self):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_3	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_3(self):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_4	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_4(self):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_5	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_5(self):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_6	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_6(self):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_7	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_7(self):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_8	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_8(self):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_9	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_9(self):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_10	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_10(self):$/;"	m	class:RegistrationTestcase
+generate_REG_11_default_config	WINNF_FT_S_REG_testcase.py	/^  def generate_REG_11_default_config(self, filename):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_11	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_11(self, config_filename):$/;"	m	class:RegistrationTestcase
+generate_REG_12_default_config	WINNF_FT_S_REG_testcase.py	/^  def generate_REG_12_default_config(self, filename):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_12	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_12(self, config_filename):$/;"	m	class:RegistrationTestcase
+generate_REG_13_default_config	WINNF_FT_S_REG_testcase.py	/^  def generate_REG_13_default_config(self, filename):$/;"	m	class:RegistrationTestcase
+test_WINNF_FT_S_REG_13	WINNF_FT_S_REG_testcase.py	/^  def test_WINNF_FT_S_REG_13(self, config_filename):$/;"	m	class:RegistrationTestcase
