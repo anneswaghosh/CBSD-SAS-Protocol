@@ -4,6 +4,39 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+parser	cbsd.py	/^parser = argparse.ArgumentParser(description='Test Main')$/;"	v
+help	cbsd.py	/^                    help='Logging level: debug, info, warning or error')$/;"	v
+logger	cbsd.py	/^logger = logging.getLogger()$/;"	v
+handler	cbsd.py	/^handler = logging.StreamHandler(sys.stdout)$/;"	v
+_LOGGER_MAP	cbsd.py	/^_LOGGER_MAP = {$/;"	v
+NUM_PROCESSES	cbsd.py	/^NUM_PROCESSES = -2$/;"	v
+MEM_ALLOCATION_GEO_CACHE_MB	cbsd.py	/^MEM_ALLOCATION_GEO_CACHE_MB = -1$/;"	v
+MEM_RATIO_FOR_GEO_CACHE	cbsd.py	/^MEM_RATIO_FOR_GEO_CACHE = 0.5$/;"	v
+MEM_NED_WEIGHT_MASTER	cbsd.py	/^MEM_NED_WEIGHT_MASTER = 2.0$/;"	v
+MEM_NLCD_WEIGHT_MASTER	cbsd.py	/^MEM_NLCD_WEIGHT_MASTER = 2.0$/;"	v
+MEM_NLCD_CACHE_WORKERS	cbsd.py	/^MEM_NLCD_CACHE_WORKERS = 6$/;"	v
+GetAvailableMemoryMb	cbsd.py	/^def GetAvailableMemoryMb():$/;"	f
+GetGeoAllocatedMemory	cbsd.py	/^def GetGeoAllocatedMemory():$/;"	f
+GetGeoCacheSize	cbsd.py	/^def GetGeoCacheSize(num_workers):$/;"	f
+options	cbsd.py	/^  options = parser.parse_args()$/;"	v
+num_workers	cbsd.py	/^  num_workers = mpool.GetNumWorkerProcesses()$/;"	v
+client	cbsd.py	/^  client = cbsd_sas.client ()$/;"	v
+ret	cbsd.py	/^  ret = client.registration ()$/;"	v
+server	cbsd_sas.py	/^class server:$/;"	c
+__init__	cbsd_sas.py	/^  def __init__ (self):$/;"	m	class:server
+error_code	cbsd_sas.py	/^class error_code:$/;"	c
+__init__	cbsd_sas.py	/^  def __init__ (self):$/;"	m	class:error_code
+channel	cbsd_sas.py	/^class channel:$/;"	c
+__init__	cbsd_sas.py	/^  def __init__ (self):$/;"	m	class:channel
+grant_info	cbsd_sas.py	/^class grant_info:$/;"	c
+__init__	cbsd_sas.py	/^  def __init__ (self):$/;"	m	class:grant_info
+release_grant	cbsd_sas.py	/^  def release_grant (self):$/;"	m	class:grant_info
+grant_timer_expiry_handler	cbsd_sas.py	/^  def grant_timer_expiry_handler (self):$/;"	m	class:grant_info
+heart	cbsd_sas.py	/^  def heart$/;"	m	class:grant_info
+client	cbsd_sas.py	/^class client:$/;"	c
+__init__	cbsd_sas.py	/^  def __init__ (self):$/;"	m	class:client
+registration	cbsd_sas.py	/^  def registration (self):$/;"	m	class:client
+grant	cbsd_sas.py	/^  def grant (self):$/;"	m	class:client
 openssl_db	certs/generate_short_lived_certs.sh	/^function openssl_db {$/;"	f
 generate_cbsd_short_lived_certificate	certs/generate_short_lived_certs.sh	/^function generate_cbsd_short_lived_certificate() {$/;"	f
 generate_dp_short_lived_certificate	certs/generate_short_lived_certs.sh	/^function generate_dp_short_lived_certificate() {$/;"	f
@@ -90,6 +123,1351 @@ args	fake_sas.py	/^    args = parser.parse_args()$/;"	v
 config_parser	fake_sas.py	/^  config_parser = ConfigParser.RawConfigParser()$/;"	v
 cbsd_sas_version	fake_sas.py	/^  cbsd_sas_version = config_parser.get('SasConfig', 'CbsdSasVersion')$/;"	v
 sas_sas_version	fake_sas.py	/^  sas_sas_version = config_parser.get('SasConfig', 'SasSasVersion')$/;"	v
+ext_fail	reference_models/test_config.py	/^ext_fail = False$/;"	v
+ext_fail	reference_models/test_config.py	/^  ext_fail = True$/;"	v
+ext_fail	reference_models/test_config.py	/^  ext_fail = True$/;"	v
+geo_fail	reference_models/test_config.py	/^geo_fail = False$/;"	v
+terrain_driver	reference_models/test_config.py	/^terrain_driver = terrain.TerrainDriver()$/;"	v
+nlcd_driver	reference_models/test_config.py	/^nlcd_driver = nlcd.NlcdDriver()$/;"	v
+geo_fail	reference_models/test_config.py	/^  geo_fail = True$/;"	v
+geo_fail	reference_models/test_config.py	/^  geo_fail = True$/;"	v
+missing_tiles	reference_models/test_config.py	/^missing_tiles = []$/;"	v
+encoding	reference_models/test_config.py	/^  encoding = '%c%02d%c%03d' % ($/;"	v
+tile_name1	reference_models/test_config.py	/^  tile_name1 = 'usgs_ned_1_' + encoding + '_gridfloat_std.flt'$/;"	v
+tile_name2	reference_models/test_config.py	/^  tile_name2 = 'float' + encoding + '_1_std.flt'$/;"	v
+tile_exists	reference_models/test_config.py	/^  tile_exists = (os.path.isfile(os.path.join(terrain_driver._terrain_dir, tile_name1))$/;"	v
+geo_fail	reference_models/test_config.py	/^  geo_fail = True$/;"	v
+missing_tiles	reference_models/test_config.py	/^missing_tiles = []$/;"	v
+encoding	reference_models/test_config.py	/^  encoding = '%c%02d%c%03d' % ($/;"	v
+tile_name1	reference_models/test_config.py	/^  tile_name1 = 'nlcd_' + encoding + '_ref.int'$/;"	v
+tile_name2	reference_models/test_config.py	/^  tile_name2 = 'nlcd_' + encoding + '.int'$/;"	v
+tile_exists	reference_models/test_config.py	/^  tile_exists = (os.path.isfile(os.path.join(nlcd_driver._nlcd_dir, tile_name1))$/;"	v
+geo_fail	reference_models/test_config.py	/^  geo_fail = True$/;"	v
+NUM_OF_PROCESS	reference_models/iap/iap_example.py	/^NUM_OF_PROCESS = 30$/;"	v
+cbsd_0	reference_models/iap/iap_example.py	/^  cbsd_0 = json.load(open(os.path.join('test_data', 'cbsd_0.json')))$/;"	v
+cbsd_1	reference_models/iap/iap_example.py	/^  cbsd_1 = json.load(open(os.path.join('test_data', 'cbsd_1.json')))$/;"	v
+cbsd_2	reference_models/iap/iap_example.py	/^  cbsd_2 = json.load(open(os.path.join('test_data', 'cbsd_2.json')))$/;"	v
+cbsd_3	reference_models/iap/iap_example.py	/^  cbsd_3 = json.load(open(os.path.join('test_data', 'cbsd_3.json')))$/;"	v
+cbsd_4	reference_models/iap/iap_example.py	/^  cbsd_4 = json.load(open(os.path.join('test_data', 'cbsd_4.json')))$/;"	v
+cbsd_5	reference_models/iap/iap_example.py	/^  cbsd_5 = json.load(open(os.path.join('test_data', 'cbsd_5.json')))$/;"	v
+cbsd_6	reference_models/iap/iap_example.py	/^  cbsd_6 = json.load(open(os.path.join('test_data', 'cbsd_6.json')))$/;"	v
+cbsd_7	reference_models/iap/iap_example.py	/^  cbsd_7 = json.load(open(os.path.join('test_data', 'cbsd_7.json')))$/;"	v
+cbsd_8	reference_models/iap/iap_example.py	/^  cbsd_8 = json.load(open(os.path.join('test_data', 'cbsd_8.json')))$/;"	v
+cbsd_9	reference_models/iap/iap_example.py	/^  cbsd_9 = json.load(open(os.path.join('test_data', 'cbsd_9.json')))$/;"	v
+cbsd_10	reference_models/iap/iap_example.py	/^  cbsd_10 = json.load(open(os.path.join('test_data', 'cbsd_10.json')))$/;"	v
+cbsd_11	reference_models/iap/iap_example.py	/^  cbsd_11 = json.load(open(os.path.join('test_data', 'cbsd_11.json')))$/;"	v
+cbsd_12	reference_models/iap/iap_example.py	/^  cbsd_12 = json.load(open(os.path.join('test_data', 'cbsd_12.json')))$/;"	v
+cbsd_13	reference_models/iap/iap_example.py	/^  cbsd_13 = json.load(open(os.path.join('test_data', 'cbsd_13.json')))$/;"	v
+cbsd_14	reference_models/iap/iap_example.py	/^  cbsd_14 = json.load(open(os.path.join('test_data', 'cbsd_14.json')))$/;"	v
+cbsd_15	reference_models/iap/iap_example.py	/^  cbsd_15 = json.load(open(os.path.join('test_data', 'cbsd_15.json')))$/;"	v
+cbsd_16	reference_models/iap/iap_example.py	/^  cbsd_16 = json.load(open(os.path.join('test_data', 'cbsd_16.json')))$/;"	v
+cbsd_17	reference_models/iap/iap_example.py	/^  cbsd_17 = json.load(open(os.path.join('test_data', 'cbsd_17.json')))$/;"	v
+cbsd_18	reference_models/iap/iap_example.py	/^  cbsd_18 = json.load(open(os.path.join('test_data', 'cbsd_18.json')))$/;"	v
+cbsd_19	reference_models/iap/iap_example.py	/^  cbsd_19 = json.load(open(os.path.join('test_data', 'cbsd_19.json')))$/;"	v
+cbsd_20	reference_models/iap/iap_example.py	/^  cbsd_20 = json.load(open(os.path.join('test_data', 'cbsd_20.json')))$/;"	v
+cbsd_21	reference_models/iap/iap_example.py	/^  cbsd_21 = json.load(open(os.path.join('test_data', 'cbsd_21.json')))$/;"	v
+cbsd_22	reference_models/iap/iap_example.py	/^  cbsd_22 = json.load(open(os.path.join('test_data', 'cbsd_22.json')))$/;"	v
+cbsd_23	reference_models/iap/iap_example.py	/^  cbsd_23 = json.load(open(os.path.join('test_data', 'cbsd_23.json')))$/;"	v
+fss_0	reference_models/iap/iap_example.py	/^  fss_0 = json.load(open(os.path.join('test_data', 'fss_0.json')))$/;"	v
+fss_1	reference_models/iap/iap_example.py	/^  fss_1 = json.load(open(os.path.join('test_data', 'fss_1.json')))$/;"	v
+ppa_0	reference_models/iap/iap_example.py	/^  ppa_0 = json.load(open(os.path.join('test_data', 'ppa_0.json')))$/;"	v
+ppa_1	reference_models/iap/iap_example.py	/^  ppa_1 = json.load(open(os.path.join('test_data', 'ppa_1.json')))$/;"	v
+ppa_2	reference_models/iap/iap_example.py	/^  ppa_2 = json.load(open(os.path.join('test_data', 'ppa_2.json')))$/;"	v
+ppa_3	reference_models/iap/iap_example.py	/^  ppa_3 = json.load(open(os.path.join('test_data', 'ppa_3.json')))$/;"	v
+esc_0	reference_models/iap/iap_example.py	/^  esc_0 = json.load(open(os.path.join('test_data', 'esc_0.json')))$/;"	v
+gwpz_0	reference_models/iap/iap_example.py	/^  gwpz_0 = json.load(open(os.path.join('test_data', 'gwpz_0.json')))$/;"	v
+gwpz_1	reference_models/iap/iap_example.py	/^  gwpz_1 = json.load(open(os.path.join('test_data', 'gwpz_1.json')))$/;"	v
+pal_0	reference_models/iap/iap_example.py	/^  pal_0 = json.load(open(os.path.join('test_data', 'pal_0.json')))$/;"	v
+pal_1	reference_models/iap/iap_example.py	/^  pal_1 = json.load(open(os.path.join('test_data', 'pal_1.json')))$/;"	v
+pal_2	reference_models/iap/iap_example.py	/^  pal_2 = json.load(open(os.path.join('test_data', 'pal_2.json')))$/;"	v
+pal_3	reference_models/iap/iap_example.py	/^  pal_3 = json.load(open(os.path.join('test_data', 'pal_3.json')))$/;"	v
+sas_uut	reference_models/iap/iap_example.py	/^  sas_uut = FullActivityDump({$/;"	v
+sas_th1	reference_models/iap/iap_example.py	/^  sas_th1 = FullActivityDump({$/;"	v
+sas_th2	reference_models/iap/iap_example.py	/^  sas_th2 = FullActivityDump({$/;"	v
+pal_records	reference_models/iap/iap_example.py	/^  pal_records = [pal_0, pal_1, pal_2, pal_3]$/;"	v
+fss_records	reference_models/iap/iap_example.py	/^  fss_records = [fss_0, fss_1]$/;"	v
+esc_records	reference_models/iap/iap_example.py	/^  esc_records = [esc_0]$/;"	v
+gwpz_records	reference_models/iap/iap_example.py	/^  gwpz_records = [gwpz_0, gwpz_1]$/;"	v
+ppa_records	reference_models/iap/iap_example.py	/^  ppa_records = [ppa_0, ppa_1, ppa_2, ppa_3]$/;"	v
+sas_th_fad_objects	reference_models/iap/iap_example.py	/^  sas_th_fad_objects = [sas_th1, sas_th2]$/;"	v
+start_time	reference_models/iap/iap_example.py	/^  start_time = time.time()$/;"	v
+fss_freq_range	reference_models/iap/iap_example.py	/^        ['operationParam']['operationFrequencyRange']$/;"	v
+fss_low_freq	reference_models/iap/iap_example.py	/^    fss_low_freq = fss_freq_range['lowFrequency']$/;"	v
+fss_high_freq	reference_models/iap/iap_example.py	/^    fss_high_freq = fss_freq_range['highFrequency']$/;"	v
+fss_ttc_flag	reference_models/iap/iap_example.py	/^    fss_ttc_flag = fss_record['ttc']$/;"	v
+fss_cochannel_allowed_interference	reference_models/iap/iap_example.py	/^      fss_cochannel_allowed_interference = iap.performIapForFssCochannel($/;"	v
+fss_blocking_allowed_interference	reference_models/iap/iap_example.py	/^      fss_blocking_allowed_interference = iap.performIapForFssBlocking($/;"	v
+fss_blocking_allowed_interference	reference_models/iap/iap_example.py	/^      fss_blocking_allowed_interference = iap.performIapForFssBlocking($/;"	v
+esc_allowed_interference	reference_models/iap/iap_example.py	/^    esc_allowed_interference = iap.performIapForEsc(esc_record, sas_uut, sas_th_fad_objects)$/;"	v
+gwpz_allowed_interference	reference_models/iap/iap_example.py	/^    gwpz_allowed_interference = iap.performIapForGwpz($/;"	v
+ppa_allowed_interference	reference_models/iap/iap_example.py	/^    ppa_allowed_interference = iap.performIapForPpa($/;"	v
+end_time	reference_models/iap/iap_example.py	/^  end_time = time.time()$/;"	v
+THRESH_PPA_DBM_PER_RBW	reference_models/iap/iap.py	/^THRESH_PPA_DBM_PER_RBW = -80$/;"	v
+THRESH_GWPZ_DBM_PER_RBW	reference_models/iap/iap.py	/^THRESH_GWPZ_DBM_PER_RBW = -80$/;"	v
+THRESH_FSS_CO_CHANNEL_DBM_PER_RBW	reference_models/iap/iap.py	/^THRESH_FSS_CO_CHANNEL_DBM_PER_RBW = -129$/;"	v
+THRESH_FSS_BLOCKING_DBM_PER_RBW	reference_models/iap/iap.py	/^THRESH_FSS_BLOCKING_DBM_PER_RBW = -60$/;"	v
+THRESH_ESC_DBM_PER_RBW	reference_models/iap/iap.py	/^THRESH_ESC_DBM_PER_RBW = -109$/;"	v
+MARGIN_PPA_DB	reference_models/iap/iap.py	/^MARGIN_PPA_DB = 1$/;"	v
+MARGIN_GWPZ_DB	reference_models/iap/iap.py	/^MARGIN_GWPZ_DB = 1$/;"	v
+MARGIN_FSS_CO_CHANNEL_DB	reference_models/iap/iap.py	/^MARGIN_FSS_CO_CHANNEL_DB = 1$/;"	v
+MARGIN_FSS_BLOCKING_DB	reference_models/iap/iap.py	/^MARGIN_FSS_BLOCKING_DB = 1$/;"	v
+MARGIN_ESC_DB	reference_models/iap/iap.py	/^MARGIN_ESC_DB = 1$/;"	v
+MHZ	reference_models/iap/iap.py	/^MHZ = 1.e6$/;"	v
+IAPBW_HZ	reference_models/iap/iap.py	/^IAPBW_HZ = 5*MHZ$/;"	v
+GWPZ_RBW_HZ	reference_models/iap/iap.py	/^GWPZ_RBW_HZ = 10*MHZ$/;"	v
+PPA_RBW_HZ	reference_models/iap/iap.py	/^PPA_RBW_HZ = 10*MHZ$/;"	v
+FSS_RBW_HZ	reference_models/iap/iap.py	/^FSS_RBW_HZ = 1*MHZ$/;"	v
+ESC_RBW_HZ	reference_models/iap/iap.py	/^ESC_RBW_HZ = 1*MHZ$/;"	v
+THRESH_PPA_DBM_PER_IAPBW	reference_models/iap/iap.py	/^THRESH_PPA_DBM_PER_IAPBW = (THRESH_PPA_DBM_PER_RBW +$/;"	v
+THRESH_GWPZ_DBM_PER_IAPBW	reference_models/iap/iap.py	/^THRESH_GWPZ_DBM_PER_IAPBW = (THRESH_GWPZ_DBM_PER_RBW +$/;"	v
+THRESH_FSS_CO_CHANNEL_DBM_PER_IAPBW	reference_models/iap/iap.py	/^THRESH_FSS_CO_CHANNEL_DBM_PER_IAPBW = (THRESH_FSS_CO_CHANNEL_DBM_PER_RBW$/;"	v
+THRESH_ESC_DBM_PER_IAPBW	reference_models/iap/iap.py	/^THRESH_ESC_DBM_PER_IAPBW = (THRESH_ESC_DBM_PER_RBW +$/;"	v
+GWPZ_GRID_RES_ARCSEC	reference_models/iap/iap.py	/^GWPZ_GRID_RES_ARCSEC = 2$/;"	v
+PPA_GRID_RES_ARCSEC	reference_models/iap/iap.py	/^PPA_GRID_RES_ARCSEC = 2$/;"	v
+iapPointConstraint	reference_models/iap/iap.py	/^def iapPointConstraint(protection_point, channels, low_freq, high_freq,$/;"	f
+performIapForEsc	reference_models/iap/iap.py	/^def performIapForEsc(esc_record, sas_uut_fad_object, sas_th_fad_objects):$/;"	f
+performIapForGwpz	reference_models/iap/iap.py	/^def performIapForGwpz(gwpz_record, sas_uut_fad_object, sas_th_fad_objects):$/;"	f
+performIapForPpa	reference_models/iap/iap.py	/^def performIapForPpa(ppa_record, sas_uut_fad_object, sas_th_fad_objects,$/;"	f
+performIapForFssCochannel	reference_models/iap/iap.py	/^def performIapForFssCochannel(fss_record, sas_uut_fad_object, sas_th_fad_objects):$/;"	f
+performIapForFssBlocking	reference_models/iap/iap.py	/^def performIapForFssBlocking(fss_record, sas_uut_fad_object, sas_th_fad_objects):$/;"	f
+calculatePostIapAggregateInterference	reference_models/iap/iap.py	/^def calculatePostIapAggregateInterference(q_p, num_sas, iap_interfs):$/;"	f
+_ALPHA_U	reference_models/propagation/wf_hybrid.py	/^_ALPHA_U = 4.0976291$/;"	v
+_BETA_U	reference_models/propagation/wf_hybrid.py	/^_BETA_U = -1.2255656$/;"	v
+_GAMMA_U	reference_models/propagation/wf_hybrid.py	/^_GAMMA_U = 0.68350345$/;"	v
+HybridMode	reference_models/propagation/wf_hybrid.py	/^class HybridMode:$/;"	c
+FSL	reference_models/propagation/wf_hybrid.py	/^  FSL = 0$/;"	v	class:HybridMode
+ITM_HIGH_HEIGHT	reference_models/propagation/wf_hybrid.py	/^  ITM_HIGH_HEIGHT = 1$/;"	v	class:HybridMode
+ITM_RURAL	reference_models/propagation/wf_hybrid.py	/^  ITM_RURAL = 2$/;"	v	class:HybridMode
+ITM_DOMINANT	reference_models/propagation/wf_hybrid.py	/^  ITM_DOMINANT = 3$/;"	v	class:HybridMode
+EHATA_DOMINANT	reference_models/propagation/wf_hybrid.py	/^  EHATA_DOMINANT = 4$/;"	v	class:HybridMode
+EHATA_FSL_INTERP	reference_models/propagation/wf_hybrid.py	/^  EHATA_FSL_INTERP = 5$/;"	v	class:HybridMode
+ITM_CORRECTED	reference_models/propagation/wf_hybrid.py	/^  ITM_CORRECTED = 6$/;"	v	class:HybridMode
+_HYBRID_MODES	reference_models/propagation/wf_hybrid.py	/^_HYBRID_MODES = {$/;"	v
+GetInfoOnHybridCode	reference_models/propagation/wf_hybrid.py	/^def GetInfoOnHybridCode(code):$/;"	f
+GetEHataStandardDeviation	reference_models/propagation/wf_hybrid.py	/^def GetEHataStandardDeviation(freq_mhz, is_urban):$/;"	f
+_GetMedianToMeanOffsetDb	reference_models/propagation/wf_hybrid.py	/^def _GetMedianToMeanOffsetDb(freq_mhz, is_urban):$/;"	f
+_PropagResult	reference_models/propagation/wf_hybrid.py	/^_PropagResult = namedtuple('_PropagResult',$/;"	v
+_IncidenceAngles	reference_models/propagation/wf_hybrid.py	/^_IncidenceAngles = namedtuple('_IncidenceAngles',$/;"	v
+CalcHybridPropagationLoss	reference_models/propagation/wf_hybrid.py	/^def CalcHybridPropagationLoss(lat_cbsd, lon_cbsd, height_cbsd,$/;"	f
+CalcFreeSpaceLoss	reference_models/propagation/wf_hybrid.py	/^def CalcFreeSpaceLoss(dist_km, freq_mhz, height_cbsd, height_rx):$/;"	f
+_BuildOutput	reference_models/propagation/wf_hybrid.py	/^def _BuildOutput(db_loss, incidence_angles, internals,$/;"	f
+terrainDriver	reference_models/propagation/wf_itm.py	/^terrainDriver = drive.terrain_driver$/;"	v
+ItmErrorCode	reference_models/propagation/wf_itm.py	/^class ItmErrorCode:$/;"	c
+NONE	reference_models/propagation/wf_itm.py	/^  NONE = 0$/;"	v	class:ItmErrorCode
+CAUTION	reference_models/propagation/wf_itm.py	/^  CAUTION = 1$/;"	v	class:ItmErrorCode
+NOTE	reference_models/propagation/wf_itm.py	/^  NOTE = 2$/;"	v	class:ItmErrorCode
+WARNING	reference_models/propagation/wf_itm.py	/^  WARNING = 3$/;"	v	class:ItmErrorCode
+OTHER	reference_models/propagation/wf_itm.py	/^  OTHER = 4$/;"	v	class:ItmErrorCode
+_ITM_ERROR_MODES	reference_models/propagation/wf_itm.py	/^_ITM_ERROR_MODES = {$/;"	v
+GetInfoOnItmCode	reference_models/propagation/wf_itm.py	/^def GetInfoOnItmCode(code):$/;"	f
+_PropagResult	reference_models/propagation/wf_itm.py	/^_PropagResult = namedtuple('_PropagResult',$/;"	v
+_IncidenceAngles	reference_models/propagation/wf_itm.py	/^_IncidenceAngles = namedtuple('_IncidenceAngles',$/;"	v
+CalcItmPropagationLoss	reference_models/propagation/wf_itm.py	/^def CalcItmPropagationLoss(lat_cbsd, lon_cbsd, height_cbsd,$/;"	f
+ComputeHaat	reference_models/propagation/wf_itm.py	/^def ComputeHaat(lat_cbsd, lon_cbsd, height_cbsd, height_is_agl=True):$/;"	f
+ExtendedHata	reference_models/propagation/ehata/ehata_its_py.cpp	/^static PyObject* ExtendedHata(PyObject* self, PyObject* args) {$/;"	f	file:
+MedianBasicPropLoss	reference_models/propagation/ehata/ehata_its_py.cpp	/^static PyObject* MedianBasicPropLoss(PyObject* self, PyObject* args) {$/;"	f	file:
+SetWinnForumExtensions	reference_models/propagation/ehata/ehata_its_py.cpp	/^static PyObject* SetWinnForumExtensions(PyObject* self, PyObject* args) {$/;"	f	file:
+EHATAMethods	reference_models/propagation/ehata/ehata_its_py.cpp	/^static PyMethodDef EHATAMethods[] = {$/;"	v	file:
+initehata_its	reference_models/propagation/ehata/ehata_its_py.cpp	/^PyMODINIT_FUNC initehata_its(void) {$/;"	f
+ehata_module	reference_models/propagation/ehata/setup.py	/^ehata_module = Extension('ehata_its',$/;"	v
+sources	reference_models/propagation/ehata/setup.py	/^                         sources = ['its\/ExtendedHata.cpp',$/;"	v
+cfg_vars	reference_models/propagation/ehata/setup.py	/^cfg_vars = get_config_vars()$/;"	v
+version	reference_models/propagation/ehata/setup.py	/^      version = '1.0',$/;"	v
+description	reference_models/propagation/ehata/setup.py	/^      description = 'ITS eHata propagation model',$/;"	v
+ext_modules	reference_models/propagation/ehata/setup.py	/^      ext_modules = [ehata_module])$/;"	v
+GeneralSlopeCorrectionFactor	reference_models/propagation/ehata/its/GeneralSlopeCorrectionFactor.cpp	/^double GeneralSlopeCorrectionFactor(double theta_m__mrad, double d__km)$/;"	f
+IsolatedRidgeCorrectionFactor	reference_models/propagation/ehata/its/IsolatedRidgeCorrectionFactor.cpp	/^double IsolatedRidgeCorrectionFactor(double d1_hzn__km, double d2_hzn__km, double h_edge__meter)$/;"	f
+MixedPathCorrectionFactor	reference_models/propagation/ehata/its/MixedPathCorrectionFactor.cpp	/^double MixedPathCorrectionFactor(double d__km, InterValues *interValues)$/;"	f
+FineRollingHillyTerrainCorectionFactor	reference_models/propagation/ehata/its/FineRollingHillyTerrainCorectionFactor.cpp	/^double FineRollingHillyTerrainCorectionFactor(InterValues *interValues, double h_m_gnd__meter)$/;"	f
+_WinnForum_Extensions	reference_models/propagation/ehata/its/ExtendedHata.cpp	/^bool _WinnForum_Extensions = true; \/\/ on by default$/;"	v
+SetWinnForumExtensions	reference_models/propagation/ehata/its/ExtendedHata.cpp	/^void SetWinnForumExtensions(bool on)$/;"	f
+GetDistanceInMeters	reference_models/propagation/ehata/its/ExtendedHata.cpp	/^double GetDistanceInMeters(double pfl[])$/;"	f
+printInterValues	reference_models/propagation/ehata/its/ExtendedHata.cpp	/^void printInterValues(InterValues *interValues)$/;"	f
+ExtendedHata	reference_models/propagation/ehata/its/ExtendedHata.cpp	/^void ExtendedHata(double pfl[], double f__mhz, double h_b__meter, double h_m__meter,$/;"	f
+ExtendedHata_DBG	reference_models/propagation/ehata/its/ExtendedHata.cpp	/^void ExtendedHata_DBG(double pfl[], double f__mhz, double h_b__meter, double h_m__meter,$/;"	f
+PreprocessTerrainPath	reference_models/propagation/ehata/its/PreprocessTerrainPath.cpp	/^void PreprocessTerrainPath(double *pfl, double h_b__meter, double h_m__meter, InterValues *interValues)$/;"	f
+FindAverageGroundHeight	reference_models/propagation/ehata/its/PreprocessTerrainPath.cpp	/^void FindAverageGroundHeight(double *pfl, InterValues *interValues)$/;"	f
+ComputeTerrainStatistics	reference_models/propagation/ehata/its/PreprocessTerrainPath.cpp	/^void ComputeTerrainStatistics(double *pfl, InterValues *interValues)$/;"	f
+MobileTerrainSlope	reference_models/propagation/ehata/its/PreprocessTerrainPath.cpp	/^void MobileTerrainSlope(double *pfl, InterValues *interValues)$/;"	f
+AnalyzeSeaPath	reference_models/propagation/ehata/its/PreprocessTerrainPath.cpp	/^void AnalyzeSeaPath(double* pfl, InterValues *interValues)$/;"	f
+AverageTerrainHeight	reference_models/propagation/ehata/its/PreprocessTerrainPath.cpp	/^double AverageTerrainHeight(double *pfl)$/;"	f
+SingleHorizonTest	reference_models/propagation/ehata/its/PreprocessTerrainPath.cpp	/^void SingleHorizonTest(double *pfl, double h_m__meter, double h_b__meter, InterValues *interValues)$/;"	f
+MedianRollingHillyTerrainCorrectionFactor	reference_models/propagation/ehata/its/MedianRollingHillyTerrainCorrectionFactor.cpp	/^double MedianRollingHillyTerrainCorrectionFactor(double deltah__meter)$/;"	f
+LeastSquares	reference_models/propagation/ehata/its/LeastSquares.cpp	/^void LeastSquares(double *pfl_segment, double x1, double x2, double *z0, double *zn)$/;"	f
+MedianBasicPropLoss	reference_models/propagation/ehata/its/MedianBasicPropLoss.cpp	/^void MedianBasicPropLoss(double f__mhz, double h_b__meter, double h_m__meter, double d__km, int enviro_code, double* plb_med__db, InterValues *interValues)$/;"	f
+PROPAGATION_EHATA_ITS_EHATA_H	reference_models/propagation/ehata/its/ehata.h	2;"	d
+DLLEXPORT	reference_models/propagation/ehata/its/ehata.h	6;"	d
+DLLEXPORT	reference_models/propagation/ehata/its/ehata.h	8;"	d
+MAX	reference_models/propagation/ehata/its/ehata.h	11;"	d
+MIN	reference_models/propagation/ehata/its/ehata.h	12;"	d
+InterValues	reference_models/propagation/ehata/its/ehata.h	/^struct InterValues$/;"	s
+d_bp__km	reference_models/propagation/ehata/its/ehata.h	/^    double d_bp__km;$/;"	m	struct:InterValues
+att_1km	reference_models/propagation/ehata/its/ehata.h	/^    double att_1km;$/;"	m	struct:InterValues
+att_100km	reference_models/propagation/ehata/its/ehata.h	/^    double att_100km;$/;"	m	struct:InterValues
+h_b_eff__meter	reference_models/propagation/ehata/its/ehata.h	/^    double h_b_eff__meter;$/;"	m	struct:InterValues
+h_m_eff__meter	reference_models/propagation/ehata/its/ehata.h	/^    double h_m_eff__meter;$/;"	m	struct:InterValues
+pfl10__meter	reference_models/propagation/ehata/its/ehata.h	/^    double pfl10__meter;$/;"	m	struct:InterValues
+pfl50__meter	reference_models/propagation/ehata/its/ehata.h	/^    double pfl50__meter;$/;"	m	struct:InterValues
+pfl90__meter	reference_models/propagation/ehata/its/ehata.h	/^    double pfl90__meter;$/;"	m	struct:InterValues
+deltah__meter	reference_models/propagation/ehata/its/ehata.h	/^    double deltah__meter;$/;"	m	struct:InterValues
+d__km	reference_models/propagation/ehata/its/ehata.h	/^    double d__km;$/;"	m	struct:InterValues
+d_hzn__meter	reference_models/propagation/ehata/its/ehata.h	/^    double d_hzn__meter[2];$/;"	m	struct:InterValues
+h_avg__meter	reference_models/propagation/ehata/its/ehata.h	/^    double h_avg__meter[2];$/;"	m	struct:InterValues
+theta_m__mrad	reference_models/propagation/ehata/its/ehata.h	/^    double theta_m__mrad;$/;"	m	struct:InterValues
+beta	reference_models/propagation/ehata/its/ehata.h	/^    double beta;$/;"	m	struct:InterValues
+iend_ov_sea	reference_models/propagation/ehata/its/ehata.h	/^    int iend_ov_sea;$/;"	m	struct:InterValues
+hedge_tilda	reference_models/propagation/ehata/its/ehata.h	/^    double hedge_tilda;$/;"	m	struct:InterValues
+single_horizon	reference_models/propagation/ehata/its/ehata.h	/^    bool single_horizon;$/;"	m	struct:InterValues
+slope_max	reference_models/propagation/ehata/its/ehata.h	/^    double slope_max;$/;"	m	struct:InterValues
+slope_min	reference_models/propagation/ehata/its/ehata.h	/^    double slope_min;$/;"	m	struct:InterValues
+trace_code	reference_models/propagation/ehata/its/ehata.h	/^    int trace_code;$/;"	m	struct:InterValues
+PI	reference_models/propagation/ehata/its/ehata.h	64;"	d
+TRACE__METHOD_00	reference_models/propagation/ehata/its/ehata.h	89;"	d
+TRACE__METHOD_01	reference_models/propagation/ehata/its/ehata.h	90;"	d
+TRACE__METHOD_02	reference_models/propagation/ehata/its/ehata.h	91;"	d
+TRACE__METHOD_03	reference_models/propagation/ehata/its/ehata.h	92;"	d
+TRACE__METHOD_04	reference_models/propagation/ehata/its/ehata.h	93;"	d
+TRACE__METHOD_05	reference_models/propagation/ehata/its/ehata.h	94;"	d
+TRACE__METHOD_06	reference_models/propagation/ehata/its/ehata.h	95;"	d
+TRACE__METHOD_07	reference_models/propagation/ehata/its/ehata.h	96;"	d
+TRACE__METHOD_08	reference_models/propagation/ehata/its/ehata.h	97;"	d
+TRACE__METHOD_09	reference_models/propagation/ehata/its/ehata.h	98;"	d
+TRACE__METHOD_10	reference_models/propagation/ehata/its/ehata.h	99;"	d
+TRACE__METHOD_11	reference_models/propagation/ehata/its/ehata.h	100;"	d
+TRACE__METHOD_12	reference_models/propagation/ehata/its/ehata.h	101;"	d
+TRACE__METHOD_13	reference_models/propagation/ehata/its/ehata.h	102;"	d
+TRACE__METHOD_14	reference_models/propagation/ehata/its/ehata.h	103;"	d
+TRACE__METHOD_15	reference_models/propagation/ehata/its/ehata.h	104;"	d
+TRACE__METHOD_16	reference_models/propagation/ehata/its/ehata.h	105;"	d
+TRACE__METHOD_17	reference_models/propagation/ehata/its/ehata.h	106;"	d
+TRACE__METHOD_18	reference_models/propagation/ehata/its/ehata.h	107;"	d
+TRACE__METHOD_19	reference_models/propagation/ehata/its/ehata.h	108;"	d
+FindQuantile	reference_models/propagation/ehata/its/FindQuantile.cpp	/^double FindQuantile(const int &nn, double *a, const int &ir)$/;"	f
+FindHorizons	reference_models/propagation/ehata/its/FindHorizons.cpp	/^void FindHorizons(double *pfl, double gme, double d__meter, double h_1__meter,$/;"	f
+PYTHON	reference_models/propagation/ehata/Makefile	/^PYTHON	?= python$/;"	m
+SETUP	reference_models/propagation/ehata/Makefile	/^SETUP	:= setup.py$/;"	m
+SetWinnForumExtensions	reference_models/propagation/ehata/ehata.py	/^def SetWinnForumExtensions(on):$/;"	f
+ExtendedHata	reference_models/propagation/ehata/ehata.py	/^def ExtendedHata(its_elev, freq_mhz, height_tx, height_rx, region_code):$/;"	f
+MedianBasicPropLoss	reference_models/propagation/ehata/ehata.py	/^def MedianBasicPropLoss(freq_mhz, height_tx, height_rx, dist_km, region_code):$/;"	f
+CbsdEffectiveHeights	reference_models/propagation/ehata/ehata.py	/^def CbsdEffectiveHeights(height_cbsd, its_elev):$/;"	f
+ReadProfileFile	reference_models/propagation/ehata/ehata_test.py	/^def ReadProfileFile(filename):$/;"	f
+ReadTestInputs	reference_models/propagation/ehata/ehata_test.py	/^def ReadTestInputs(filename):$/;"	f
+TestEHata	reference_models/propagation/ehata/ehata_test.py	/^class TestEHata(unittest.TestCase):$/;"	c
+setUp	reference_models/propagation/ehata/ehata_test.py	/^  def setUp(self):$/;"	m	class:TestEHata
+tearDown	reference_models/propagation/ehata/ehata_test.py	/^  def tearDown(self):$/;"	m	class:TestEHata
+test_its_testbed	reference_models/propagation/ehata/ehata_test.py	/^  def test_its_testbed(self):$/;"	m	class:TestEHata
+test_eff_height_within3km	reference_models/propagation/ehata/ehata_test.py	/^  def test_eff_height_within3km(self):$/;"	m	class:TestEHata
+test_eff_height_at3km	reference_models/propagation/ehata/ehata_test.py	/^  def test_eff_height_at3km(self):$/;"	m	class:TestEHata
+test_eff_height_within15km	reference_models/propagation/ehata/ehata_test.py	/^  def test_eff_height_within15km(self):$/;"	m	class:TestEHata
+test_eff_height_over15km	reference_models/propagation/ehata/ehata_test.py	/^  def test_eff_height_over15km(self):$/;"	m	class:TestEHata
+TERRAIN_TEST_DIR	reference_models/propagation/wf_hybrid_test.py	/^TERRAIN_TEST_DIR = os.path.join(os.path.dirname(__file__),$/;"	v
+ITU_TEST_DIR	reference_models/propagation/wf_hybrid_test.py	/^ITU_TEST_DIR = os.path.join(os.path.dirname(__file__),$/;"	v
+TestWfHybrid	reference_models/propagation/wf_hybrid_test.py	/^class TestWfHybrid(unittest.TestCase):$/;"	c
+setUpClass	reference_models/propagation/wf_hybrid_test.py	/^  def setUpClass(cls):$/;"	m	class:TestWfHybrid
+tearDownClass	reference_models/propagation/wf_hybrid_test.py	/^  def tearDownClass(cls):$/;"	m	class:TestWfHybrid
+setUp	reference_models/propagation/wf_hybrid_test.py	/^  def setUp(self):$/;"	m	class:TestWfHybrid
+test_100m_mode	reference_models/propagation/wf_hybrid_test.py	/^  def test_100m_mode(self):$/;"	m	class:TestWfHybrid
+test_high_height_mode	reference_models/propagation/wf_hybrid_test.py	/^  def test_high_height_mode(self):$/;"	m	class:TestWfHybrid
+test_rural_mode	reference_models/propagation/wf_hybrid_test.py	/^  def test_rural_mode(self):$/;"	m	class:TestWfHybrid
+test_1km_mode	reference_models/propagation/wf_hybrid_test.py	/^  def test_1km_mode(self):$/;"	m	class:TestWfHybrid
+test_itm_dominant	reference_models/propagation/wf_hybrid_test.py	/^  def test_itm_dominant(self):$/;"	m	class:TestWfHybrid
+test_ehata_dominant	reference_models/propagation/wf_hybrid_test.py	/^  def test_ehata_dominant(self):$/;"	m	class:TestWfHybrid
+test_ehata_mean	reference_models/propagation/wf_hybrid_test.py	/^  def test_ehata_mean(self):$/;"	m	class:TestWfHybrid
+test_over_80km	reference_models/propagation/wf_hybrid_test.py	/^  def test_over_80km(self):$/;"	m	class:TestWfHybrid
+test_average_itm	reference_models/propagation/wf_hybrid_test.py	/^  def test_average_itm(self):$/;"	m	class:TestWfHybrid
+test_indoor	reference_models/propagation/wf_hybrid_test.py	/^  def test_indoor(self):$/;"	m	class:TestWfHybrid
+test_median_to_mean_offset	reference_models/propagation/wf_hybrid_test.py	/^  def test_median_to_mean_offset(self):$/;"	m	class:TestWfHybrid
+test_small_height	reference_models/propagation/wf_hybrid_test.py	/^  def test_small_height(self):$/;"	m	class:TestWfHybrid
+test_same_location	reference_models/propagation/wf_hybrid_test.py	/^  def test_same_location(self):$/;"	m	class:TestWfHybrid
+point_to_point	reference_models/propagation/itm/itm.py	/^def point_to_point(its_elev, height_tx, height_rx,$/;"	f
+PROFILE	reference_models/propagation/itm/itm_test.py	/^PROFILE = [156, 77800.\/156.,$/;"	v
+_GetHorizonAnglesLegacy	reference_models/propagation/itm/itm_test.py	/^def _GetHorizonAnglesLegacy(its_elev, height_cbsd, height_rx, refractivity):$/;"	f
+TestItm	reference_models/propagation/itm/itm_test.py	/^class TestItm(unittest.TestCase):$/;"	c
+test_qkpfl_path2200_its	reference_models/propagation/itm/itm_test.py	/^  def test_qkpfl_path2200_its(self):$/;"	m	class:TestItm
+test_qkpfl_path1979_its	reference_models/propagation/itm/itm_test.py	/^  def test_qkpfl_path1979_its(self):$/;"	m	class:TestItm
+test_default_arg	reference_models/propagation/itm/itm_test.py	/^  def test_default_arg(self):$/;"	m	class:TestItm
+test_reliabilities	reference_models/propagation/itm/itm_test.py	/^  def test_reliabilities(self):$/;"	m	class:TestItm
+test_horizon_angles	reference_models/propagation/itm/itm_test.py	/^  def test_horizon_angles(self):$/;"	m	class:TestItm
+test_horizon_angles_los	reference_models/propagation/itm/itm_test.py	/^  def test_horizon_angles_los(self):$/;"	m	class:TestItm
+itm_module	reference_models/propagation/itm/setup.py	/^itm_module = Extension('itm_its', sources = ['its\/itm.cpp',$/;"	v
+cfg_vars	reference_models/propagation/itm/setup.py	/^cfg_vars = get_config_vars()$/;"	v
+version	reference_models/propagation/itm/setup.py	/^      version = '1.0',$/;"	v
+description	reference_models/propagation/itm/setup.py	/^      description = 'Longley-Rice ITM propagation model',$/;"	v
+ext_modules	reference_models/propagation/itm/setup.py	/^      ext_modules = [itm_module])$/;"	v
+itm_point_to_point	reference_models/propagation/itm/itm_its_py.cpp	/^static PyObject* itm_point_to_point(PyObject* self, PyObject* args) {$/;"	f	file:
+itm_point_to_point_rels	reference_models/propagation/itm/itm_its_py.cpp	/^static PyObject* itm_point_to_point_rels(PyObject* self, PyObject* args) {$/;"	f	file:
+ITMMethods	reference_models/propagation/itm/itm_its_py.cpp	/^static PyMethodDef ITMMethods[] = {$/;"	v	file:
+inititm_its	reference_models/propagation/itm/itm_its_py.cpp	/^PyMODINIT_FUNC inititm_its(void) {$/;"	f
+THIRD	reference_models/propagation/itm/its/original/ITMDLL.cpp	21;"	d	file:
+DllExport	reference_models/propagation/itm/its/original/ITMDLL.cpp	22;"	d	file:
+tcomplex	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^struct tcomplex$/;"	s	file:
+tcreal	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^ { double tcreal;$/;"	m	struct:tcomplex	file:
+tcimag	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^   double tcimag;$/;"	m	struct:tcomplex	file:
+prop_type	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^struct prop_type$/;"	s	file:
+aref	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^{ double aref;$/;"	m	struct:prop_type	file:
+dist	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double dist;$/;"	m	struct:prop_type	file:
+hg	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double hg[2];$/;"	m	struct:prop_type	file:
+wn	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double wn;$/;"	m	struct:prop_type	file:
+dh	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double dh;$/;"	m	struct:prop_type	file:
+ens	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double ens;$/;"	m	struct:prop_type	file:
+gme	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double gme;$/;"	m	struct:prop_type	file:
+zgndreal	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double zgndreal;$/;"	m	struct:prop_type	file:
+zgndimag	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double zgndimag;$/;"	m	struct:prop_type	file:
+he	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double he[2];$/;"	m	struct:prop_type	file:
+dl	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double dl[2];$/;"	m	struct:prop_type	file:
+the	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double the[2];$/;"	m	struct:prop_type	file:
+kwx	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  int kwx;$/;"	m	struct:prop_type	file:
+mdp	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  int mdp;$/;"	m	struct:prop_type	file:
+propv_type	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^struct propv_type$/;"	s	file:
+sgc	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^{ double sgc;$/;"	m	struct:propv_type	file:
+lvar	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  int lvar;$/;"	m	struct:propv_type	file:
+mdvar	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  int mdvar;$/;"	m	struct:propv_type	file:
+klim	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  int klim;$/;"	m	struct:propv_type	file:
+propa_type	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^struct propa_type$/;"	s	file:
+dlsa	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^{ double dlsa;$/;"	m	struct:propa_type	file:
+dx	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double dx;$/;"	m	struct:propa_type	file:
+ael	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double ael;$/;"	m	struct:propa_type	file:
+ak1	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double ak1;$/;"	m	struct:propa_type	file:
+ak2	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double ak2;$/;"	m	struct:propa_type	file:
+aed	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double aed;$/;"	m	struct:propa_type	file:
+emd	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double emd;$/;"	m	struct:propa_type	file:
+aes	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double aes;$/;"	m	struct:propa_type	file:
+ems	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double ems;$/;"	m	struct:propa_type	file:
+dls	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double dls[2];$/;"	m	struct:propa_type	file:
+dla	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double dla;$/;"	m	struct:propa_type	file:
+tha	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^  double tha;$/;"	m	struct:propa_type	file:
+mymin	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^int mymin(const int &i, const int &j)$/;"	f
+mymax	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^int mymax(const int &i, const int &j)$/;"	f
+mymin	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double mymin(const double &a, const double &b)$/;"	f
+mymax	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double mymax(const double &a, const double &b)$/;"	f
+FORTRAN_DIM	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double FORTRAN_DIM(const double &x, const double &y)$/;"	f
+aknfe	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double aknfe(const double &v2)$/;"	f
+fht	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double fht(const double& x, const double& pk)$/;"	f
+h0f	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double h0f(double r, double et)$/;"	f
+ahd	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double ahd(double td)$/;"	f
+adiff	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double  adiff( double d, prop_type &prop, propa_type &propa)$/;"	f
+ascat	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double  ascat( double d, prop_type &prop, propa_type &propa)$/;"	f
+qerfi	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double DllExport _stdcall qerfi( double q )$/;"	f
+qlrps	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^void DllExport _stdcall qlrps( double fmhz, double zsys, double en0,$/;"	f
+abq_alos	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double abq_alos (complex<double> r)$/;"	f
+alos	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double  alos( double d, prop_type &prop, propa_type &propa)$/;"	f
+qlra	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^void DllExport _stdcall qlra( int kst[], int klimx, int mdvarx,$/;"	f
+lrprop	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^void DllExport _stdcall lrprop (double d,$/;"	f
+curve	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double curve (double const &c1, double const &c2, double const &x1,$/;"	f
+avar	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double DllExport _stdcall avar(double zzt, double zzl, double zzc,$/;"	f
+hzns	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^void hzns (double pfl[], prop_type &prop)$/;"	f
+z1sq1	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^void z1sq1 (double z[], const double &x1, const double &x2,$/;"	f
+qtile	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double qtile (const int &nn, double a[], const int &ir)$/;"	f
+qerf	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double qerf(const double &z)$/;"	f
+d1thx	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double d1thx(double pfl[], const double &x1, const double &x2)$/;"	f
+qlrpfl	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^void DllExport _stdcall qlrpfl( double pfl[], int klimx, int mdvarx,$/;"	f
+deg2rad	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double deg2rad(double d)$/;"	f
+point_to_point	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^void DllExport _stdcall point_to_point(double elev[], double tht_m, double rht_m,$/;"	f
+point_to_pointMDH	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^void DllExport _stdcall point_to_pointMDH (double elev[], double tht_m, double rht_m,$/;"	f
+point_to_pointDH	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^void DllExport _stdcall point_to_pointDH (double elev[], double tht_m, double rht_m,$/;"	f
+area	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^void DllExport _stdcall area(long ModVar, double deltaH, double tht_m, double rht_m,$/;"	f
+ITMAreadBLoss	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double DllExport _stdcall ITMAreadBLoss(long ModVar, double deltaH, double tht_m, double rht_m,$/;"	f
+ITMDLLVersion	reference_models/propagation/itm/its/original/ITMDLL.cpp	/^double  DllExport _stdcall ITMDLLVersion()$/;"	f
+M_PI	reference_models/propagation/itm/its/itm.cpp	23;"	d	file:
+THIRD	reference_models/propagation/itm/its/itm.cpp	26;"	d	file:
+tcomplex	reference_models/propagation/itm/its/itm.cpp	/^struct tcomplex$/;"	s	file:
+tcreal	reference_models/propagation/itm/its/itm.cpp	/^ { double tcreal;$/;"	m	struct:tcomplex	file:
+tcimag	reference_models/propagation/itm/its/itm.cpp	/^   double tcimag;$/;"	m	struct:tcomplex	file:
+prop_type	reference_models/propagation/itm/its/itm.cpp	/^struct prop_type$/;"	s	file:
+aref	reference_models/propagation/itm/its/itm.cpp	/^{ double aref;$/;"	m	struct:prop_type	file:
+dist	reference_models/propagation/itm/its/itm.cpp	/^  double dist;$/;"	m	struct:prop_type	file:
+hg	reference_models/propagation/itm/its/itm.cpp	/^  double hg[2];$/;"	m	struct:prop_type	file:
+wn	reference_models/propagation/itm/its/itm.cpp	/^  double wn;$/;"	m	struct:prop_type	file:
+dh	reference_models/propagation/itm/its/itm.cpp	/^  double dh;$/;"	m	struct:prop_type	file:
+ens	reference_models/propagation/itm/its/itm.cpp	/^  double ens;$/;"	m	struct:prop_type	file:
+gme	reference_models/propagation/itm/its/itm.cpp	/^  double gme;$/;"	m	struct:prop_type	file:
+zgndreal	reference_models/propagation/itm/its/itm.cpp	/^  double zgndreal;$/;"	m	struct:prop_type	file:
+zgndimag	reference_models/propagation/itm/its/itm.cpp	/^  double zgndimag;$/;"	m	struct:prop_type	file:
+he	reference_models/propagation/itm/its/itm.cpp	/^  double he[2];$/;"	m	struct:prop_type	file:
+dl	reference_models/propagation/itm/its/itm.cpp	/^  double dl[2];$/;"	m	struct:prop_type	file:
+the	reference_models/propagation/itm/its/itm.cpp	/^  double the[2];$/;"	m	struct:prop_type	file:
+theta	reference_models/propagation/itm/its/itm.cpp	/^  double theta[2];  \/\/ Vertical incidence angles in degrees$/;"	m	struct:prop_type	file:
+kwx	reference_models/propagation/itm/its/itm.cpp	/^  int kwx;$/;"	m	struct:prop_type	file:
+mdp	reference_models/propagation/itm/its/itm.cpp	/^  int mdp;$/;"	m	struct:prop_type	file:
+propv_type	reference_models/propagation/itm/its/itm.cpp	/^struct propv_type$/;"	s	file:
+sgc	reference_models/propagation/itm/its/itm.cpp	/^{ double sgc;$/;"	m	struct:propv_type	file:
+lvar	reference_models/propagation/itm/its/itm.cpp	/^  int lvar;$/;"	m	struct:propv_type	file:
+mdvar	reference_models/propagation/itm/its/itm.cpp	/^  int mdvar;$/;"	m	struct:propv_type	file:
+klim	reference_models/propagation/itm/its/itm.cpp	/^  int klim;$/;"	m	struct:propv_type	file:
+propa_type	reference_models/propagation/itm/its/itm.cpp	/^struct propa_type$/;"	s	file:
+dlsa	reference_models/propagation/itm/its/itm.cpp	/^{ double dlsa;$/;"	m	struct:propa_type	file:
+dx	reference_models/propagation/itm/its/itm.cpp	/^  double dx;$/;"	m	struct:propa_type	file:
+ael	reference_models/propagation/itm/its/itm.cpp	/^  double ael;$/;"	m	struct:propa_type	file:
+ak1	reference_models/propagation/itm/its/itm.cpp	/^  double ak1;$/;"	m	struct:propa_type	file:
+ak2	reference_models/propagation/itm/its/itm.cpp	/^  double ak2;$/;"	m	struct:propa_type	file:
+aed	reference_models/propagation/itm/its/itm.cpp	/^  double aed;$/;"	m	struct:propa_type	file:
+emd	reference_models/propagation/itm/its/itm.cpp	/^  double emd;$/;"	m	struct:propa_type	file:
+aes	reference_models/propagation/itm/its/itm.cpp	/^  double aes;$/;"	m	struct:propa_type	file:
+ems	reference_models/propagation/itm/its/itm.cpp	/^  double ems;$/;"	m	struct:propa_type	file:
+dls	reference_models/propagation/itm/its/itm.cpp	/^  double dls[2];$/;"	m	struct:propa_type	file:
+dla	reference_models/propagation/itm/its/itm.cpp	/^  double dla;$/;"	m	struct:propa_type	file:
+tha	reference_models/propagation/itm/its/itm.cpp	/^  double tha;$/;"	m	struct:propa_type	file:
+mymin	reference_models/propagation/itm/its/itm.cpp	/^int mymin(const int &i, const int &j)$/;"	f
+mymax	reference_models/propagation/itm/its/itm.cpp	/^int mymax(const int &i, const int &j)$/;"	f
+mymin	reference_models/propagation/itm/its/itm.cpp	/^double mymin(const double &a, const double &b)$/;"	f
+mymax	reference_models/propagation/itm/its/itm.cpp	/^double mymax(const double &a, const double &b)$/;"	f
+FORTRAN_DIM	reference_models/propagation/itm/its/itm.cpp	/^double FORTRAN_DIM(const double &x, const double &y)$/;"	f
+aknfe	reference_models/propagation/itm/its/itm.cpp	/^double aknfe(const double &v2)$/;"	f
+fht	reference_models/propagation/itm/its/itm.cpp	/^double fht(const double& x, const double& pk)$/;"	f
+h0f	reference_models/propagation/itm/its/itm.cpp	/^double h0f(double r, double et)$/;"	f
+ahd	reference_models/propagation/itm/its/itm.cpp	/^double ahd(double td)$/;"	f
+adiff	reference_models/propagation/itm/its/itm.cpp	/^double  adiff( double d, prop_type &prop, propa_type &propa)$/;"	f
+ascat	reference_models/propagation/itm/its/itm.cpp	/^double  ascat( double d, prop_type &prop, propa_type &propa)$/;"	f
+qerfi	reference_models/propagation/itm/its/itm.cpp	/^double qerfi( double q )$/;"	f
+qlrps	reference_models/propagation/itm/its/itm.cpp	/^void qlrps( double fmhz, double zsys, double en0,$/;"	f
+abq_alos	reference_models/propagation/itm/its/itm.cpp	/^double abq_alos (complex<double> r)$/;"	f
+alos	reference_models/propagation/itm/its/itm.cpp	/^double  alos( double d, prop_type &prop, propa_type &propa)$/;"	f
+qlra	reference_models/propagation/itm/its/itm.cpp	/^void qlra( int kst[], int klimx, int mdvarx,$/;"	f
+lrprop	reference_models/propagation/itm/its/itm.cpp	/^void lrprop (double d,$/;"	f
+curve	reference_models/propagation/itm/its/itm.cpp	/^double curve (double const &c1, double const &c2, double const &x1,$/;"	f
+avar	reference_models/propagation/itm/its/itm.cpp	/^double avar(double zzt, double zzl, double zzc,$/;"	f
+hzns	reference_models/propagation/itm/its/itm.cpp	/^void hzns (double pfl[], prop_type &prop)$/;"	f
+z1sq1	reference_models/propagation/itm/its/itm.cpp	/^void z1sq1 (double z[], const double &x1, const double &x2,$/;"	f
+qtile	reference_models/propagation/itm/its/itm.cpp	/^double qtile (const int &nn, double a[], const int &ir)$/;"	f
+qerf	reference_models/propagation/itm/its/itm.cpp	/^double qerf(const double &z)$/;"	f
+d1thx	reference_models/propagation/itm/its/itm.cpp	/^double d1thx(double pfl[], const double &x1, const double &x2)$/;"	f
+qlrpfl	reference_models/propagation/itm/its/itm.cpp	/^void qlrpfl( double pfl[], int klimx, int mdvarx,$/;"	f
+deg2rad	reference_models/propagation/itm/its/itm.cpp	/^double deg2rad(double d)$/;"	f
+point_to_point	reference_models/propagation/itm/its/itm.cpp	/^void point_to_point(double elev[], double tht_m, double rht_m,$/;"	f
+point_to_point_rels	reference_models/propagation/itm/its/itm.cpp	/^void point_to_point_rels(double elev[], double tht_m, double rht_m,$/;"	f
+point_to_pointMDH	reference_models/propagation/itm/its/itm.cpp	/^void point_to_pointMDH (double elev[], double tht_m, double rht_m,$/;"	f
+point_to_pointDH	reference_models/propagation/itm/its/itm.cpp	/^void point_to_pointDH (double elev[], double tht_m, double rht_m,$/;"	f
+area	reference_models/propagation/itm/its/itm.cpp	/^void area(long ModVar, double deltaH, double tht_m, double rht_m,$/;"	f
+ITMAreadBLoss	reference_models/propagation/itm/its/itm.cpp	/^double ITMAreadBLoss(long ModVar, double deltaH, double tht_m, double rht_m,$/;"	f
+ITMDLLVersion	reference_models/propagation/itm/its/itm.cpp	/^double ITMDLLVersion()$/;"	f
+main	reference_models/propagation/itm/its/itm_test.cpp	/^int main() {$/;"	f
+POL_HORIZONTAL	reference_models/propagation/itm/its/itm.h	18;"	d
+POL_VERTICAL	reference_models/propagation/itm/its/itm.h	19;"	d
+SITE_CRITERIA_RANDOM	reference_models/propagation/itm/its/itm.h	22;"	d
+SITE_CRITERIA_CAREFUL	reference_models/propagation/itm/its/itm.h	23;"	d
+SITE_CRITERIA_VERY_CAREFUL	reference_models/propagation/itm/its/itm.h	24;"	d
+RADIO_CLIMATE_EQUATORIAL	reference_models/propagation/itm/its/itm.h	27;"	d
+RADIO_CLIMATE_CONTINTAL_SUBTROPICAL	reference_models/propagation/itm/its/itm.h	28;"	d
+RADIO_CLIMATE_MARITIME_TROPICAL	reference_models/propagation/itm/its/itm.h	29;"	d
+RADIO_CLIMATE_DESERT	reference_models/propagation/itm/its/itm.h	30;"	d
+RADIO_CLIMATE_CONTINENTAL_TEMPERATE	reference_models/propagation/itm/its/itm.h	31;"	d
+RADIO_CLIMATE_MARITIME_TEMPERATE_OVER_LAND	reference_models/propagation/itm/its/itm.h	32;"	d
+RADIO_CLIMATE_MARITIME_TEMPERATE_OVER_SEA	reference_models/propagation/itm/its/itm.h	33;"	d
+MODVAR_SINGLE	reference_models/propagation/itm/its/itm.h	36;"	d
+MODVAR_INDIVIDUAL	reference_models/propagation/itm/its/itm.h	37;"	d
+MODVAR_MOBILE	reference_models/propagation/itm/its/itm.h	38;"	d
+MODVAR_BROADCAST	reference_models/propagation/itm/its/itm.h	39;"	d
+ERR_NO_ERROR	reference_models/propagation/itm/its/itm.h	44;"	d
+ERR_WARNING_NEARLY_OUT_OF_RANGE	reference_models/propagation/itm/its/itm.h	45;"	d
+ERR_NOTE_IMPOSSIBLE_PARAMS	reference_models/propagation/itm/its/itm.h	46;"	d
+ERR_WARNING_COMBINATION_OUT_OF_RANGE	reference_models/propagation/itm/its/itm.h	47;"	d
+PROPMODE_UNDEFINED	reference_models/propagation/itm/its/itm.h	50;"	d
+PROPMODE_LINE_OF_SIGHT	reference_models/propagation/itm/its/itm.h	51;"	d
+PROPMODE_SINGLE_HORIZON_DIFFRACTION	reference_models/propagation/itm/its/itm.h	52;"	d
+PROPMODE_SINGLE_HORIZON_TROPOSCATTER	reference_models/propagation/itm/its/itm.h	53;"	d
+PROPMODE_DOUBLE_HORIZON_DIFFRACTION	reference_models/propagation/itm/its/itm.h	54;"	d
+PROPMODE_DOUBLE_HORIZON_TROPOSCATTER	reference_models/propagation/itm/its/itm.h	55;"	d
+STRMODE_LINE_OF_SIGHT	reference_models/propagation/itm/its/itm.h	58;"	d
+STRMODE_SINGLE_HORIZON_DIFFRACTION	reference_models/propagation/itm/its/itm.h	59;"	d
+STRMODE_SINGLE_HORIZON_TROPOSCATTER	reference_models/propagation/itm/its/itm.h	60;"	d
+STRMODE_DOUBLE_HORIZON_DIFFRACTION	reference_models/propagation/itm/its/itm.h	61;"	d
+STRMODE_DOUBLE_HORIZON_TROPOSCATTER	reference_models/propagation/itm/its/itm.h	62;"	d
+PYTHON	reference_models/propagation/itm/Makefile	/^PYTHON	?= python$/;"	m
+SETUP	reference_models/propagation/itm/Makefile	/^SETUP	:= setup.py$/;"	m
+TERRAIN_TEST_DIR	reference_models/propagation/wf_itm_test.py	/^TERRAIN_TEST_DIR = os.path.join(os.path.dirname(__file__),$/;"	v
+ITU_TEST_DIR	reference_models/propagation/wf_itm_test.py	/^ITU_TEST_DIR = os.path.join(os.path.dirname(__file__),$/;"	v
+TestWfItm	reference_models/propagation/wf_itm_test.py	/^class TestWfItm(unittest.TestCase):$/;"	c
+setUpClass	reference_models/propagation/wf_itm_test.py	/^  def setUpClass(cls):$/;"	m	class:TestWfItm
+tearDownClass	reference_models/propagation/wf_itm_test.py	/^  def tearDownClass(cls):$/;"	m	class:TestWfItm
+setUp	reference_models/propagation/wf_itm_test.py	/^  def setUp(self):$/;"	m	class:TestWfItm
+test_los_mode	reference_models/propagation/wf_itm_test.py	/^  def test_los_mode(self):$/;"	m	class:TestWfItm
+test_op_mode	reference_models/propagation/wf_itm_test.py	/^  def test_op_mode(self):$/;"	m	class:TestWfItm
+test_average	reference_models/propagation/wf_itm_test.py	/^  def test_average(self):$/;"	m	class:TestWfItm
+test_indoor	reference_models/propagation/wf_itm_test.py	/^  def test_indoor(self):$/;"	m	class:TestWfItm
+test_small_height	reference_models/propagation/wf_itm_test.py	/^  def test_small_height(self):$/;"	m	class:TestWfItm
+test_haat	reference_models/propagation/wf_itm_test.py	/^  def test_haat(self):$/;"	m	class:TestWfItm
+test_angles_vs_legacy	reference_models/propagation/wf_itm_test.py	/^  def test_angles_vs_legacy(self):$/;"	m	class:TestWfItm
+test_same_location	reference_models/propagation/wf_itm_test.py	/^  def test_same_location(self):$/;"	m	class:TestWfItm
+GetAntennaPatternGains	reference_models/antenna/antenna.py	/^def GetAntennaPatternGains(hor_dirs, ant_azimuth,$/;"	f
+GetStandardAntennaGains	reference_models/antenna/antenna.py	/^def GetStandardAntennaGains(hor_dirs, ant_azimuth=None, ant_beamwidth=None, ant_gain=0):$/;"	f
+GetRadarNormalizedAntennaGains	reference_models/antenna/antenna.py	/^def GetRadarNormalizedAntennaGains(hor_dirs,$/;"	f
+GetFssAntennaGains	reference_models/antenna/antenna.py	/^def GetFssAntennaGains(hor_dirs, ver_dirs,$/;"	f
+_GetGsoGains	reference_models/antenna/antenna.py	/^def _GetGsoGains(theta, nominal_gain):$/;"	f
+TestAntenna	reference_models/antenna/antenna_test.py	/^class TestAntenna(unittest.TestCase):$/;"	c
+test_pattern_gain	reference_models/antenna/antenna_test.py	/^  def test_pattern_gain(self):$/;"	m	class:TestAntenna
+test_standard_gain	reference_models/antenna/antenna_test.py	/^  def test_standard_gain(self):$/;"	m	class:TestAntenna
+test_dpa_gain	reference_models/antenna/antenna_test.py	/^  def test_dpa_gain(self):$/;"	m	class:TestAntenna
+test_fss_gain	reference_models/antenna/antenna_test.py	/^  def test_fss_gain(self):$/;"	m	class:TestAntenna
+TEST_DIR	reference_models/interference/aggregate_interference_test.py	/^TEST_DIR = os.path.join(os.path.dirname(__file__), 'test_data')$/;"	v
+TestAggregateInterference	reference_models/interference/aggregate_interference_test.py	/^class TestAggregateInterference(unittest.TestCase):$/;"	c
+setUpClass	reference_models/interference/aggregate_interference_test.py	/^  def setUpClass(cls):$/;"	m	class:TestAggregateInterference
+setUp	reference_models/interference/aggregate_interference_test.py	/^  def setUp(self):$/;"	m	class:TestAggregateInterference
+tearDown	reference_models/interference/aggregate_interference_test.py	/^  def tearDown(self):$/;"	m	class:TestAggregateInterference
+test_AggregateInterferenceFssCochannel	reference_models/interference/aggregate_interference_test.py	/^  def test_AggregateInterferenceFssCochannel(self):$/;"	m	class:TestAggregateInterference
+test_AggregateInterferenceFssBlocking	reference_models/interference/aggregate_interference_test.py	/^  def test_AggregateInterferenceFssBlocking(self):$/;"	m	class:TestAggregateInterference
+test_AggregateInterferenceEsc	reference_models/interference/aggregate_interference_test.py	/^  def test_AggregateInterferenceEsc(self):$/;"	m	class:TestAggregateInterference
+test_AggregateInterferencePpa	reference_models/interference/aggregate_interference_test.py	/^  def test_AggregateInterferencePpa(self):$/;"	m	class:TestAggregateInterference
+test_AggregateInterferenceGwpz	reference_models/interference/aggregate_interference_test.py	/^  def test_AggregateInterferenceGwpz(self):$/;"	m	class:TestAggregateInterference
+assertSameInterference	reference_models/interference/aggregate_interference_test.py	/^  def assertSameInterference(self, allowed_interference, expected_interference):$/;"	m	class:TestAggregateInterference
+TEST_DIR	reference_models/interference/interference_test.py	/^TEST_DIR = os.path.join(os.path.dirname(__file__), 'test_data')$/;"	v
+FreqRange	reference_models/interference/interference_test.py	/^class FreqRange(object):$/;"	c
+__init__	reference_models/interference/interference_test.py	/^  def __init__(self, low, high):$/;"	m	class:FreqRange
+TestAggInterf	reference_models/interference/interference_test.py	/^class TestAggInterf(unittest.TestCase):$/;"	c
+setUpClass	reference_models/interference/interference_test.py	/^  def setUpClass(cls):$/;"	m	class:TestAggInterf
+setUp	reference_models/interference/interference_test.py	/^  def setUp(self):$/;"	m	class:TestAggInterf
+tearDown	reference_models/interference/interference_test.py	/^  def tearDown(self):$/;"	m	class:TestAggInterf
+test_getFssMaskLoss	reference_models/interference/interference_test.py	/^  def test_getFssMaskLoss(self):$/;"	m	class:TestAggInterf
+test_computeFssBlocking	reference_models/interference/interference_test.py	/^  def test_computeFssBlocking(self):$/;"	m	class:TestAggInterf
+test_computeFssCoChannel	reference_models/interference/interference_test.py	/^  def test_computeFssCoChannel(self):$/;"	m	class:TestAggInterf
+test_getProtectedChannels	reference_models/interference/interference_test.py	/^  def test_getProtectedChannels(self):$/;"	m	class:TestAggInterf
+NUM_OF_PROCESS	reference_models/interference/aggregate_interference_example.py	/^NUM_OF_PROCESS = 30$/;"	v
+CvtToList	reference_models/interference/aggregate_interference_example.py	/^def CvtToList(data):$/;"	f
+_BASE_DATA_DIR	reference_models/interference/aggregate_interference_example.py	/^  _BASE_DATA_DIR = os.path.join(os.path.dirname(__file__), 'test_data')$/;"	v
+cbsd_filename	reference_models/interference/aggregate_interference_example.py	/^  cbsd_filename = ['cbsd_0.json',$/;"	v
+cbsd_list	reference_models/interference/aggregate_interference_example.py	/^  cbsd_list = []$/;"	v
+cbsd_record	reference_models/interference/aggregate_interference_example.py	/^    cbsd_record = json.load(open(os.path.join(_BASE_DATA_DIR, cbsd_file)))$/;"	v
+fss_filename	reference_models/interference/aggregate_interference_example.py	/^  fss_filename = ['fss_0.json', 'fss_1.json']$/;"	v
+fss_list	reference_models/interference/aggregate_interference_example.py	/^  fss_list = []$/;"	v
+fss_record	reference_models/interference/aggregate_interference_example.py	/^    fss_record = json.load(open(os.path.join(_BASE_DATA_DIR, fss_file)))$/;"	v
+esc_filename	reference_models/interference/aggregate_interference_example.py	/^  esc_filename = ['esc_0.json']$/;"	v
+esc_list	reference_models/interference/aggregate_interference_example.py	/^  esc_list = []$/;"	v
+esc_record	reference_models/interference/aggregate_interference_example.py	/^    esc_record = json.load($/;"	v
+gwpz_filename	reference_models/interference/aggregate_interference_example.py	/^  gwpz_filename = ['gwpz_0.json', 'gwpz_1.json']$/;"	v
+gwpz_list	reference_models/interference/aggregate_interference_example.py	/^  gwpz_list = []$/;"	v
+gwpz_record	reference_models/interference/aggregate_interference_example.py	/^    gwpz_record = json.load($/;"	v
+ppa_filename	reference_models/interference/aggregate_interference_example.py	/^  ppa_filename = ['ppa_0.json', 'ppa_1.json', 'ppa_2.json', 'ppa_3.json']$/;"	v
+ppa_list	reference_models/interference/aggregate_interference_example.py	/^  ppa_list = []$/;"	v
+ppa_record	reference_models/interference/aggregate_interference_example.py	/^    ppa_record = json.load(open(os.path.join(_BASE_DATA_DIR, ppa_file)))$/;"	v
+pal_filename	reference_models/interference/aggregate_interference_example.py	/^  pal_filename = ['pal_0.json', 'pal_1.json', 'pal_2.json', 'pal_3.json']$/;"	v
+ppa_filename	reference_models/interference/aggregate_interference_example.py	/^  ppa_filename = []$/;"	v
+pal_list	reference_models/interference/aggregate_interference_example.py	/^  pal_list = []$/;"	v
+pal_record	reference_models/interference/aggregate_interference_example.py	/^      pal_record = json.load(open(os.path.join(_BASE_DATA_DIR, pal_file)))$/;"	v
+start_time	reference_models/interference/aggregate_interference_example.py	/^  start_time = time.time()$/;"	v
+fss_freq_range	reference_models/interference/aggregate_interference_example.py	/^        ['operationParam']['operationFrequencyRange']$/;"	v
+fss_low_freq	reference_models/interference/aggregate_interference_example.py	/^    fss_low_freq = fss_freq_range['lowFrequency']$/;"	v
+fss_high_freq	reference_models/interference/aggregate_interference_example.py	/^    fss_high_freq = fss_freq_range['highFrequency']$/;"	v
+fss_ttc_flag	reference_models/interference/aggregate_interference_example.py	/^    fss_ttc_flag = fss_record['ttc']$/;"	v
+fss_cochannel_aggr_interference	reference_models/interference/aggregate_interference_example.py	/^        calculateAggregateInterferenceForFssCochannel(fss_record, data.getAllGrantInfoFromCbsdDataDump(cbsd_list))$/;"	v
+fss_blocking_aggr_interference	reference_models/interference/aggregate_interference_example.py	/^        calculateAggregateInterferenceForFssBlocking(fss_record, data.getAllGrantInfoFromCbsdDataDump(cbsd_list))$/;"	v
+fss_blocking_aggr_interference	reference_models/interference/aggregate_interference_example.py	/^        calculateAggregateInterferenceForFssBlocking(fss_record, data.getAllGrantInfoFromCbsdDataDump(cbsd_list))$/;"	v
+esc_aggr_interference	reference_models/interference/aggregate_interference_example.py	/^      calculateAggregateInterferenceForEsc(esc_record, data.getAllGrantInfoFromCbsdDataDump(cbsd_list))$/;"	v
+gwpz_aggr_interference	reference_models/interference/aggregate_interference_example.py	/^      calculateAggregateInterferenceForGwpz(gwpz_record, data.getAllGrantInfoFromCbsdDataDump(cbsd_list))$/;"	v
+ppa_aggr_interference	reference_models/interference/aggregate_interference_example.py	/^      calculateAggregateInterferenceForPpa(ppa_record, pal_list, data.getAllGrantInfoFromCbsdDataDump(cbsd_list, ppa_record=ppa_record))$/;"	v
+end_time	reference_models/interference/aggregate_interference_example.py	/^  end_time = time.time()$/;"	v
+GWPZ_GRID_RES_ARCSEC	reference_models/interference/aggregate_interference.py	/^GWPZ_GRID_RES_ARCSEC = 2$/;"	v
+PPA_GRID_RES_ARCSEC	reference_models/interference/aggregate_interference.py	/^PPA_GRID_RES_ARCSEC = 2$/;"	v
+InterferenceDict	reference_models/interference/aggregate_interference.py	/^def InterferenceDict(data_list):$/;"	f
+convertAndSumInterference	reference_models/interference/aggregate_interference.py	/^def convertAndSumInterference(cbsd_interference_list):$/;"	f
+aggregateInterferenceForPoint	reference_models/interference/aggregate_interference.py	/^def aggregateInterferenceForPoint(protection_point, channels, grants,$/;"	f
+calculateAggregateInterferenceForFssCochannel	reference_models/interference/aggregate_interference.py	/^def calculateAggregateInterferenceForFssCochannel(fss_record, grants):$/;"	f
+calculateAggregateInterferenceForFssBlocking	reference_models/interference/aggregate_interference.py	/^def calculateAggregateInterferenceForFssBlocking(fss_record, grants):$/;"	f
+calculateAggregateInterferenceForEsc	reference_models/interference/aggregate_interference.py	/^def calculateAggregateInterferenceForEsc(esc_record, grants):$/;"	f
+calculateAggregateInterferenceForGwpz	reference_models/interference/aggregate_interference.py	/^def calculateAggregateInterferenceForGwpz(gwpz_record, grants):$/;"	f
+calculateAggregateInterferenceForPpa	reference_models/interference/aggregate_interference.py	/^def calculateAggregateInterferenceForPpa(ppa_record, pal_records, grants):$/;"	f
+GWPZ_NEIGHBORHOOD_DIST	reference_models/interference/interference.py	/^GWPZ_NEIGHBORHOOD_DIST = 40  # neighborhood distance from a CBSD to a given protection$/;"	v
+PPA_NEIGHBORHOOD_DIST	reference_models/interference/interference.py	/^PPA_NEIGHBORHOOD_DIST = 40  # neighborhood distance from a CBSD to a given protection$/;"	v
+FSS_CO_CHANNEL_NEIGHBORHOOD_DIST	reference_models/interference/interference.py	/^FSS_CO_CHANNEL_NEIGHBORHOOD_DIST = 150  # neighborhood distance from a CBSD to FSS for$/;"	v
+FSS_BLOCKING_NEIGHBORHOOD_DIST	reference_models/interference/interference.py	/^FSS_BLOCKING_NEIGHBORHOOD_DIST = 40  # neighborhood distance from a CBSD to FSS$/;"	v
+ESC_NEIGHBORHOOD_DIST_A	reference_models/interference/interference.py	/^ESC_NEIGHBORHOOD_DIST_A = 40  # neighborhood distance from a ESC to category A CBSD$/;"	v
+ESC_NEIGHBORHOOD_DIST_B	reference_models/interference/interference.py	/^ESC_NEIGHBORHOOD_DIST_B = 80  # neighborhood distance from a ESC to category B CBSD$/;"	v
+FREQ_PROP_MODEL_MHZ	reference_models/interference/interference.py	/^FREQ_PROP_MODEL_MHZ = 3625.0$/;"	v
+CBRS_LOW_FREQ_HZ	reference_models/interference/interference.py	/^CBRS_LOW_FREQ_HZ = 3550.e6$/;"	v
+CBRS_HIGH_FREQ_HZ	reference_models/interference/interference.py	/^CBRS_HIGH_FREQ_HZ = 3700.e6$/;"	v
+FSS_LOW_FREQ_HZ	reference_models/interference/interference.py	/^FSS_LOW_FREQ_HZ = 3600.e6$/;"	v
+FSS_TTC_LOW_FREQ_HZ	reference_models/interference/interference.py	/^FSS_TTC_LOW_FREQ_HZ = 3700.e6$/;"	v
+FSS_TTC_HIGH_FREQ_HZ	reference_models/interference/interference.py	/^FSS_TTC_HIGH_FREQ_HZ = 4200.e6$/;"	v
+ESC_CAT_A_LOW_FREQ_HZ	reference_models/interference/interference.py	/^ESC_CAT_A_LOW_FREQ_HZ = 3550.e6$/;"	v
+ESC_CAT_A_HIGH_FREQ_HZ	reference_models/interference/interference.py	/^ESC_CAT_A_HIGH_FREQ_HZ = 3660.e6$/;"	v
+ESC_LOW_FREQ_HZ	reference_models/interference/interference.py	/^ESC_LOW_FREQ_HZ = 3550.e6$/;"	v
+ESC_HIGH_FREQ_HZ	reference_models/interference/interference.py	/^ESC_HIGH_FREQ_HZ = 3680.e6$/;"	v
+ESC_CH21_CF_HZ	reference_models/interference/interference.py	/^ESC_CH21_CF_HZ = 3652.5e6$/;"	v
+MHZ	reference_models/interference/interference.py	/^MHZ = 1.e6$/;"	v
+RBW_HZ	reference_models/interference/interference.py	/^RBW_HZ = 5.e6$/;"	v
+GWPZ_PPA_HEIGHT	reference_models/interference/interference.py	/^GWPZ_PPA_HEIGHT = 1.5$/;"	v
+IN_BAND_INSERTION_LOSS	reference_models/interference/interference.py	/^IN_BAND_INSERTION_LOSS = 0.5$/;"	v
+_DISTANCE_PER_PROTECTION_TYPE	reference_models/interference/interference.py	/^_DISTANCE_PER_PROTECTION_TYPE = {$/;"	v
+dbToLinear	reference_models/interference/interference.py	/^def dbToLinear(x):$/;"	f
+linearToDb	reference_models/interference/interference.py	/^def linearToDb(x):$/;"	f
+getProtectedChannels	reference_models/interference/interference.py	/^def getProtectedChannels(low_freq_hz, high_freq_hz):$/;"	f
+findGrantsInsideNeighborhood	reference_models/interference/interference.py	/^def findGrantsInsideNeighborhood(grants, protection_point, entity_type):$/;"	f
+grantFrequencyOverlapCheck	reference_models/interference/interference.py	/^def grantFrequencyOverlapCheck(grant, ch_low_freq, ch_high_freq, protection_ent_type):$/;"	f
+findOverlappingGrants	reference_models/interference/interference.py	/^def findOverlappingGrants(grants, constraint):$/;"	f
+computeInterferencePpaGwpzPoint	reference_models/interference/interference.py	/^def computeInterferencePpaGwpzPoint(cbsd_grant, constraint, h_inc_ant,$/;"	f
+getEscMaskLoss	reference_models/interference/interference.py	/^def getEscMaskLoss(constraint):$/;"	f
+computeInterferenceEsc	reference_models/interference/interference.py	/^def computeInterferenceEsc(cbsd_grant, constraint, esc_antenna_info, max_eirp):$/;"	f
+computeInterferenceFssCochannel	reference_models/interference/interference.py	/^def computeInterferenceFssCochannel(cbsd_grant, constraint, fss_info, max_eirp):$/;"	f
+getFssMaskLoss	reference_models/interference/interference.py	/^def getFssMaskLoss(cbsd_grant, constraint):$/;"	f
+computeInterferenceFssBlocking	reference_models/interference/interference.py	/^def computeInterferenceFssBlocking(cbsd_grant, constraint, fss_info, max_eirp):$/;"	f
+getEffectiveSystemEirp	reference_models/interference/interference.py	/^def getEffectiveSystemEirp(max_eirp, cbsd_max_ant_gain, effective_ant_gain,$/;"	f
+computeInterference	reference_models/interference/interference.py	/^def computeInterference(grant, eirp, constraint,$/;"	f
+PROTECTION_ZONE_FILE	reference_models/geo/zones.py	/^PROTECTION_ZONE_FILE = 'protection_zones.kml'$/;"	v
+EXCLUSION_ZONE_FILE	reference_models/geo/zones.py	/^EXCLUSION_ZONE_FILE = 'GB_Part90_EZ.kml'$/;"	v
+COASTAL_DPA_ZONE_FILE	reference_models/geo/zones.py	/^COASTAL_DPA_ZONE_FILE = 'E-DPAs.kml'$/;"	v
+PORTAL_DPA_ZONE_FILE	reference_models/geo/zones.py	/^PORTAL_DPA_ZONE_FILE = 'P-DPAs.kml'$/;"	v
+FCC_FIELD_OFFICES_FILE	reference_models/geo/zones.py	/^FCC_FIELD_OFFICES_FILE = 'fcc_field_office_locations.csv'$/;"	v
+USBORDER_FILE	reference_models/geo/zones.py	/^USBORDER_FILE = 'usborder.kmz'$/;"	v
+URBAN_AREAS_FILE	reference_models/geo/zones.py	/^URBAN_AREAS_FILE = 'Urban_Areas_3601.kmz'$/;"	v
+USCANADA_BORDER_FILE	reference_models/geo/zones.py	/^USCANADA_BORDER_FILE = 'uscabdry_sampled.kmz'$/;"	v
+DPA_CATA_DEFAULT_NEIGHBOR_DIST	reference_models/geo/zones.py	/^DPA_CATA_DEFAULT_NEIGHBOR_DIST = 150$/;"	v
+_SplitFreqRange	reference_models/geo/zones.py	/^def _SplitFreqRange(freq_range):$/;"	f
+COASTAL_DPA_PROPERTIES	reference_models/geo/zones.py	/^COASTAL_DPA_PROPERTIES = [('freqRangeMHz', _SplitFreqRange, None),$/;"	v
+PORTAL_DPA_PROPERTIES	reference_models/geo/zones.py	/^PORTAL_DPA_PROPERTIES = [('freqRangeMHz', _SplitFreqRange, None),$/;"	v
+_COASTAL_PROTECTION_ZONES	reference_models/geo/zones.py	/^_COASTAL_PROTECTION_ZONES = [$/;"	v
+_coastal_protection_zone	reference_models/geo/zones.py	/^_coastal_protection_zone = None$/;"	v
+_exclusion_zones_gbs	reference_models/geo/zones.py	/^_exclusion_zones_gbs = None$/;"	v
+_exclusion_zones_p90	reference_models/geo/zones.py	/^_exclusion_zones_p90 = None$/;"	v
+_coastal_dpa_zones	reference_models/geo/zones.py	/^_coastal_dpa_zones = None$/;"	v
+_coastal_dpa_path	reference_models/geo/zones.py	/^_coastal_dpa_path = None$/;"	v
+_portal_dpa_zones	reference_models/geo/zones.py	/^_portal_dpa_zones = None$/;"	v
+_portal_dpa_path	reference_models/geo/zones.py	/^_portal_dpa_path = None$/;"	v
+_border_zone	reference_models/geo/zones.py	/^_border_zone = None$/;"	v
+_uscanada_border	reference_models/geo/zones.py	/^_uscanada_border = None$/;"	v
+_SplitCoordinates	reference_models/geo/zones.py	/^def _SplitCoordinates(coord):$/;"	f
+_GetPoint	reference_models/geo/zones.py	/^def _GetPoint(point):$/;"	f
+_GetPolygon	reference_models/geo/zones.py	/^def _GetPolygon(poly):$/;"	f
+_GetLineString	reference_models/geo/zones.py	/^def _GetLineString(linestring):$/;"	f
+_Zone	reference_models/geo/zones.py	/^class _Zone(object):$/;"	c
+__init__	reference_models/geo/zones.py	/^  def __init__(self, fields):$/;"	m	class:_Zone
+__repr__	reference_models/geo/zones.py	/^  def __repr__(self):$/;"	m	class:_Zone	file:
+_ReadKmlZones	reference_models/geo/zones.py	/^def _ReadKmlZones(kml_path, root_id_zone='Placemark', ignore_if_parent=None,$/;"	f
+_ReadKmlBorder	reference_models/geo/zones.py	/^def _ReadKmlBorder(kml_path, root_id='Placemark'):$/;"	f
+_GetAllExclusionZones	reference_models/geo/zones.py	/^def _GetAllExclusionZones():$/;"	f
+_CheckDpaValidity	reference_models/geo/zones.py	/^def _CheckDpaValidity(dpa_zones, attributes):$/;"	f
+_LoadDpaZones	reference_models/geo/zones.py	/^def _LoadDpaZones(kml_path, properties, fix_invalid=True):$/;"	f
+GetCoastalProtectionZone	reference_models/geo/zones.py	/^def GetCoastalProtectionZone():$/;"	f
+GetGbsExclusionZones	reference_models/geo/zones.py	/^def GetGbsExclusionZones():$/;"	f
+GetPart90ExclusionZones	reference_models/geo/zones.py	/^def GetPart90ExclusionZones():$/;"	f
+GetCoastalDpaZones	reference_models/geo/zones.py	/^def GetCoastalDpaZones(kml_path=None):$/;"	f
+GetPortalDpaZones	reference_models/geo/zones.py	/^def GetPortalDpaZones(kml_path=None):$/;"	f
+GetUsCanadaBorder	reference_models/geo/zones.py	/^def GetUsCanadaBorder():$/;"	f
+GetUsBorder	reference_models/geo/zones.py	/^def GetUsBorder():$/;"	f
+GetUrbanAreas	reference_models/geo/zones.py	/^def GetUrbanAreas(simplify_deg=1e-3):$/;"	f
+GetFccOfficeLocations	reference_models/geo/zones.py	/^def GetFccOfficeLocations():$/;"	f
+TileStats	reference_models/geo/tiles.py	/^class TileStats(object):$/;"	c
+__init__	reference_models/geo/tiles.py	/^  def __init__(self, type='ned'):$/;"	m	class:TileStats
+UpdateForTileLoad	reference_models/geo/tiles.py	/^  def UpdateForTileLoad(self, ilat, ilon):$/;"	m	class:TileStats
+ActiveTilesCount	reference_models/geo/tiles.py	/^  def ActiveTilesCount(self):$/;"	m	class:TileStats
+Reset	reference_models/geo/tiles.py	/^  def Reset(self):$/;"	m	class:TileStats
+Report	reference_models/geo/tiles.py	/^  def Report(self):$/;"	m	class:TileStats
+NED_TILES	reference_models/geo/tiles.py	/^NED_TILES = set([$/;"	v
+NLCD_TILES	reference_models/geo/tiles.py	/^NLCD_TILES = set([$/;"	v
+_BASE_DATA_DIR	reference_models/geo/CONFIG.py	/^_BASE_DATA_DIR = os.path.abspath($/;"	v
+ITU_DIR	reference_models/geo/CONFIG.py	/^ITU_DIR = os.path.join(_BASE_DATA_DIR, 'itu')$/;"	v
+CENSUS_TRACTS_DIR	reference_models/geo/CONFIG.py	/^CENSUS_TRACTS_DIR = os.path.join(_BASE_DATA_DIR, 'census_tracts')$/;"	v
+TERRAIN_DIR	reference_models/geo/CONFIG.py	/^TERRAIN_DIR = os.path.join(_BASE_DATA_DIR, 'geo', 'ned')$/;"	v
+LANDCOVER_DIR	reference_models/geo/CONFIG.py	/^LANDCOVER_DIR = os.path.join(_BASE_DATA_DIR, 'geo', 'nlcd')$/;"	v
+NTIA_DIR	reference_models/geo/CONFIG.py	/^NTIA_DIR = os.path.join(_BASE_DATA_DIR, 'ntia')$/;"	v
+FCC_DIR	reference_models/geo/CONFIG.py	/^FCC_DIR = os.path.join(_BASE_DATA_DIR, 'fcc')$/;"	v
+GetItuDir	reference_models/geo/CONFIG.py	/^def GetItuDir():$/;"	f
+GetTerrainDir	reference_models/geo/CONFIG.py	/^def GetTerrainDir():$/;"	f
+GetLandCoverDir	reference_models/geo/CONFIG.py	/^def GetLandCoverDir():$/;"	f
+GetCensusTractsDir	reference_models/geo/CONFIG.py	/^def GetCensusTractsDir():$/;"	f
+GetNtiaDir	reference_models/geo/CONFIG.py	/^def GetNtiaDir():$/;"	f
+GetFccDir	reference_models/geo/CONFIG.py	/^def GetFccDir():$/;"	f
+terrain_driver	reference_models/geo/drive.py	/^terrain_driver = terrain.TerrainDriver()$/;"	v
+nlcd_driver	reference_models/geo/drive.py	/^nlcd_driver = nlcd.NlcdDriver()$/;"	v
+climate_driver	reference_models/geo/drive.py	/^climate_driver = tropoclim.ClimateIndexer()$/;"	v
+refract_driver	reference_models/geo/drive.py	/^refract_driver = refractivity.RefractivityIndexer()$/;"	v
+census_tract_driver	reference_models/geo/drive.py	/^census_tract_driver = census_tract.CensusTractDriver()$/;"	v
+ConfigureTerrainDriver	reference_models/geo/drive.py	/^def ConfigureTerrainDriver(terrain_dir=None, cache_size=None):$/;"	f
+ConfigureNlcdDriver	reference_models/geo/drive.py	/^def ConfigureNlcdDriver(nlcd_dir=None, cache_size=None):$/;"	f
+ConfigureItuDrivers	reference_models/geo/drive.py	/^def ConfigureItuDrivers(itu_dir=None):$/;"	f
+ConfigureCensusTractDriver	reference_models/geo/drive.py	/^def ConfigureCensusTractDriver(census_tract_dir=None):$/;"	f
+TEST_DIR	reference_models/geo/tropoclim_test.py	/^TEST_DIR = os.path.join(os.path.dirname(__file__),'testdata', 'itu')$/;"	v
+TestTropoclim	reference_models/geo/tropoclim_test.py	/^class TestTropoclim(unittest.TestCase):$/;"	c
+setUp	reference_models/geo/tropoclim_test.py	/^  def setUp(self):$/;"	m	class:TestTropoclim
+test_internals	reference_models/geo/tropoclim_test.py	/^  def test_internals(self):$/;"	m	class:TestTropoclim
+test_data	reference_models/geo/tropoclim_test.py	/^  def test_data(self):$/;"	m	class:TestTropoclim
+ClimateIndexer	reference_models/geo/tropoclim.py	/^class ClimateIndexer:$/;"	c
+__init__	reference_models/geo/tropoclim.py	/^  def __init__(self, datafile_or_dir=None):$/;"	m	class:ClimateIndexer
+ConfigureDataFile	reference_models/geo/tropoclim.py	/^  def ConfigureDataFile(self, datafile_or_dir, do_load=True):$/;"	m	class:ClimateIndexer
+TropoClim	reference_models/geo/tropoclim.py	/^  def TropoClim(self, lat, lon):$/;"	m	class:ClimateIndexer
+_ZONE_NAMES	reference_models/geo/tropoclim.py	/^_ZONE_NAMES = [$/;"	v
+ClimateZoneName	reference_models/geo/tropoclim.py	/^def ClimateZoneName(zone):$/;"	f
+geodesic_iterative	reference_models/geo/vincenty_test.py	/^def geodesic_iterative(lat1, lon1, lat2, lon2, num_points):$/;"	f
+TestVincenty	reference_models/geo/vincenty_test.py	/^class TestVincenty(unittest.TestCase):$/;"	c
+test_distbear_whensamepoints	reference_models/geo/vincenty_test.py	/^  def test_distbear_whensamepoints(self):$/;"	m	class:TestVincenty
+test_distbear	reference_models/geo/vincenty_test.py	/^  def test_distbear(self):$/;"	m	class:TestVincenty
+test_point	reference_models/geo/vincenty_test.py	/^  def test_point(self):$/;"	m	class:TestVincenty
+test_points	reference_models/geo/vincenty_test.py	/^  def test_points(self):$/;"	m	class:TestVincenty
+test_sampling	reference_models/geo/vincenty_test.py	/^  def test_sampling(self):$/;"	m	class:TestVincenty
+WGS_EQUATORIAL_RADIUS_KM2	reference_models/geo/utils.py	/^WGS_EQUATORIAL_RADIUS_KM2 = 6378.137$/;"	v
+WGS_POLAR_RADIUS_KM2	reference_models/geo/utils.py	/^WGS_POLAR_RADIUS_KM2 = 6356.753$/;"	v
+HasCorrectGeoJsonWinding	reference_models/geo/utils.py	/^def HasCorrectGeoJsonWinding(geometry):$/;"	f
+_HasSinglePolygonCorrectWinding	reference_models/geo/utils.py	/^  def _HasSinglePolygonCorrectWinding(coords):$/;"	f	function:HasCorrectGeoJsonWinding
+InsureGeoJsonWinding	reference_models/geo/utils.py	/^def InsureGeoJsonWinding(geometry):$/;"	f
+_InsureSinglePolygonCorrectWinding	reference_models/geo/utils.py	/^  def _InsureSinglePolygonCorrectWinding(coords):$/;"	f	function:InsureGeoJsonWinding
+_list_convert	reference_models/geo/utils.py	/^  def _list_convert(x):$/;"	f	function:InsureGeoJsonWinding
+_GeoJsonToShapelyGeometry	reference_models/geo/utils.py	/^def _GeoJsonToShapelyGeometry(geometry):$/;"	f
+ToShapely	reference_models/geo/utils.py	/^def ToShapely(geometry):$/;"	f
+ToGeoJson	reference_models/geo/utils.py	/^def ToGeoJson(geometry, as_dict=False):$/;"	f
+InsureFeatureCollection	reference_models/geo/utils.py	/^def InsureFeatureCollection(geometry, as_dict=False):$/;"	f
+GridPolygon	reference_models/geo/utils.py	/^def GridPolygon(poly, res_arcsec):$/;"	f
+_RingArea	reference_models/geo/utils.py	/^def _RingArea(latitudes, longitudes):$/;"	f
+GeometryArea	reference_models/geo/utils.py	/^def GeometryArea(geometry, merge_geometries=False):$/;"	f
+PolyWithoutSmallHoles	reference_models/geo/utils.py	/^def PolyWithoutSmallHoles(poly, min_hole_area_km2=0.5):$/;"	f
+PolygonsAlmostEqual	reference_models/geo/utils.py	/^def PolygonsAlmostEqual(poly_ref, poly, tol_perc=10):$/;"	f
+ShrinkAndCleanPolygon	reference_models/geo/utils.py	/^def ShrinkAndCleanPolygon(poly, shrink_deg, min_poly_ratio=0.01):$/;"	f
+GetClosestCanadianBorderPoint	reference_models/geo/utils.py	/^def GetClosestCanadianBorderPoint(latitude, longitude, max_dist_km):$/;"	f
+_distancesOfPoints	reference_models/geo/utils.py	/^def _distancesOfPoints(latitude, longitude, points):$/;"	f
+_angleBetween	reference_models/geo/utils.py	/^def _angleBetween(angle, min_angle, max_angle):$/;"	f
+CheckCbsdInBorderSharingZone	reference_models/geo/utils.py	/^def CheckCbsdInBorderSharingZone(latitude, longitude,$/;"	f
+LandCoverCodes	reference_models/geo/nlcd.py	/^class LandCoverCodes:$/;"	c
+UNDEFINED	reference_models/geo/nlcd.py	/^  UNDEFINED = 0$/;"	v	class:LandCoverCodes
+OPEN_WATER	reference_models/geo/nlcd.py	/^  OPEN_WATER = 11$/;"	v	class:LandCoverCodes
+PERENNIAL_SNOW	reference_models/geo/nlcd.py	/^  PERENNIAL_SNOW = 12$/;"	v	class:LandCoverCodes
+DEVELOPED_OPEN	reference_models/geo/nlcd.py	/^  DEVELOPED_OPEN = 21$/;"	v	class:LandCoverCodes
+DEVELOPED_LOW	reference_models/geo/nlcd.py	/^  DEVELOPED_LOW = 22$/;"	v	class:LandCoverCodes
+DEVELOPED_MEDIUM	reference_models/geo/nlcd.py	/^  DEVELOPED_MEDIUM = 23$/;"	v	class:LandCoverCodes
+DEVELOPED_HIGH	reference_models/geo/nlcd.py	/^  DEVELOPED_HIGH = 24$/;"	v	class:LandCoverCodes
+BARREN_LAND	reference_models/geo/nlcd.py	/^  BARREN_LAND = 31$/;"	v	class:LandCoverCodes
+DECIDUOUS_FOREST	reference_models/geo/nlcd.py	/^  DECIDUOUS_FOREST = 41$/;"	v	class:LandCoverCodes
+EVERGREEN_FOREST	reference_models/geo/nlcd.py	/^  EVERGREEN_FOREST = 42$/;"	v	class:LandCoverCodes
+MIXED_FOREST	reference_models/geo/nlcd.py	/^  MIXED_FOREST = 43$/;"	v	class:LandCoverCodes
+DWARF_SCRUB	reference_models/geo/nlcd.py	/^  DWARF_SCRUB = 51$/;"	v	class:LandCoverCodes
+SHRUB_SCRUB	reference_models/geo/nlcd.py	/^  SHRUB_SCRUB = 52$/;"	v	class:LandCoverCodes
+GRASSLAND	reference_models/geo/nlcd.py	/^  GRASSLAND = 71$/;"	v	class:LandCoverCodes
+SEDGE	reference_models/geo/nlcd.py	/^  SEDGE = 72$/;"	v	class:LandCoverCodes
+LICHENS	reference_models/geo/nlcd.py	/^  LICHENS = 73$/;"	v	class:LandCoverCodes
+MOSS	reference_models/geo/nlcd.py	/^  MOSS = 74$/;"	v	class:LandCoverCodes
+PASTURE_HAY	reference_models/geo/nlcd.py	/^  PASTURE_HAY = 81$/;"	v	class:LandCoverCodes
+CULTIVATED_CROPS	reference_models/geo/nlcd.py	/^  CULTIVATED_CROPS = 82$/;"	v	class:LandCoverCodes
+WOODY_WETLANDS	reference_models/geo/nlcd.py	/^  WOODY_WETLANDS = 90$/;"	v	class:LandCoverCodes
+EMERGENT_HERBACEOUS_WETLANDS	reference_models/geo/nlcd.py	/^  EMERGENT_HERBACEOUS_WETLANDS = 95$/;"	v	class:LandCoverCodes
+_TILE_DIM	reference_models/geo/nlcd.py	/^_TILE_DIM = 3600$/;"	v
+_TILES_KEYS	reference_models/geo/nlcd.py	/^_TILES_KEYS = tiles.NLCD_TILES$/;"	v
+GetRegionType	reference_models/geo/nlcd.py	/^def GetRegionType(code):$/;"	f
+NlcdDriver	reference_models/geo/nlcd.py	/^class NlcdDriver:$/;"	c
+__init__	reference_models/geo/nlcd.py	/^  def __init__(self, nlcd_directory=None, cache_size=8):$/;"	m	class:NlcdDriver
+SetNlcdDirectory	reference_models/geo/nlcd.py	/^  def SetNlcdDirectory(self, nlcd_directory):$/;"	m	class:NlcdDriver
+SetCacheSize	reference_models/geo/nlcd.py	/^  def SetCacheSize(self, cache_size):$/;"	m	class:NlcdDriver
+_CacheLruUpdate	reference_models/geo/nlcd.py	/^  def _CacheLruUpdate(self, key):$/;"	m	class:NlcdDriver
+GetTile	reference_models/geo/nlcd.py	/^  def GetTile(self, ilat, ilon):$/;"	m	class:NlcdDriver
+GetLandCoverCodes	reference_models/geo/nlcd.py	/^  def GetLandCoverCodes(self, lat, lon):$/;"	m	class:NlcdDriver
+RegionNlcdVote	reference_models/geo/nlcd.py	/^  def RegionNlcdVote(self, points, out_forbid=False):$/;"	m	class:NlcdDriver
+GeodesicDistanceBearing	reference_models/geo/vincenty.py	/^def GeodesicDistanceBearing(lat1, lon1, lat2, lon2, accuracy=1.0E-12):$/;"	f
+GeodesicPoint	reference_models/geo/vincenty.py	/^def GeodesicPoint(lat, lon, dist_km, bearing, accuracy=1.0E-12):$/;"	f
+GeodesicPoints	reference_models/geo/vincenty.py	/^def GeodesicPoints(lat, lon, distances_km, bearing, accuracy=1.0E-12):$/;"	f
+GeodesicSampling	reference_models/geo/vincenty.py	/^def GeodesicSampling(lat1, lon1, lat2, lon2, num_points):$/;"	f
+TestZones	reference_models/geo/zones_test.py	/^class TestZones(unittest.TestCase):$/;"	c
+test_read_protection	reference_models/geo/zones_test.py	/^  def test_read_protection(self):$/;"	m	class:TestZones
+test_read_exclusion	reference_models/geo/zones_test.py	/^  def test_read_exclusion(self):$/;"	m	class:TestZones
+test_read_coastal_dpa	reference_models/geo/zones_test.py	/^  def test_read_coastal_dpa(self):$/;"	m	class:TestZones
+test_read_portal_dpa	reference_models/geo/zones_test.py	/^  def test_read_portal_dpa(self):$/;"	m	class:TestZones
+test_read_urban_areas	reference_models/geo/zones_test.py	/^  def test_read_urban_areas(self):$/;"	m	class:TestZones
+test_read_usborder	reference_models/geo/zones_test.py	/^  def test_read_usborder(self):$/;"	m	class:TestZones
+test_read_uscanadaborder	reference_models/geo/zones_test.py	/^  def test_read_uscanadaborder(self):$/;"	m	class:TestZones
+RefractivityIndexer	reference_models/geo/refractivity.py	/^class RefractivityIndexer:$/;"	c
+__init__	reference_models/geo/refractivity.py	/^  def __init__(self, datafile_or_dir=None):$/;"	m	class:RefractivityIndexer
+ConfigureDataFile	reference_models/geo/refractivity.py	/^  def ConfigureDataFile(self, datafile_or_dir, do_load=True):$/;"	m	class:RefractivityIndexer
+Refractivity	reference_models/geo/refractivity.py	/^  def Refractivity(self, lat, lon):$/;"	m	class:RefractivityIndexer
+indx	reference_models/geo/refractivity.py	/^  indx = RefractivityIndexer()$/;"	v	class:RefractivityIndexer
+r	reference_models/geo/refractivity.py	/^  r = indx.Refractivity(float(sys.argv[1]), float(sys.argv[2]))$/;"	v	class:RefractivityIndexer
+CensusTractDriver	reference_models/geo/census_tract.py	/^class CensusTractDriver(object):$/;"	c
+__init__	reference_models/geo/census_tract.py	/^  def __init__(self, census_tract_directory=None):$/;"	m	class:CensusTractDriver
+SetCensusTractDirectory	reference_models/geo/census_tract.py	/^  def SetCensusTractDirectory(self, census_tract_directory):$/;"	m	class:CensusTractDriver
+GetCensusTract	reference_models/geo/census_tract.py	/^  def GetCensusTract(self, fips_code):$/;"	m	class:CensusTractDriver
+_RADIUS_EARTH_METERS	reference_models/geo/terrain.py	/^_RADIUS_EARTH_METERS = 6378.e3 # Mean radius of the Earth in km$/;"	v
+_NUM_PIXEL_OVERLAP	reference_models/geo/terrain.py	/^_NUM_PIXEL_OVERLAP = 6 # Number of pixel overlap in tiles$/;"	v
+_TILE_BASE_DIM	reference_models/geo/terrain.py	/^_TILE_BASE_DIM = 3600$/;"	v
+_TILE_DIM	reference_models/geo/terrain.py	/^_TILE_DIM = _TILE_BASE_DIM + 2 * _NUM_PIXEL_OVERLAP # Dimension of a tile$/;"	v
+_TILES_KEYS	reference_models/geo/terrain.py	/^_TILES_KEYS = tiles.NED_TILES$/;"	v
+TerrainDriver	reference_models/geo/terrain.py	/^class TerrainDriver:$/;"	c
+__init__	reference_models/geo/terrain.py	/^  def __init__(self, terrain_directory=None, cache_size=8):$/;"	m	class:TerrainDriver
+SetTerrainDirectory	reference_models/geo/terrain.py	/^  def SetTerrainDirectory(self, terrain_directory):$/;"	m	class:TerrainDriver
+SetFlatEarthMode	reference_models/geo/terrain.py	/^  def SetFlatEarthMode(self, do_flat=False):$/;"	m	class:TerrainDriver
+SetCacheSize	reference_models/geo/terrain.py	/^  def SetCacheSize(self, cache_size):$/;"	m	class:TerrainDriver
+_CacheLruUpdate	reference_models/geo/terrain.py	/^  def _CacheLruUpdate(self, key):$/;"	m	class:TerrainDriver
+GetTile	reference_models/geo/terrain.py	/^  def GetTile(self, ilat, ilon):$/;"	m	class:TerrainDriver
+GetTerrainElevation	reference_models/geo/terrain.py	/^  def GetTerrainElevation(self, lat, lon, do_interp=True):$/;"	m	class:TerrainDriver
+TerrainProfile	reference_models/geo/terrain.py	/^  def TerrainProfile(self, lat1, lon1, lat2, lon2,$/;"	m	class:TerrainDriver
+ComputeNormalizedHaat	reference_models/geo/terrain.py	/^  def ComputeNormalizedHaat(self, lat, lon):$/;"	m	class:TerrainDriver
+TEST_DIR	reference_models/geo/nlcd_test.py	/^TEST_DIR = os.path.join(os.path.dirname(__file__), 'testdata', 'nlcd')$/;"	v
+TestNlcd	reference_models/geo/nlcd_test.py	/^class TestNlcd(unittest.TestCase):$/;"	c
+setUpClass	reference_models/geo/nlcd_test.py	/^  def setUpClass(cls):$/;"	m	class:TestNlcd
+tearDownClass	reference_models/geo/nlcd_test.py	/^  def tearDownClass(cls):$/;"	m	class:TestNlcd
+setUp	reference_models/geo/nlcd_test.py	/^  def setUp(self):$/;"	m	class:TestNlcd
+test_get_land	reference_models/geo/nlcd_test.py	/^  def test_get_land(self):$/;"	m	class:TestNlcd
+test_outside_grid	reference_models/geo/nlcd_test.py	/^  def test_outside_grid(self):$/;"	m	class:TestNlcd
+test_missing_tile	reference_models/geo/nlcd_test.py	/^  def test_missing_tile(self):$/;"	m	class:TestNlcd
+test_region_vote	reference_models/geo/nlcd_test.py	/^  def test_region_vote(self):$/;"	m	class:TestNlcd
+test_multitile	reference_models/geo/nlcd_test.py	/^  def test_multitile(self):$/;"	m	class:TestNlcd
+test_cache	reference_models/geo/nlcd_test.py	/^  def test_cache(self):$/;"	m	class:TestNlcd
+test_vote_undefd	reference_models/geo/nlcd_test.py	/^  def test_vote_undefd(self):$/;"	m	class:TestNlcd
+TEST_DIR	reference_models/geo/utils_test.py	/^TEST_DIR = os.path.join(os.path.dirname(__file__),'testdata', 'json')$/;"	v
+TestUtils	reference_models/geo/utils_test.py	/^class TestUtils(unittest.TestCase):$/;"	c
+test_area_simple_square	reference_models/geo/utils_test.py	/^  def test_area_simple_square(self):$/;"	m	class:TestUtils
+test_complex_polygons	reference_models/geo/utils_test.py	/^  def test_complex_polygons(self):$/;"	m	class:TestUtils
+test_area_missouri	reference_models/geo/utils_test.py	/^  def test_area_missouri(self):$/;"	m	class:TestUtils
+test_area_geojson_missouri	reference_models/geo/utils_test.py	/^  def test_area_geojson_missouri(self):$/;"	m	class:TestUtils
+test_area_geojson_ppa	reference_models/geo/utils_test.py	/^  def test_area_geojson_ppa(self):$/;"	m	class:TestUtils
+test_area_geojson_geocollection_and_merge	reference_models/geo/utils_test.py	/^  def test_area_geojson_geocollection_and_merge(self):$/;"	m	class:TestUtils
+test_degenerate_shapes	reference_models/geo/utils_test.py	/^  def test_degenerate_shapes(self):$/;"	m	class:TestUtils
+test_remove_small_holes	reference_models/geo/utils_test.py	/^  def test_remove_small_holes(self):$/;"	m	class:TestUtils
+test_grid_point_and_null	reference_models/geo/utils_test.py	/^  def test_grid_point_and_null(self):$/;"	m	class:TestUtils
+test_grid_simple	reference_models/geo/utils_test.py	/^  def test_grid_simple(self):$/;"	m	class:TestUtils
+test_grid_border_included	reference_models/geo/utils_test.py	/^  def test_grid_border_included(self):$/;"	m	class:TestUtils
+test_grid_simple_with_hole	reference_models/geo/utils_test.py	/^  def test_grid_simple_with_hole(self):$/;"	m	class:TestUtils
+test_grid_complex	reference_models/geo/utils_test.py	/^  def test_grid_complex(self):$/;"	m	class:TestUtils
+test_polygons_equal	reference_models/geo/utils_test.py	/^  def test_polygons_equal(self):$/;"	m	class:TestUtils
+test_polygon_correct_geojson_winding	reference_models/geo/utils_test.py	/^  def test_polygon_correct_geojson_winding(self):$/;"	m	class:TestUtils
+test_json_polygon_corrected_winding	reference_models/geo/utils_test.py	/^  def test_json_polygon_corrected_winding(self):$/;"	m	class:TestUtils
+test_json_multicollection_correct_winding	reference_models/geo/utils_test.py	/^  def test_json_multicollection_correct_winding(self):$/;"	m	class:TestUtils
+test_togeojson_with_correct_winding	reference_models/geo/utils_test.py	/^  def test_togeojson_with_correct_winding(self):$/;"	m	class:TestUtils
+test_togeojson_with_multi_polygon	reference_models/geo/utils_test.py	/^  def test_togeojson_with_multi_polygon(self):$/;"	m	class:TestUtils
+test_toshapely	reference_models/geo/utils_test.py	/^  def test_toshapely(self):$/;"	m	class:TestUtils
+test_closest_border_point	reference_models/geo/utils_test.py	/^  def test_closest_border_point(self):$/;"	m	class:TestUtils
+test_check_sharing_zone	reference_models/geo/utils_test.py	/^  def test_check_sharing_zone(self):$/;"	m	class:TestUtils
+test_insure_feature_collection	reference_models/geo/utils_test.py	/^  def test_insure_feature_collection(self):$/;"	m	class:TestUtils
+test_shrinks_polygon	reference_models/geo/utils_test.py	/^  def test_shrinks_polygon(self):$/;"	m	class:TestUtils
+TEST_DIR	reference_models/geo/refractivity_test.py	/^TEST_DIR = os.path.join(os.path.dirname(__file__),'testdata', 'itu')$/;"	v
+TestRefractivity	reference_models/geo/refractivity_test.py	/^class TestRefractivity(unittest.TestCase):$/;"	c
+setUp	reference_models/geo/refractivity_test.py	/^  def setUp(self):$/;"	m	class:TestRefractivity
+test_internals	reference_models/geo/refractivity_test.py	/^  def test_internals(self):$/;"	m	class:TestRefractivity
+test_data	reference_models/geo/refractivity_test.py	/^  def test_data(self):$/;"	m	class:TestRefractivity
+test_interpolation	reference_models/geo/refractivity_test.py	/^  def test_interpolation(self):$/;"	m	class:TestRefractivity
+TEST_DIR	reference_models/geo/terrain_test.py	/^TEST_DIR = os.path.join(os.path.dirname(__file__),'testdata', 'ned')$/;"	v
+TestTerrain	reference_models/geo/terrain_test.py	/^class TestTerrain(unittest.TestCase):$/;"	c
+setUpClass	reference_models/geo/terrain_test.py	/^  def setUpClass(cls):$/;"	m	class:TestTerrain
+tearDownClass	reference_models/geo/terrain_test.py	/^  def tearDownClass(cls):$/;"	m	class:TestTerrain
+setUp	reference_models/geo/terrain_test.py	/^  def setUp(self):$/;"	m	class:TestTerrain
+test_get_elevation	reference_models/geo/terrain_test.py	/^  def test_get_elevation(self):$/;"	m	class:TestTerrain
+test_outside_grid	reference_models/geo/terrain_test.py	/^  def test_outside_grid(self):$/;"	m	class:TestTerrain
+test_missing_tile	reference_models/geo/terrain_test.py	/^  def test_missing_tile(self):$/;"	m	class:TestTerrain
+test_interpolation	reference_models/geo/terrain_test.py	/^  def test_interpolation(self):$/;"	m	class:TestTerrain
+test_multipoints	reference_models/geo/terrain_test.py	/^  def test_multipoints(self):$/;"	m	class:TestTerrain
+test_multi_twotiles	reference_models/geo/terrain_test.py	/^  def test_multi_twotiles(self):$/;"	m	class:TestTerrain
+test_cache	reference_models/geo/terrain_test.py	/^  def test_cache(self):$/;"	m	class:TestTerrain
+test_haat	reference_models/geo/terrain_test.py	/^  def test_haat(self):$/;"	m	class:TestTerrain
+ProtectedEntityType	reference_models/common/data.py	/^class ProtectedEntityType(enum.Enum):$/;"	c
+GWPZ_AREA	reference_models/common/data.py	/^  GWPZ_AREA = 1$/;"	v	class:ProtectedEntityType
+PPA_AREA	reference_models/common/data.py	/^  PPA_AREA = 2$/;"	v	class:ProtectedEntityType
+FSS_CO_CHANNEL	reference_models/common/data.py	/^  FSS_CO_CHANNEL = 3$/;"	v	class:ProtectedEntityType
+FSS_BLOCKING	reference_models/common/data.py	/^  FSS_BLOCKING = 4$/;"	v	class:ProtectedEntityType
+ESC	reference_models/common/data.py	/^  ESC = 5$/;"	v	class:ProtectedEntityType
+DPA	reference_models/common/data.py	/^  DPA = 6$/;"	v	class:ProtectedEntityType
+ProtectionConstraint	reference_models/common/data.py	/^ProtectionConstraint = namedtuple('ProtectionConstraint',$/;"	v
+CbsdGrantInfo	reference_models/common/data.py	/^                                'is_managed_grant'])):$/;"	c
+__slots__	reference_models/common/data.py	/^  __slots__ = ()$/;"	v	class:CbsdGrantInfo
+uniqueCbsdKey	reference_models/common/data.py	/^  def uniqueCbsdKey(self):$/;"	m	class:CbsdGrantInfo
+FssInformation	reference_models/common/data.py	/^FssInformation = namedtuple('FssInformation',$/;"	v
+EscInformation	reference_models/common/data.py	/^EscInformation = namedtuple('EscInformation',$/;"	v
+getFssInfo	reference_models/common/data.py	/^def getFssInfo(fss_record):$/;"	f
+getEscInfo	reference_models/common/data.py	/^def getEscInfo(esc_record):$/;"	f
+constructCbsdGrantInfo	reference_models/common/data.py	/^def constructCbsdGrantInfo(reg_request, grant_request, is_managing_sas=True):$/;"	f
+getCbsdsNotPartOfPpaCluster	reference_models/common/data.py	/^def getCbsdsNotPartOfPpaCluster(cbsds, ppa_record):$/;"	f
+getAllGrantInfoFromCbsdDataDump	reference_models/common/data.py	/^def getAllGrantInfoFromCbsdDataDump(cbsd_data_records, is_managing_sas=True,$/;"	f
+getGrantObjectsFromFAD	reference_models/common/data.py	/^def getGrantObjectsFromFAD(sas_uut_fad_object, sas_th_fad_objects,$/;"	f
+getGrantsFromRequests	reference_models/common/data.py	/^def getGrantsFromRequests(registration_requests, grant_requests, is_managing_sas=True):$/;"	f
+getAuthorizedGrantsFromDomainProxies	reference_models/common/data.py	/^def getAuthorizedGrantsFromDomainProxies(domain_proxies, ppa_record=None):$/;"	f
+_DummyPool	reference_models/common/mpool.py	/^class _DummyPool(object):$/;"	c
+_max_workers	reference_models/common/mpool.py	/^  _max_workers = 1$/;"	v	class:_DummyPool
+map	reference_models/common/mpool.py	/^  def map(self, fn, iterable, chunksize=None):$/;"	m	class:_DummyPool
+apply_async	reference_models/common/mpool.py	/^  def apply_async(self, fn, args=(), kwds={}, callback=None):$/;"	m	class:_DummyPool
+Result	reference_models/common/mpool.py	/^    class Result(object):$/;"	c	function:_DummyPool.apply_async
+__init__	reference_models/common/mpool.py	/^      def __init__(self, result):$/;"	m	class:_DummyPool.apply_async.Result
+get	reference_models/common/mpool.py	/^      def get(self, timeout):$/;"	m	class:_DummyPool.apply_async.Result
+wait	reference_models/common/mpool.py	/^      def wait(self, timeout):$/;"	m	class:_DummyPool.apply_async.Result
+ready	reference_models/common/mpool.py	/^      def ready(self):$/;"	m	class:_DummyPool.apply_async.Result
+successful	reference_models/common/mpool.py	/^      def successful(self):$/;"	m	class:_DummyPool.apply_async.Result
+close	reference_models/common/mpool.py	/^  def close(self):$/;"	m	class:_DummyPool
+join	reference_models/common/mpool.py	/^  def join(self):$/;"	m	class:_DummyPool
+_pool	reference_models/common/mpool.py	/^_pool = _DummyPool()$/;"	v
+_num_workers	reference_models/common/mpool.py	/^_num_workers = 0$/;"	v
+Pool	reference_models/common/mpool.py	/^def Pool(reinit=False):$/;"	f
+GetNumWorkerProcesses	reference_models/common/mpool.py	/^def GetNumWorkerProcesses():$/;"	f
+_partial_fn	reference_models/common/mpool.py	/^def _partial_fn(fn):$/;"	f
+RunOnEachWorkerProcess	reference_models/common/mpool.py	/^def RunOnEachWorkerProcess(fn, * args, **kwargs):$/;"	f
+Configure	reference_models/common/mpool.py	/^def Configure(num_processes=-1, pool=None):$/;"	f
+LruCache	reference_models/common/cache.py	/^def LruCache(maxsize=None):$/;"	f
+wrapper	reference_models/common/cache.py	/^  def wrapper(fn):$/;"	f	function:LruCache
+CacheManager	reference_models/common/cache.py	/^class CacheManager(object):$/;"	c
+__init__	reference_models/common/cache.py	/^  def __init__(self, fn, maxsize=None):$/;"	m	class:CacheManager
+__enter__	reference_models/common/cache.py	/^  def __enter__(self):$/;"	m	class:CacheManager	file:
+__exit__	reference_models/common/cache.py	/^  def __exit__(self, *args):$/;"	m	class:CacheManager	file:
+clear	reference_models/common/cache.py	/^  def clear(self):$/;"	m	class:CacheManager
+cache_info	reference_models/common/cache.py	/^  def cache_info(self):$/;"	m	class:CacheManager
+_overrideModuleFunctionWith	reference_models/common/cache.py	/^  def _overrideModuleFunctionWith(self, fn):$/;"	m	class:CacheManager
+user_id	reference_models/ppa/ppa_example.py	/^user_id = 'pal_user_id_0'$/;"	v
+pal_record_filenames	reference_models/ppa/ppa_example.py	/^pal_record_filenames = ['pal_record_0.json']$/;"	v
+device_filenames	reference_models/ppa/ppa_example.py	/^device_filenames = ['device_a.json']$/;"	v
+pal_low_frequency	reference_models/ppa/ppa_example.py	/^pal_low_frequency = 3550000000$/;"	v
+pal_high_frequency	reference_models/ppa/ppa_example.py	/^pal_high_frequency = 3650000000$/;"	v
+TEST_DIR	reference_models/ppa/ppa_example.py	/^TEST_DIR = os.path.join(os.path.dirname(__file__), 'test_data')$/;"	v
+devices	reference_models/ppa/ppa_example.py	/^devices = [json.load(open(os.path.join(TEST_DIR, device_filename)))$/;"	v
+pal_records	reference_models/ppa/ppa_example.py	/^pal_records = [json.load(open(os.path.join(TEST_DIR, pal_record_filename)))$/;"	v
+pal_records	reference_models/ppa/ppa_example.py	/^pal_records = util.makePalRecordsConsistent(pal_records, pal_low_frequency,$/;"	v
+ppa	reference_models/ppa/ppa_example.py	/^ppa = ppa.PpaCreationModel(devices, pal_records)$/;"	v
+TEST_DIR	reference_models/ppa/ppa_test.py	/^TEST_DIR = os.path.join(os.path.dirname(__file__), 'test_data')$/;"	v
+TestPpa	reference_models/ppa/ppa_test.py	/^class TestPpa(unittest.TestCase):$/;"	c
+setUpClass	reference_models/ppa/ppa_test.py	/^  def setUpClass(cls):$/;"	m	class:TestPpa
+setUp	reference_models/ppa/ppa_test.py	/^  def setUp(self):$/;"	m	class:TestPpa
+tearDown	reference_models/ppa/ppa_test.py	/^  def tearDown(self):$/;"	m	class:TestPpa
+assertAlmostSamePolygon	reference_models/ppa/ppa_test.py	/^  def assertAlmostSamePolygon(self, poly1, poly2, tol_km2=0.001):$/;"	m	class:TestPpa
+test_SimplePpaCircle	reference_models/ppa/ppa_test.py	/^  def test_SimplePpaCircle(self):$/;"	m	class:TestPpa
+test_ClippedPpaByCensus	reference_models/ppa/ppa_test.py	/^  def test_ClippedPpaByCensus(self):$/;"	m	class:TestPpa
+THRESHOLD_PER_10MHZ	reference_models/ppa/ppa.py	/^THRESHOLD_PER_10MHZ = -96$/;"	v
+RX_HEIGHT	reference_models/ppa/ppa.py	/^RX_HEIGHT = 1.5$/;"	v
+MAX_ALLOWABLE_EIRP_PER_10_MHZ_CAT_A	reference_models/ppa/ppa.py	/^MAX_ALLOWABLE_EIRP_PER_10_MHZ_CAT_A = 30.$/;"	v
+MAX_ALLOWABLE_EIRP_PER_10_MHZ_CAT_B	reference_models/ppa/ppa.py	/^MAX_ALLOWABLE_EIRP_PER_10_MHZ_CAT_B = 47.$/;"	v
+_CalculateDbLossForEachPointAndGetContour	reference_models/ppa/ppa.py	/^def _CalculateDbLossForEachPointAndGetContour(install_param, eirp_capability, antenna_gain,$/;"	f
+_HammingFilter	reference_models/ppa/ppa.py	/^def _HammingFilter(x, window_len=15):$/;"	f
+_GetPolygon	reference_models/ppa/ppa.py	/^def _GetPolygon(device):$/;"	f
+_ClipPpaByCensusTract	reference_models/ppa/ppa.py	/^def _ClipPpaByCensusTract(contour_union, pal_records):$/;"	f
+PpaCreationModel	reference_models/ppa/ppa.py	/^def PpaCreationModel(devices, pal_records):$/;"	f
+ProtectionPoint	reference_models/dpa/dpa_builder.py	/^ProtectionPoint = namedtuple('ProtectionPoint',$/;"	v
+_builder_methods	reference_models/dpa/dpa_builder.py	/^_builder_methods = {}$/;"	v
+RegisterMethod	reference_models/dpa/dpa_builder.py	/^def RegisterMethod(name, fn):$/;"	f
+DpaProtectionPoints	reference_models/dpa/dpa_builder.py	/^def DpaProtectionPoints(dpa_name, dpa_geometry, protection_points_method=None):$/;"	f
+_ExtractBuilder	reference_models/dpa/dpa_builder.py	/^  def _ExtractBuilder(method):$/;"	f	function:DpaProtectionPoints
+_us_border_ext	reference_models/dpa/dpa_builder.py	/^_us_border_ext = None$/;"	v
+_us_border_ext_buffer	reference_models/dpa/dpa_builder.py	/^_us_border_ext_buffer = None$/;"	v
+_DefaultProtectionPoints	reference_models/dpa/dpa_builder.py	/^def _DefaultProtectionPoints(dpa_name,$/;"	f
+SampleLine	reference_models/dpa/dpa_builder.py	/^  def SampleLine(line, num_points, min_step_arcsec):$/;"	f	function:_DefaultProtectionPoints
+CvtKmToArcSec	reference_models/dpa/dpa_builder.py	/^  def CvtKmToArcSec(dist_km, ref_geo):$/;"	f	function:_DefaultProtectionPoints
+ProtectionPoint	reference_models/dpa/move_list_example.py	/^ProtectionPoint = namedtuple('ProtectionPoint', ['latitude', 'longitude'])$/;"	v
+ProtectionSpecs	reference_models/dpa/move_list_example.py	/^ProtectionSpecs = namedtuple('ProtectionSpecs',$/;"	v
+protection_specs	reference_models/dpa/move_list_example.py	/^  protection_specs = ProtectionSpecs(lowFreq=3600000000, highFreq=3610000000,$/;"	v
+neighbor_distances	reference_models/dpa/move_list_example.py	/^                                     neighbor_distances=(150, 200, 0, 25))$/;"	v
+protection_points	reference_models/dpa/move_list_example.py	/^  protection_points = [ProtectionPoint(latitude=36.9400, longitude=-75.9989),$/;"	v
+num_iter	reference_models/dpa/move_list_example.py	/^  num_iter = 2000$/;"	v
+num_processes	reference_models/dpa/move_list_example.py	/^  num_processes = 0$/;"	v
+current_dir	reference_models/dpa/move_list_example.py	/^  current_dir = os.getcwd()$/;"	v
+_BASE_DATA_DIR	reference_models/dpa/move_list_example.py	/^  _BASE_DATA_DIR = os.path.join(current_dir, 'test_data')$/;"	v
+reg_request_filename	reference_models/dpa/move_list_example.py	/^  reg_request_filename = ['RegistrationRequest_1.json',$/;"	v
+reg_request_list	reference_models/dpa/move_list_example.py	/^  reg_request_list = []$/;"	v
+reg_request	reference_models/dpa/move_list_example.py	/^    reg_request = json.load(open(os.path.join(_BASE_DATA_DIR, reg_file)))$/;"	v
+grant_request_filename	reference_models/dpa/move_list_example.py	/^  grant_request_filename = ['GrantRequest_1.json',$/;"	v
+grant_request_list	reference_models/dpa/move_list_example.py	/^  grant_request_list = []$/;"	v
+grant_request	reference_models/dpa/move_list_example.py	/^    grant_request = json.load(open(os.path.join(_BASE_DATA_DIR, grant_file)))$/;"	v
+start_time	reference_models/dpa/move_list_example.py	/^  start_time = time.time()$/;"	v
+res	reference_models/dpa/move_list_example.py	/^  res = move_list.findMoveList(protection_specs, protection_points,$/;"	v
+end_time	reference_models/dpa/move_list_example.py	/^  end_time = time.time()$/;"	v
+ProtectionPoint	reference_models/dpa/move_list_test.py	/^ProtectionPoint = namedtuple('ProtectionPoint', ['latitude', 'longitude'])$/;"	v
+TestDpa	reference_models/dpa/move_list_test.py	/^class TestDpa(unittest.TestCase):$/;"	c
+setUp	reference_models/dpa/move_list_test.py	/^  def setUp(self):$/;"	m	class:TestDpa
+tearDown	reference_models/dpa/move_list_test.py	/^  def tearDown(self):$/;"	m	class:TestDpa
+test_movelist_single_grant	reference_models/dpa/move_list_test.py	/^  def test_movelist_single_grant(self):$/;"	m	class:TestDpa
+test_movelist_oob_cata	reference_models/dpa/move_list_test.py	/^  def test_movelist_oob_cata(self):$/;"	m	class:TestDpa
+test_movelist_oob_catb	reference_models/dpa/move_list_test.py	/^  def test_movelist_oob_catb(self):$/;"	m	class:TestDpa
+test_movelist_oob_purge_catb	reference_models/dpa/move_list_test.py	/^  def test_movelist_oob_purge_catb(self):$/;"	m	class:TestDpa
+ProtectionPoint	reference_models/dpa/dpa_mgr_example.py	/^ProtectionPoint = namedtuple('ProtectionPoint', ['latitude', 'longitude'])$/;"	v
+num_iter	reference_models/dpa/dpa_mgr_example.py	/^  num_iter = 2000$/;"	v
+margin_db	reference_models/dpa/dpa_mgr_example.py	/^  margin_db = 0.01  # Possible only because cache manager is used$/;"	v
+num_processes	reference_models/dpa/dpa_mgr_example.py	/^  num_processes = 4$/;"	v
+protection_points	reference_models/dpa/dpa_mgr_example.py	/^  protection_points = [ProtectionPoint(latitude=36.9400, longitude=-75.9989),$/;"	v
+channel	reference_models/dpa/dpa_mgr_example.py	/^  channel = (3600, 3610)$/;"	v
+dpa_ref	reference_models/dpa/dpa_mgr_example.py	/^  dpa_ref = dpa_mgr.Dpa(protection_points,$/;"	v
+name	reference_models/dpa/dpa_mgr_example.py	/^                        name='test(East1)',$/;"	v
+threshold	reference_models/dpa/dpa_mgr_example.py	/^                        threshold=-144,$/;"	v
+beamwidth	reference_models/dpa/dpa_mgr_example.py	/^                        beamwidth=3,$/;"	v
+radar_height	reference_models/dpa/dpa_mgr_example.py	/^                        radar_height=50,$/;"	v
+neighbor_distances	reference_models/dpa/dpa_mgr_example.py	/^                        neighbor_distances=(150, 190, 0, 25),$/;"	v
+freq_ranges_mhz	reference_models/dpa/dpa_mgr_example.py	/^                        freq_ranges_mhz=[channel])$/;"	v
+current_dir	reference_models/dpa/dpa_mgr_example.py	/^  current_dir = os.getcwd()$/;"	v
+_BASE_DATA_DIR	reference_models/dpa/dpa_mgr_example.py	/^  _BASE_DATA_DIR = os.path.join(current_dir, 'test_data')$/;"	v
+reg_request_filename	reference_models/dpa/dpa_mgr_example.py	/^  reg_request_filename = ['RegistrationRequest_1.json',$/;"	v
+reg_request_list	reference_models/dpa/dpa_mgr_example.py	/^  reg_request_list = []$/;"	v
+reg_request	reference_models/dpa/dpa_mgr_example.py	/^    reg_request = json.load(open(os.path.join(_BASE_DATA_DIR, reg_file)))$/;"	v
+grant_request_filename	reference_models/dpa/dpa_mgr_example.py	/^  grant_request_filename = ['GrantRequest_1.json',$/;"	v
+grant_request_list	reference_models/dpa/dpa_mgr_example.py	/^  grant_request_list = []$/;"	v
+grant_request	reference_models/dpa/dpa_mgr_example.py	/^    grant_request = json.load(open(os.path.join(_BASE_DATA_DIR, grant_file)))$/;"	v
+grants_uut	reference_models/dpa/dpa_mgr_example.py	/^  grants_uut = data.getGrantsFromRequests(reg_request_list[:4], grant_request_list[:4])$/;"	v
+grants_th	reference_models/dpa/dpa_mgr_example.py	/^  grants_th = data.getGrantsFromRequests(reg_request_list[4:], grant_request_list[4:],$/;"	v
+is_managing_sas	reference_models/dpa/dpa_mgr_example.py	/^                                         is_managing_sas=False)$/;"	v
+start_time	reference_models/dpa/dpa_mgr_example.py	/^  start_time = time.time()$/;"	v
+end_time	reference_models/dpa/dpa_mgr_example.py	/^  end_time = time.time()$/;"	v
+interf	reference_models/dpa/dpa_mgr_example.py	/^  interf = dpa_ref.CalcKeepListInterference(channel)$/;"	v
+protection_points	reference_models/dpa/dpa_mgr_example.py	/^  protection_points = [ProtectionPoint(latitude=36.945, longitude=-76.),$/;"	v
+dpa_uut	reference_models/dpa/dpa_mgr_example.py	/^  dpa_uut = dpa_mgr.Dpa(protection_points,$/;"	v
+name	reference_models/dpa/dpa_mgr_example.py	/^                        name='alt(East1)',$/;"	v
+threshold	reference_models/dpa/dpa_mgr_example.py	/^                        threshold=-144,$/;"	v
+beamwidth	reference_models/dpa/dpa_mgr_example.py	/^                        beamwidth=3,$/;"	v
+radar_height	reference_models/dpa/dpa_mgr_example.py	/^                        radar_height=50,$/;"	v
+freq_ranges_mhz	reference_models/dpa/dpa_mgr_example.py	/^                        freq_ranges_mhz=[channel])$/;"	v
+keep_list	reference_models/dpa/dpa_mgr_example.py	/^  keep_list = dpa_uut.GetKeepList(channel)$/;"	v
+active_uut_grants	reference_models/dpa/dpa_mgr_example.py	/^  active_uut_grants = [grant for grant in grants_uut$/;"	v
+check	reference_models/dpa/dpa_mgr_example.py	/^  check = dpa_ref.CheckInterference(active_uut_grants,$/;"	v
+margin_db	reference_models/dpa/dpa_mgr_example.py	/^                                    margin_db=margin_db,$/;"	v
+extensive_print	reference_models/dpa/dpa_mgr_example.py	/^                                    extensive_print=False)$/;"	v
+keep_list	reference_models/dpa/dpa_mgr_example.py	/^  keep_list = dpa_uut.GetKeepList(channel)$/;"	v
+active_uut_grants	reference_models/dpa/dpa_mgr_example.py	/^  active_uut_grants = [grant for grant in grants_uut$/;"	v
+check	reference_models/dpa/dpa_mgr_example.py	/^  check = dpa_ref.CheckInterference(active_uut_grants,$/;"	v
+margin_db	reference_models/dpa/dpa_mgr_example.py	/^                                    margin_db='target (1.5)')$/;"	v
+check	reference_models/dpa/dpa_mgr_example.py	/^  check = dpa_ref.CheckInterference(active_uut_grants,$/;"	v
+margin_db	reference_models/dpa/dpa_mgr_example.py	/^                                    margin_db='linear (1.5)')$/;"	v
+keep_list	reference_models/dpa/dpa_mgr_example.py	/^  keep_list = dpa_uut.GetKeepList(channel)$/;"	v
+active_uut_grants	reference_models/dpa/dpa_mgr_example.py	/^  active_uut_grants = [grant for grant in grants_uut$/;"	v
+check	reference_models/dpa/dpa_mgr_example.py	/^  check = dpa_uut.CheckInterference(active_uut_grants,$/;"	v
+margin_db	reference_models/dpa/dpa_mgr_example.py	/^                                    margin_db=margin_db,$/;"	v
+do_abs_check_single_uut	reference_models/dpa/dpa_mgr_example.py	/^                                    do_abs_check_single_uut=True,$/;"	v
+extensive_print	reference_models/dpa/dpa_mgr_example.py	/^                                    extensive_print=False)$/;"	v
+dpa_suut	reference_models/dpa/dpa_mgr_example.py	/^  dpa_suut = dpa_mgr.Dpa(protection_points,$/;"	v
+name	reference_models/dpa/dpa_mgr_example.py	/^                         name='alt(East1)',$/;"	v
+threshold	reference_models/dpa/dpa_mgr_example.py	/^                         threshold=-144,$/;"	v
+beamwidth	reference_models/dpa/dpa_mgr_example.py	/^                         beamwidth=3,$/;"	v
+radar_height	reference_models/dpa/dpa_mgr_example.py	/^                         radar_height=50,$/;"	v
+freq_ranges_mhz	reference_models/dpa/dpa_mgr_example.py	/^                         freq_ranges_mhz=[channel])$/;"	v
+check	reference_models/dpa/dpa_mgr_example.py	/^  check = dpa_suut.CheckInterference(active_uut_grants,$/;"	v
+margin_db	reference_models/dpa/dpa_mgr_example.py	/^                                     margin_db=margin_db,$/;"	v
+do_abs_check_single_uut	reference_models/dpa/dpa_mgr_example.py	/^                                     do_abs_check_single_uut=True,$/;"	v
+extensive_print	reference_models/dpa/dpa_mgr_example.py	/^                                     extensive_print=False)$/;"	v
+dpa_pt	reference_models/dpa/dpa_mgr_example.py	/^  dpa_pt = dpa_mgr.BuildDpa('Pensacola')$/;"	v
+dpa_zone	reference_models/dpa/dpa_mgr_example.py	/^  dpa_zone = dpa_mgr.BuildDpa('East3',$/;"	v
+protection_points_method	reference_models/dpa/dpa_mgr_example.py	/^                              protection_points_method='default(4,2,1,1)')$/;"	v
+dpa_zone	reference_models/dpa/dpa_mgr_example.py	/^  dpa_zone = dpa_mgr.BuildDpa('East3',$/;"	v
+protection_points_method	reference_models/dpa/dpa_mgr_example.py	/^                              protection_points_method='default(1,0,0,0)')$/;"	v
+dpa_portal	reference_models/dpa/dpa_mgr_example.py	/^  dpa_portal = dpa_mgr.BuildDpa('BATH')$/;"	v
+dpa_inland	reference_models/dpa/dpa_mgr_example.py	/^  dpa_inland = dpa_mgr.BuildDpa('Alameda',$/;"	v
+protection_points_method	reference_models/dpa/dpa_mgr_example.py	/^                                protection_points_method='default(1000,2000,1,1,40,0.5,2)')$/;"	v
+dpa_multigeo	reference_models/dpa/dpa_mgr_example.py	/^  dpa_multigeo = dpa_mgr.BuildDpa('Alaska9',$/;"	v
+protection_points_method	reference_models/dpa/dpa_mgr_example.py	/^                                protection_points_method='default(10,5,2,1,40,0.5,2)')$/;"	v
+dpa_file	reference_models/dpa/dpa_mgr_example.py	/^  dpa_file = dpa_mgr.BuildDpa('Alameda',$/;"	v
+protection_points_method	reference_models/dpa/dpa_mgr_example.py	/^                              protection_points_method='.\/test_data\/points_alameda.json')$/;"	v
+PROTECTION_PERCENTILE	reference_models/dpa/move_list.py	/^PROTECTION_PERCENTILE = 95      $/;"	v
+FREQ_PROP_MODEL	reference_models/dpa/move_list.py	/^FREQ_PROP_MODEL = 3625.0$/;"	v
+LOW_FREQ_COCH	reference_models/dpa/move_list.py	/^LOW_FREQ_COCH = 3550e6$/;"	v
+HIGH_FREQ_COCH	reference_models/dpa/move_list.py	/^HIGH_FREQ_COCH = 3700e6$/;"	v
+OOB_POWER_WITHIN_10MHZ	reference_models/dpa/move_list.py	/^OOB_POWER_WITHIN_10MHZ = -13$/;"	v
+OOB_POWER_OUTSIDE_10MHZ	reference_models/dpa/move_list.py	/^OOB_POWER_OUTSIDE_10MHZ = -25$/;"	v
+OOB_POWER_BELOW_3530MHZ	reference_models/dpa/move_list.py	/^OOB_POWER_BELOW_3530MHZ = -40$/;"	v
+InterferenceContribution	reference_models/dpa/move_list.py	/^InterferenceContribution = namedtuple('InterferenceContribution',$/;"	v
+DpaType	reference_models/dpa/move_list.py	/^class DpaType(Enum):$/;"	c
+CO_CHANNEL	reference_models/dpa/move_list.py	/^  CO_CHANNEL = 1$/;"	v	class:DpaType
+OUT_OF_BAND	reference_models/dpa/move_list.py	/^  OUT_OF_BAND = 2$/;"	v	class:DpaType
+findDpaType	reference_models/dpa/move_list.py	/^def findDpaType(low_freq, high_freq):$/;"	f
+findGrantsInsideNeighborhood	reference_models/dpa/move_list.py	/^def findGrantsInsideNeighborhood(grants, constraint,$/;"	f
+ComputeOOBConductedPower	reference_models/dpa/move_list.py	/^def ComputeOOBConductedPower(low_freq_cbsd, low_freq_c, high_freq_c):$/;"	f
+computeInterference	reference_models/dpa/move_list.py	/^def computeInterference(grant, constraint, inc_ant_height, num_iteration, dpa_type):$/;"	f
+formInterferenceMatrix	reference_models/dpa/move_list.py	/^def formInterferenceMatrix(grants, grants_ids, constraint,$/;"	f
+findAzimuthRange	reference_models/dpa/move_list.py	/^def findAzimuthRange(min_azimuth, max_azimuth, beamwidth):$/;"	f
+find_nc	reference_models/dpa/move_list.py	/^def find_nc(I, bearings, t, beamwidth, min_azimuth, max_azimuth):$/;"	f
+_addMinFreqGrantToFront	reference_models/dpa/move_list.py	/^def _addMinFreqGrantToFront(l, grant):$/;"	f
+moveListConstraint	reference_models/dpa/move_list.py	/^def moveListConstraint(protection_point, low_freq, high_freq,$/;"	f
+getDpaNeighborGrants	reference_models/dpa/move_list.py	/^def getDpaNeighborGrants(grants, protection_points,$/;"	f
+calcAggregatedInterference	reference_models/dpa/move_list.py	/^def calcAggregatedInterference(protection_point,$/;"	f
+InterferenceCacheManager	reference_models/dpa/move_list.py	/^class InterferenceCacheManager(cache.CacheManager):$/;"	c
+__init__	reference_models/dpa/move_list.py	/^  def __init__(self, maxsize=None):$/;"	m	class:InterferenceCacheManager
+findMoveList	reference_models/dpa/move_list.py	/^def findMoveList(protection_specs, protection_points, registration_requests,$/;"	f
+TestDpa	reference_models/dpa/dpa_mgr_test.py	/^class TestDpa(unittest.TestCase):$/;"	c
+setUp	reference_models/dpa/dpa_mgr_test.py	/^  def setUp(self):$/;"	m	class:TestDpa
+tearDown	reference_models/dpa/dpa_mgr_test.py	/^  def tearDown(self):$/;"	m	class:TestDpa
+test_channelization	reference_models/dpa/dpa_mgr_test.py	/^  def test_channelization(self):$/;"	m	class:TestDpa
+DPA_DEFAULT_THRESHOLD_PER_10MHZ	reference_models/dpa/dpa_mgr.py	/^DPA_DEFAULT_THRESHOLD_PER_10MHZ = -144$/;"	v
+DPA_DEFAULT_RADAR_HEIGHT	reference_models/dpa/dpa_mgr.py	/^DPA_DEFAULT_RADAR_HEIGHT = 50$/;"	v
+DPA_DEFAULT_BEAMWIDTH	reference_models/dpa/dpa_mgr.py	/^DPA_DEFAULT_BEAMWIDTH = 3$/;"	v
+DPA_DEFAULT_FREQ_RANGE	reference_models/dpa/dpa_mgr.py	/^DPA_DEFAULT_FREQ_RANGE = (3550, 3650)$/;"	v
+DPA_DEFAULT_DISTANCES	reference_models/dpa/dpa_mgr.py	/^DPA_DEFAULT_DISTANCES = (150, 200, 0, 25)$/;"	v
+DPA_CHANNEL_BANDWIDTH	reference_models/dpa/dpa_mgr.py	/^DPA_CHANNEL_BANDWIDTH = 10$/;"	v
+GetDpaLogDir	reference_models/dpa/dpa_mgr.py	/^def GetDpaLogDir():$/;"	f
+_EmptyFad	reference_models/dpa/dpa_mgr.py	/^class _EmptyFad(object):$/;"	c
+getCbsdRecords	reference_models/dpa/dpa_mgr.py	/^  def getCbsdRecords(self):$/;"	m	class:_EmptyFad
+Db2Lin	reference_models/dpa/dpa_mgr.py	/^def Db2Lin(x):$/;"	f
+Lin2Db	reference_models/dpa/dpa_mgr.py	/^def Lin2Db(x):$/;"	f
+DpaInterferenceResult	reference_models/dpa/dpa_mgr.py	/^               ['max_difference', 'A_DPA', 'A_DPA_ref', 'azimuth_array'])):$/;"	c
+__slots__	reference_models/dpa/dpa_mgr.py	/^  __slots__ = ()$/;"	v	class:DpaInterferenceResult
+Dpa	reference_models/dpa/dpa_mgr.py	/^class Dpa(object):$/;"	c
+num_iteration	reference_models/dpa/dpa_mgr.py	/^  num_iteration = 2000$/;"	v	class:Dpa
+Configure	reference_models/dpa/dpa_mgr.py	/^  def Configure(cls,$/;"	m	class:Dpa
+__init__	reference_models/dpa/dpa_mgr.py	/^  def __init__(self, protected_points,$/;"	m	class:Dpa
+__str__	reference_models/dpa/dpa_mgr.py	/^  def __str__(self):$/;"	m	class:Dpa	file:
+ResetFreqRange	reference_models/dpa/dpa_mgr.py	/^  def ResetFreqRange(self, freq_ranges_mhz):$/;"	m	class:Dpa
+ResetLists	reference_models/dpa/dpa_mgr.py	/^  def ResetLists(self):$/;"	m	class:Dpa
+_DetectIfPeerSas	reference_models/dpa/dpa_mgr.py	/^  def _DetectIfPeerSas(self):$/;"	m	class:Dpa
+SetGrantsFromFad	reference_models/dpa/dpa_mgr.py	/^  def SetGrantsFromFad(self, sas_uut_fad, sas_th_fads):$/;"	m	class:Dpa
+SetGrantsFromList	reference_models/dpa/dpa_mgr.py	/^  def SetGrantsFromList(self, grants):$/;"	m	class:Dpa
+ComputeMoveLists	reference_models/dpa/dpa_mgr.py	/^  def ComputeMoveLists(self):$/;"	m	class:Dpa
+_GetChanIdx	reference_models/dpa/dpa_mgr.py	/^  def _GetChanIdx(self, channel):$/;"	m	class:Dpa
+GetMoveList	reference_models/dpa/dpa_mgr.py	/^  def GetMoveList(self, channel):$/;"	m	class:Dpa
+GetNeighborList	reference_models/dpa/dpa_mgr.py	/^  def GetNeighborList(self, channel):$/;"	m	class:Dpa
+GetKeepList	reference_models/dpa/dpa_mgr.py	/^  def GetKeepList(self, channel):$/;"	m	class:Dpa
+GetMoveListMask	reference_models/dpa/dpa_mgr.py	/^  def GetMoveListMask(self, channel):$/;"	m	class:Dpa
+CalcKeepListInterference	reference_models/dpa/dpa_mgr.py	/^  def CalcKeepListInterference(self, channel, num_iter=None):$/;"	m	class:Dpa
+CheckInterference	reference_models/dpa/dpa_mgr.py	/^  def CheckInterference(self, sas_uut_active_grants, margin_db,$/;"	m	class:Dpa
+__PrintStatistics	reference_models/dpa/dpa_mgr.py	/^  def __PrintStatistics(self, results, dpa_name, channel, threshold, margin_mw=None):$/;"	m	class:Dpa	file:
+__PrintKeepLists	reference_models/dpa/dpa_mgr.py	/^  def __PrintKeepLists(self, keep_list_th_other_sas, keep_list_th_managing_sas,$/;"	m	class:Dpa	file:
+WriteList	reference_models/dpa/dpa_mgr.py	/^    def WriteList(filename, keep_list):$/;"	f	function:Dpa.__PrintKeepLists
+GetDpaProtectedChannels	reference_models/dpa/dpa_mgr.py	/^def GetDpaProtectedChannels(freq_ranges_mhz, is_portal_dpa=False):$/;"	f
+_CalcTestPointInterfDiff	reference_models/dpa/dpa_mgr.py	/^def _CalcTestPointInterfDiff(point,$/;"	f
+BuildDpa	reference_models/dpa/dpa_mgr.py	/^def BuildDpa(dpa_name, protection_points_method=None, portal_dpa_filename=None):$/;"	f
+preIapReferenceModel	reference_models/pre_iap_filtering/pre_iap_filtering.py	/^def preIapReferenceModel(protected_entities, sas_uut_fad, sas_test_harness_fads):$/;"	f
+REF_BW	reference_models/pre_iap_filtering/fss_purge.py	/^REF_BW = 5.e6$/;"	v
+FSS_OOBE_MARGIN	reference_models/pre_iap_filtering/fss_purge.py	/^FSS_OOBE_MARGIN = 1$/;"	v
+OFFSET_REF_BW_DB	reference_models/pre_iap_filtering/fss_purge.py	/^OFFSET_REF_BW_DB = 10*np.log10(REF_BW \/ interf.MHZ)$/;"	v
+grants_cbsds_namedtuple	reference_models/pre_iap_filtering/fss_purge.py	/^grants_cbsds_namedtuple = namedtuple('grants_cbsds_namedtuple', ['grant', 'cbsd'])$/;"	v
+generatePurgeListForFssPoint	reference_models/pre_iap_filtering/fss_purge.py	/^def generatePurgeListForFssPoint(cbsds, fss_point, fss_info):$/;"	f
+calculateOobeInterference	reference_models/pre_iap_filtering/fss_purge.py	/^def calculateOobeInterference(grants_cbsds_oobe_info, fss_point, fss_info):$/;"	f
+getMcbsdValue	reference_models/pre_iap_filtering/fss_purge.py	/^def getMcbsdValue(grant):$/;"	f
+getGrantInfoListForFssOobeCalculation	reference_models/pre_iap_filtering/fss_purge.py	/^def getGrantInfoListForFssOobeCalculation(cbsds):$/;"	f
+fssPurgeReferenceModel	reference_models/pre_iap_filtering/fss_purge.py	/^def fssPurgeReferenceModel(sas_uut_fad, sas_test_harness_fads, fss_records):$/;"	f
+TEST_DIR	reference_models/pre_iap_filtering/pre_iap_filtering_test.py	/^TEST_DIR = os.path.join(os.path.dirname(__file__), 'testdata')$/;"	v
+preIapFilteringTest	reference_models/pre_iap_filtering/pre_iap_filtering_test.py	/^class preIapFilteringTest(unittest.TestCase):$/;"	c
+test_pre_iap_reference_model	reference_models/pre_iap_filtering/pre_iap_filtering_test.py	/^    def test_pre_iap_reference_model(self):$/;"	m	class:preIapFilteringTest
+interSasDuplicateGrantPurgeReferenceModel	reference_models/pre_iap_filtering/inter_sas_duplicate_grant.py	/^def interSasDuplicateGrantPurgeReferenceModel(sas_uut_fad, sas_test_harness_fads):$/;"	f
+TEST_DIR	reference_models/pre_iap_filtering/zone_purge_test.py	/^TEST_DIR = os.path.join(os.path.dirname(__file__), 'testdata')$/;"	v
+TestZonePurge	reference_models/pre_iap_filtering/zone_purge_test.py	/^class TestZonePurge(unittest.TestCase):$/;"	c
+test_zone_PurgeModel_default	reference_models/pre_iap_filtering/zone_purge_test.py	/^  def test_zone_PurgeModel_default(self):$/;"	m	class:TestZonePurge
+preIapFilteringUtilTest	reference_models/pre_iap_filtering/pre_iap_util_test.py	/^class preIapFilteringUtilTest(unittest.TestCase):$/;"	c
+create_frequency_range	reference_models/pre_iap_filtering/pre_iap_util_test.py	/^  def create_frequency_range(self, low_freq, high_freq):$/;"	m	class:preIapFilteringUtilTest
+create_ppa_record	reference_models/pre_iap_filtering/pre_iap_util_test.py	/^  def create_ppa_record(self, ppa_id, pal_ids):$/;"	m	class:preIapFilteringUtilTest
+create_pal_record	reference_models/pre_iap_filtering/pre_iap_util_test.py	/^  def create_pal_record(self, pal_id, frequency_range):$/;"	m	class:preIapFilteringUtilTest
+test_ppa_frequency_range	reference_models/pre_iap_filtering/pre_iap_util_test.py	/^  def test_ppa_frequency_range(self):$/;"	m	class:preIapFilteringUtilTest
+create_grant	reference_models/pre_iap_filtering/pre_iap_util_test.py	/^  def create_grant(self, low_freq, high_freq):$/;"	m	class:preIapFilteringUtilTest
+test_frequency_overlap	reference_models/pre_iap_filtering/pre_iap_util_test.py	/^  def test_frequency_overlap(self):$/;"	m	class:preIapFilteringUtilTest
+FSS_GWBL_PROTECTION_FREQ_RANGE	reference_models/pre_iap_filtering/pre_iap_util.py	/^FSS_GWBL_PROTECTION_FREQ_RANGE = {'lowFrequency': 3650e6,$/;"	v
+FSS_GWBL_PROTECTION_DISTANCE_KM	reference_models/pre_iap_filtering/pre_iap_util.py	/^FSS_GWBL_PROTECTION_DISTANCE_KM = 150$/;"	v
+purgeOverlappingGrants	reference_models/pre_iap_filtering/pre_iap_util.py	/^def purgeOverlappingGrants(cbsds, frequency_range):$/;"	f
+checkForOverlappingGrants	reference_models/pre_iap_filtering/pre_iap_util.py	/^def checkForOverlappingGrants(grant, frequency_range):$/;"	f
+getCbsdsWithinPolygon	reference_models/pre_iap_filtering/pre_iap_util.py	/^def getCbsdsWithinPolygon(cbsds, polygon):$/;"	f
+getPpaFrequencyRange	reference_models/pre_iap_filtering/pre_iap_util.py	/^def getPpaFrequencyRange(ppa_record, pal_records):$/;"	f
+getFssNeighboringCbsdsWithGrants	reference_models/pre_iap_filtering/pre_iap_util.py	/^def getFssNeighboringCbsdsWithGrants(cbsds, fss_point,$/;"	f
+getFssNeighboringGwbl	reference_models/pre_iap_filtering/pre_iap_util.py	/^def getFssNeighboringGwbl(gwbl_records, fss_records):$/;"	f
+zonePurgeReferenceModel	reference_models/pre_iap_filtering/zone_purge.py	/^def zonePurgeReferenceModel(sas_uut_fad, sas_test_harness_fads,$/;"	f
+TEST_DIR	reference_models/pre_iap_filtering/fss_purge_test.py	/^TEST_DIR = os.path.join(os.path.dirname(__file__), 'testdata')$/;"	v
+TestFssPurge	reference_models/pre_iap_filtering/fss_purge_test.py	/^class TestFssPurge(unittest.TestCase):$/;"	c
+test_fss_purge_default	reference_models/pre_iap_filtering/fss_purge_test.py	/^  def test_fss_purge_default(self):$/;"	m	class:TestFssPurge
+Db2Lin	reference_models/tools/studies/dpa_margin_sim.py	/^Db2Lin = dpa_mgr.Db2Lin$/;"	v
+Lin2Db	reference_models/tools/studies/dpa_margin_sim.py	/^Lin2Db = dpa_mgr.Lin2Db$/;"	v
+parser	reference_models/tools/studies/dpa_margin_sim.py	/^parser = argparse.ArgumentParser(description='DPA Simulator')$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Logging level: debug, info, warning, error.')$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Optional: override DPA to consider. Needs to specify '$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Optional: override DPA builder to use '$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Optional: override DPA builder to use '$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Optional: override DPA KML (use with --dpa only).')$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Optional: override `movelistMargin`, for ex:`linear(1.5)`.')$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Optional: the channel frequency to analyze (lower freq).')$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Method of reference move list: '$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Number of move list to use in --ref_ml_method.'$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Method of UUT move list: '$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Number of move list to use in --uut_ml_method.'$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Do extensive aggregate interference analysis '$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='Number of move list to compute.')$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='If defined, save simulation data to file. '$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='The configuration file (IPR or MCP)')$/;"	v
+help	reference_models/tools/studies/dpa_margin_sim.py	/^                    help='The configuration file (IPR or MCP)')$/;"	v
+_LOGGER_MAP	reference_models/tools/studies/dpa_margin_sim.py	/^_LOGGER_MAP = {$/;"	v
+SaveDataToCache	reference_models/tools/studies/dpa_margin_sim.py	/^def SaveDataToCache(cache_file, sim_data):$/;"	f
+SyntheticMoveList	reference_models/tools/studies/dpa_margin_sim.py	/^def SyntheticMoveList(ml_list, method, num, chan_idx):$/;"	f
+ScatterAnalyze	reference_models/tools/studies/dpa_margin_sim.py	/^def ScatterAnalyze(ref_levels, diff_levels, threshold_db, tag):$/;"	f
+ExtensiveInterferenceCheck	reference_models/tools/studies/dpa_margin_sim.py	/^def ExtensiveInterferenceCheck(dpa,$/;"	f
+PlotMoveListHistogram	reference_models/tools/studies/dpa_margin_sim.py	/^def PlotMoveListHistogram(move_lists, chan_idx):$/;"	f
+GetMostUsedChannel	reference_models/tools/studies/dpa_margin_sim.py	/^def GetMostUsedChannel(dpa):$/;"	f
+FindOrBuildDpa	reference_models/tools/studies/dpa_margin_sim.py	/^def FindOrBuildDpa(dpas, options, grants):$/;"	f
+SetupSimProcessor	reference_models/tools/studies/dpa_margin_sim.py	/^def SetupSimProcessor(num_process, size_tile_cache, geo_points, load_cache=False):$/;"	f
+LoadDataFromCache	reference_models/tools/studies/dpa_margin_sim.py	/^def LoadDataFromCache(cache_file):$/;"	f
+CacheAnalyze	reference_models/tools/studies/dpa_margin_sim.py	/^def CacheAnalyze(sim_data,$/;"	f
+DpaSimulate	reference_models/tools/studies/dpa_margin_sim.py	/^def DpaSimulate(config_file, options):$/;"	f
+DpaAnalyzeLogs	reference_models/tools/studies/dpa_margin_sim.py	/^def DpaAnalyzeLogs(config_file, log_file, options):$/;"	f
+options	reference_models/tools/studies/dpa_margin_sim.py	/^  options = parser.parse_args()$/;"	v
+_prof	reference_models/tools/profpool.py	/^_prof = None$/;"	v
+_process_profile_init	reference_models/tools/profpool.py	/^def _process_profile_init():$/;"	f
+_FnRunnerWithProfiler	reference_models/tools/profpool.py	/^class _FnRunnerWithProfiler(object):$/;"	c
+__init__	reference_models/tools/profpool.py	/^  def __init__(self, fn):$/;"	m	class:_FnRunnerWithProfiler
+__call__	reference_models/tools/profpool.py	/^  def __call__(self, arg):$/;"	m	class:_FnRunnerWithProfiler	file:
+_dump_stats	reference_models/tools/profpool.py	/^def _dump_stats(idx):$/;"	f
+PoolWithProfiler	reference_models/tools/profpool.py	/^class PoolWithProfiler(object):$/;"	c
+__init__	reference_models/tools/profpool.py	/^  def __init__(self, processes):$/;"	m	class:PoolWithProfiler
+map	reference_models/tools/profpool.py	/^  def map(self, fn, iterable, chunksize=None):$/;"	m	class:PoolWithProfiler
+apply_async	reference_models/tools/profpool.py	/^  def apply_async(self, fn, args=(), kwds={}, callback=None):$/;"	m	class:PoolWithProfiler
+dump_stats	reference_models/tools/profpool.py	/^  def dump_stats(self):$/;"	m	class:PoolWithProfiler
+GetCatAOutdoorMaxHeight	reference_models/tools/cata_max_height.py	/^def GetCatAOutdoorMaxHeight(lat, lon):$/;"	f
+_GSO_SPHERICAL_CST	reference_models/tools/examples/fss_pointing.py	/^_GSO_SPHERICAL_CST = 0.1512$/;"	v
+GsoElevation	reference_models/tools/examples/fss_pointing.py	/^def GsoElevation(fss_lat, fss_lon, sat_lon):$/;"	f
+GsoAzimuth	reference_models/tools/examples/fss_pointing.py	/^def GsoAzimuth(fss_lat, fss_lon, sat_lon):$/;"	f
+_GsoExtent	reference_models/tools/examples/fss_pointing.py	/^def _GsoExtent(fss_lat, fss_min_elevation=5):$/;"	f
+GsoPossiblePointings	reference_models/tools/examples/fss_pointing.py	/^def GsoPossiblePointings(fss_lat, fss_lon,$/;"	f
+GetAllFssFromLicenseInfo	reference_models/tools/examples/example_fss_interference.py	/^def GetAllFssFromLicenseInfo(fss_license_info):$/;"	f
+fss_info	reference_models/tools/examples/example_fss_interference.py	/^fss_info = entities.FssLicenseInfo(latitude=38 + 48\/60. + 3\/3600.,$/;"	v
+longitude	reference_models/tools/examples/example_fss_interference.py	/^                                   longitude=-(94 + 15\/60. + 28.8\/3600.),$/;"	v
+height_agl	reference_models/tools/examples/example_fss_interference.py	/^                                   height_agl=3.7,$/;"	v
+max_gain_dbi	reference_models/tools/examples/example_fss_interference.py	/^                                   max_gain_dbi=40.9,$/;"	v
+satellite_arc_east_limit	reference_models/tools/examples/example_fss_interference.py	/^                                   satellite_arc_east_limit=-60,$/;"	v
+satellite_arc_west_limit	reference_models/tools/examples/example_fss_interference.py	/^                                   satellite_arc_west_limit=-143,$/;"	v
+elevation_east_limit	reference_models/tools/examples/example_fss_interference.py	/^                                   elevation_east_limit=32.8,$/;"	v
+elevation_west_limit	reference_models/tools/examples/example_fss_interference.py	/^                                   elevation_west_limit=22.9,$/;"	v
+azimuth_east_limit	reference_models/tools/examples/example_fss_interference.py	/^                                   azimuth_east_limit=132.6,$/;"	v
+azimuth_west_limit	reference_models/tools/examples/example_fss_interference.py	/^                                   azimuth_west_limit=241.2)$/;"	v
+fss_entities	reference_models/tools/examples/example_fss_interference.py	/^fss_entities = GetAllFssFromLicenseInfo(fss_info)$/;"	v
+base_fss	reference_models/tools/examples/example_fss_interference.py	/^base_fss = fss_entities[0]  # All FSS entities share same location$/;"	v
+cbsds_cat_a_indoor	reference_models/tools/examples/example_fss_interference.py	/^cbsds_cat_a_indoor = entities.GenerateCbsdList(100,$/;"	v
+max_distance_km	reference_models/tools/examples/example_fss_interference.py	/^                                               max_distance_km=200)$/;"	v
+cbsds_cat_a_outdoor	reference_models/tools/examples/example_fss_interference.py	/^cbsds_cat_a_outdoor = entities.GenerateCbsdList(50,$/;"	v
+max_distance_km	reference_models/tools/examples/example_fss_interference.py	/^                                                max_distance_km=200)$/;"	v
+cbsds_cat_b	reference_models/tools/examples/example_fss_interference.py	/^cbsds_cat_b = entities.GenerateCbsdList(20,$/;"	v
+max_distance_km	reference_models/tools/examples/example_fss_interference.py	/^                                        max_distance_km=200)$/;"	v
+all_cbsds	reference_models/tools/examples/example_fss_interference.py	/^all_cbsds = []$/;"	v
+cbsds	reference_models/tools/examples/example_fss_interference.py	/^cbsds = []$/;"	v
+cbsd_rssi	reference_models/tools/examples/example_fss_interference.py	/^cbsd_rssi = np.zeros(len(cbsds))$/;"	v
+cbsd_incidence_angles	reference_models/tools/examples/example_fss_interference.py	/^cbsd_incidence_angles = []$/;"	v
+cbsd_effective_eirp	reference_models/tools/examples/example_fss_interference.py	/^  cbsd_effective_eirp = antenna.GetStandardAntennaGains($/;"	v
+fss_total_rssi	reference_models/tools/examples/example_fss_interference.py	/^fss_total_rssi = []$/;"	v
+hor_dirs	reference_models/tools/examples/example_fss_interference.py	/^  hor_dirs = [inc_angle.hor_rx for inc_angle in cbsd_incidence_angles]$/;"	v
+ver_dirs	reference_models/tools/examples/example_fss_interference.py	/^  ver_dirs = [inc_angle.ver_rx for inc_angle in cbsd_incidence_angles]$/;"	v
+fss_ant_gains	reference_models/tools/examples/example_fss_interference.py	/^  fss_ant_gains =  antenna.GetFssAntennaGains($/;"	v
+total_rssi	reference_models/tools/examples/example_fss_interference.py	/^  total_rssi = 10 * np.log10(np.sum( 10**((cbsd_rssi + fss_ant_gains) \/ 10.)))$/;"	v
+TestAntenna	reference_models/tools/examples/fss_pointing_test.py	/^class TestAntenna(unittest.TestCase):$/;"	c
+test_gso_elevation	reference_models/tools/examples/fss_pointing_test.py	/^  def test_gso_elevation(self):$/;"	m	class:TestAntenna
+test_gso_azimuth	reference_models/tools/examples/fss_pointing_test.py	/^  def test_gso_azimuth(self):$/;"	m	class:TestAntenna
+test_gso_pointings	reference_models/tools/examples/fss_pointing_test.py	/^  def test_gso_pointings(self):$/;"	m	class:TestAntenna
+FakePropagationPredictor	reference_models/tools/testutils.py	/^class FakePropagationPredictor(object):$/;"	c
+__init__	reference_models/tools/testutils.py	/^  def __init__(self, factor=1., offset=50, dist_type='L1'):$/;"	m	class:FakePropagationPredictor
+__call__	reference_models/tools/testutils.py	/^  def __call__(self,$/;"	m	class:FakePropagationPredictor	file:
+FakeInterferenceCalculator	reference_models/tools/testutils.py	/^class FakeInterferenceCalculator(object):$/;"	c
+__init__	reference_models/tools/testutils.py	/^  def __init__(self,$/;"	m	class:FakeInterferenceCalculator
+__call__	reference_models/tools/testutils.py	/^  def __call__(self, grant, max_eirp, constraint, fss_info=None,$/;"	m	class:FakeInterferenceCalculator	file:
+MakeLatLngPairs	reference_models/tools/testutils.py	/^def MakeLatLngPairs(n_pairs,$/;"	f
+UnzipTestDir	reference_models/tools/testutils.py	/^def UnzipTestDir(directory):$/;"	f
+RemoveFiles	reference_models/tools/testutils.py	/^def RemoveFiles(directory, file_list):$/;"	f
+PlotDpa	reference_models/tools/sim_utils.py	/^def PlotDpa(ax, dpa, color='m'):$/;"	f
+PlotGrants	reference_models/tools/sim_utils.py	/^def PlotGrants(ax, grants, color='r'):$/;"	f
+CreateCbrsPlot	reference_models/tools/sim_utils.py	/^def CreateCbrsPlot(grants, dpa=None, tag='', color='g',$/;"	f
+GetPDFEstimator	reference_models/tools/sim_utils.py	/^def GetPDFEstimator(s, bw_method=None):$/;"	f
+ConfigureRunningEnv	reference_models/tools/sim_utils.py	/^def ConfigureRunningEnv(num_process, size_tile_cache):$/;"	f
+_getTileStats	reference_models/tools/sim_utils.py	/^def _getTileStats():$/;"	f
+_printTileStats	reference_models/tools/sim_utils.py	/^def _printTileStats():$/;"	f
+CheckTerrainTileCacheOk	reference_models/tools/sim_utils.py	/^def CheckTerrainTileCacheOk():$/;"	f
+MergeConditionalData	reference_models/tools/sim_utils.py	/^def MergeConditionalData(registration_requests, conditional_datas):$/;"	f
+CleanGrant	reference_models/tools/sim_utils.py	/^def CleanGrant(grant):$/;"	f
+_IprConfigRead	reference_models/tools/sim_utils.py	/^def _IprConfigRead(config):$/;"	f
+_McpConfigRead	reference_models/tools/sim_utils.py	/^def _McpConfigRead(config):$/;"	f
+_RegGrantsRead	reference_models/tools/sim_utils.py	/^def _RegGrantsRead(config):$/;"	f
+ReadTestHarnessConfigFile	reference_models/tools/sim_utils.py	/^def ReadTestHarnessConfigFile(config_file):$/;"	f
+ReadDpaLogFile	reference_models/tools/sim_utils.py	/^def ReadDpaLogFile(csv_file):$/;"	f
+Cbsd	reference_models/tools/entities.py	/^Cbsd = namedtuple('Cbsd',$/;"	v
+CBSD_TEMPLATE_CAT_A_INDOOR	reference_models/tools/entities.py	/^CBSD_TEMPLATE_CAT_A_INDOOR = Cbsd(latitude=0,longitude=0,$/;"	v
+height_agl	reference_models/tools/entities.py	/^                                  height_agl=3,$/;"	v
+is_indoor	reference_models/tools/entities.py	/^                                  is_indoor=True,$/;"	v
+category	reference_models/tools/entities.py	/^                                  category='A',$/;"	v
+eirp_dbm_mhz	reference_models/tools/entities.py	/^                                  eirp_dbm_mhz=13,$/;"	v
+antenna_azimuth	reference_models/tools/entities.py	/^                                  antenna_azimuth=0,$/;"	v
+antenna_beamwidth	reference_models/tools/entities.py	/^                                  antenna_beamwidth=None,$/;"	v
+antenna_gain	reference_models/tools/entities.py	/^                                  antenna_gain=0)$/;"	v
+CBSD_TEMPLATE_CAT_A_OUTDOOR	reference_models/tools/entities.py	/^CBSD_TEMPLATE_CAT_A_OUTDOOR = Cbsd(latitude=0,longitude=0,$/;"	v
+height_agl	reference_models/tools/entities.py	/^                                   height_agl=6,$/;"	v
+is_indoor	reference_models/tools/entities.py	/^                                   is_indoor=False,$/;"	v
+category	reference_models/tools/entities.py	/^                                   category='A',$/;"	v
+eirp_dbm_mhz	reference_models/tools/entities.py	/^                                   eirp_dbm_mhz=20,$/;"	v
+antenna_azimuth	reference_models/tools/entities.py	/^                                   antenna_azimuth=0,$/;"	v
+antenna_beamwidth	reference_models/tools/entities.py	/^                                   antenna_beamwidth=None,$/;"	v
+antenna_gain	reference_models/tools/entities.py	/^                                   antenna_gain=6)$/;"	v
+CBSD_TEMPLATE_CAT_B	reference_models/tools/entities.py	/^CBSD_TEMPLATE_CAT_B = Cbsd(latitude=0,longitude=0,$/;"	v
+height_agl	reference_models/tools/entities.py	/^                           height_agl=10,$/;"	v
+is_indoor	reference_models/tools/entities.py	/^                           is_indoor=False,$/;"	v
+category	reference_models/tools/entities.py	/^                           category='B',$/;"	v
+eirp_dbm_mhz	reference_models/tools/entities.py	/^                           eirp_dbm_mhz=37,$/;"	v
+antenna_azimuth	reference_models/tools/entities.py	/^                           antenna_azimuth=[0, 120, 240],$/;"	v
+antenna_beamwidth	reference_models/tools/entities.py	/^                           antenna_beamwidth=90,$/;"	v
+antenna_gain	reference_models/tools/entities.py	/^                           antenna_gain=15)$/;"	v
+CBSD_TEMPLATE_CAT_B_OMNI	reference_models/tools/entities.py	/^CBSD_TEMPLATE_CAT_B_OMNI = Cbsd(latitude=0,longitude=0,$/;"	v
+height_agl	reference_models/tools/entities.py	/^                                height_agl=10,$/;"	v
+is_indoor	reference_models/tools/entities.py	/^                                is_indoor=False,$/;"	v
+category	reference_models/tools/entities.py	/^                                category='B',$/;"	v
+eirp_dbm_mhz	reference_models/tools/entities.py	/^                                eirp_dbm_mhz=37,$/;"	v
+antenna_azimuth	reference_models/tools/entities.py	/^                                antenna_azimuth=0,$/;"	v
+antenna_beamwidth	reference_models/tools/entities.py	/^                                antenna_beamwidth=None,$/;"	v
+antenna_gain	reference_models/tools/entities.py	/^                                antenna_gain=8)$/;"	v
+FssLicenseInfo	reference_models/tools/entities.py	/^FssLicenseInfo = namedtuple('FssLicenseInfo',$/;"	v
+FssProtection	reference_models/tools/entities.py	/^FssProtection = namedtuple('FssProtectionPoint',$/;"	v
+GenerateCbsdList	reference_models/tools/entities.py	/^def GenerateCbsdList(n_cbsd, template_cbsd,$/;"	f
+GenerateCbsdsInPolygon	reference_models/tools/entities.py	/^def GenerateCbsdsInPolygon(num_cbsds, template_cbsd, polygon,$/;"	f
+GetCbsdRegistrationRequest	reference_models/tools/entities.py	/^def GetCbsdRegistrationRequest(cbsd):$/;"	f
+GetCbsdGrantRequest	reference_models/tools/entities.py	/^def GetCbsdGrantRequest(cbsd, min_freq_mhz, max_freq_mhz):$/;"	f
+ConvertToCbsdGrantInfo	reference_models/tools/entities.py	/^def ConvertToCbsdGrantInfo(cbsds, min_freq_mhz, max_freq_mhz, chunks_mhz=-1):$/;"	f
+NUM_PROCESS	reference_models/tools/benchmark/prof_agg_interf.py	/^NUM_PROCESS = 4$/;"	v
+CvtToList	reference_models/tools/benchmark/prof_agg_interf.py	/^def CvtToList(data):$/;"	f
+pool	reference_models/tools/benchmark/prof_agg_interf.py	/^  pool = profpool.PoolWithProfiler(NUM_PROCESS)$/;"	v
+prof0	reference_models/tools/benchmark/prof_agg_interf.py	/^  prof0 = cProfile.Profile()$/;"	v
+_BASE_DATA_DIR	reference_models/tools/benchmark/prof_agg_interf.py	/^  _BASE_DATA_DIR = os.path.join(os.path.dirname(__file__),$/;"	v
+cbsd_filename	reference_models/tools/benchmark/prof_agg_interf.py	/^  cbsd_filename = ['cbsd_0.json',$/;"	v
+cbsd_list	reference_models/tools/benchmark/prof_agg_interf.py	/^  cbsd_list = []$/;"	v
+cbsd_record	reference_models/tools/benchmark/prof_agg_interf.py	/^    cbsd_record = json.load(open(os.path.join(_BASE_DATA_DIR, cbsd_file)))$/;"	v
+fss_filename	reference_models/tools/benchmark/prof_agg_interf.py	/^  fss_filename = ['fss_0.json', 'fss_1.json']$/;"	v
+fss_list	reference_models/tools/benchmark/prof_agg_interf.py	/^  fss_list = []$/;"	v
+fss_record	reference_models/tools/benchmark/prof_agg_interf.py	/^    fss_record = json.load(open(os.path.join(_BASE_DATA_DIR, fss_file)))$/;"	v
+esc_filename	reference_models/tools/benchmark/prof_agg_interf.py	/^  esc_filename = ['esc_0.json']$/;"	v
+esc_list	reference_models/tools/benchmark/prof_agg_interf.py	/^  esc_list = []$/;"	v
+esc_record	reference_models/tools/benchmark/prof_agg_interf.py	/^    esc_record = json.load($/;"	v
+gwpz_filename	reference_models/tools/benchmark/prof_agg_interf.py	/^  gwpz_filename = ['gwpz_0.json', 'gwpz_1.json']$/;"	v
+gwpz_list	reference_models/tools/benchmark/prof_agg_interf.py	/^  gwpz_list = []$/;"	v
+gwpz_record	reference_models/tools/benchmark/prof_agg_interf.py	/^    gwpz_record = json.load($/;"	v
+ppa_filename	reference_models/tools/benchmark/prof_agg_interf.py	/^  ppa_filename = ['ppa_0.json', 'ppa_1.json', 'ppa_2.json', 'ppa_3.json']$/;"	v
+ppa_list	reference_models/tools/benchmark/prof_agg_interf.py	/^  ppa_list = []$/;"	v
+ppa_record	reference_models/tools/benchmark/prof_agg_interf.py	/^    ppa_record = json.load(open(os.path.join(_BASE_DATA_DIR, ppa_file)))$/;"	v
+pal_filename	reference_models/tools/benchmark/prof_agg_interf.py	/^  pal_filename = ['pal_0.json', 'pal_1.json', 'pal_2.json', 'pal_3.json']$/;"	v
+ppa_filename	reference_models/tools/benchmark/prof_agg_interf.py	/^  ppa_filename = []$/;"	v
+pal_list	reference_models/tools/benchmark/prof_agg_interf.py	/^  pal_list = []$/;"	v
+pal_record	reference_models/tools/benchmark/prof_agg_interf.py	/^    pal_record = json.load(open(os.path.join(_BASE_DATA_DIR, pal_file)))$/;"	v
+start_time	reference_models/tools/benchmark/prof_agg_interf.py	/^  start_time = time.time()$/;"	v
+fss_freq_range	reference_models/tools/benchmark/prof_agg_interf.py	/^        ['operationParam']['operationFrequencyRange']$/;"	v
+fss_low_freq	reference_models/tools/benchmark/prof_agg_interf.py	/^    fss_low_freq = fss_freq_range['lowFrequency']$/;"	v
+fss_high_freq	reference_models/tools/benchmark/prof_agg_interf.py	/^    fss_high_freq = fss_freq_range['highFrequency']$/;"	v
+fss_ttc_flag	reference_models/tools/benchmark/prof_agg_interf.py	/^    fss_ttc_flag = fss_record['ttc']$/;"	v
+fss_cochannel_aggr_interference	reference_models/tools/benchmark/prof_agg_interf.py	/^        calculateAggregateInterferenceForFssCochannel($/;"	v
+fss_blocking_aggr_interference	reference_models/tools/benchmark/prof_agg_interf.py	/^        calculateAggregateInterferenceForFssBlocking($/;"	v
+fss_blocking_aggr_interference	reference_models/tools/benchmark/prof_agg_interf.py	/^        calculateAggregateInterferenceForFssBlocking($/;"	v
+esc_aggr_interference	reference_models/tools/benchmark/prof_agg_interf.py	/^      calculateAggregateInterferenceForEsc($/;"	v
+gwpz_aggr_interference	reference_models/tools/benchmark/prof_agg_interf.py	/^      calculateAggregateInterferenceForGwpz($/;"	v
+ppa_aggr_interference	reference_models/tools/benchmark/prof_agg_interf.py	/^      calculateAggregateInterferenceForPpa($/;"	v
+end_time	reference_models/tools/benchmark/prof_agg_interf.py	/^  end_time = time.time()$/;"	v
+p0	reference_models/tools/benchmark/prof_agg_interf.py	/^  p0 = pstats.Stats('profile-0m.out')$/;"	v
+p1	reference_models/tools/benchmark/prof_agg_interf.py	/^  p1 = pstats.Stats('profile-1.out')$/;"	v
+dpa_name	reference_models/tools/benchmark/time_dpa.py	/^dpa_name = 'East7'$/;"	v
+num_sites	reference_models/tools/benchmark/time_dpa.py	/^num_sites = 100$/;"	v
+max_dist_cat_a	reference_models/tools/benchmark/time_dpa.py	/^max_dist_cat_a = 160$/;"	v
+max_dist_cat_b	reference_models/tools/benchmark/time_dpa.py	/^max_dist_cat_b = 320$/;"	v
+npts_front_dpa_contour	reference_models/tools/benchmark/time_dpa.py	/^npts_front_dpa_contour = 50    # The mainland facing contour$/;"	v
+npts_back_dpa_contour	reference_models/tools/benchmark/time_dpa.py	/^npts_back_dpa_contour = 20     # The back contour$/;"	v
+npts_within_dpa_front	reference_models/tools/benchmark/time_dpa.py	/^npts_within_dpa_front = 20     # The front zone$/;"	v
+npts_within_dpa_back	reference_models/tools/benchmark/time_dpa.py	/^npts_within_dpa_back = 10       # The back zone$/;"	v
+front_usborder_buffer_km	reference_models/tools/benchmark/time_dpa.py	/^front_usborder_buffer_km = 40   # Front contour defined by the extension of the$/;"	v
+do_inside_urban_area	reference_models/tools/benchmark/time_dpa.py	/^do_inside_urban_area = True$/;"	v
+ratio_cat_b	reference_models/tools/benchmark/time_dpa.py	/^ratio_cat_b = 0.2$/;"	v
+ratio_cat_a_indoor	reference_models/tools/benchmark/time_dpa.py	/^ratio_cat_a_indoor = 0.4$/;"	v
+num_processes	reference_models/tools/benchmark/time_dpa.py	/^num_processes = -1$/;"	v
+num_cached_tiles	reference_models/tools/benchmark/time_dpa.py	/^num_cached_tiles = 32$/;"	v
+num_montecarlo_iter	reference_models/tools/benchmark/time_dpa.py	/^num_montecarlo_iter = 2000$/;"	v
+ratio_cat_a_outdoor	reference_models/tools/benchmark/time_dpa.py	/^ratio_cat_a_outdoor = 1.0 - ratio_cat_b - ratio_cat_a_indoor$/;"	v
+PrepareSimulation	reference_models/tools/benchmark/time_dpa.py	/^def PrepareSimulation():$/;"	f
+getTileStats	reference_models/tools/benchmark/time_dpa.py	/^def getTileStats():$/;"	f
+printTileStats	reference_models/tools/benchmark/time_dpa.py	/^def printTileStats():$/;"	f
+cbsd_lat	reference_models/tools/benchmark/prof_prop.py	/^cbsd_lat = 40.5$/;"	v
+cbsd_lon	reference_models/tools/benchmark/prof_prop.py	/^cbsd_lon = -90.5$/;"	v
+max_distance	reference_models/tools/benchmark/prof_prop.py	/^max_distance = 300$/;"	v
+distance	reference_models/tools/benchmark/prof_prop.py	/^distance = 60$/;"	v
+bearing	reference_models/tools/benchmark/prof_prop.py	/^bearing = 90$/;"	v
+freq_mhz	reference_models/tools/benchmark/prof_prop.py	/^freq_mhz = 3625$/;"	v
+CalcHybrid	reference_models/tools/benchmark/prof_prop.py	/^def CalcHybrid(rel, rx_lat, rx_lng):$/;"	f
+CalcItm	reference_models/tools/benchmark/prof_prop.py	/^def CalcItm(rel, rx_lat, rx_lng):$/;"	f
+res	reference_models/tools/benchmark/prof_prop.py	/^  res = CalcItm(0.5, rx_lat, rx_lng)$/;"	v
+cbsd_lat	reference_models/tools/benchmark/time_prop.py	/^cbsd_lat = 40.5$/;"	v
+cbsd_lon	reference_models/tools/benchmark/time_prop.py	/^cbsd_lon = -90.5$/;"	v
+max_distance	reference_models/tools/benchmark/time_prop.py	/^max_distance = 300$/;"	v
+distances	reference_models/tools/benchmark/time_prop.py	/^distances = np.array([2, 5] + range(10, 100, 10) + range(100, max_distance+20, 40))$/;"	v
+bearing	reference_models/tools/benchmark/time_prop.py	/^bearing = 90$/;"	v
+freq_mhz	reference_models/tools/benchmark/time_prop.py	/^freq_mhz = 3625$/;"	v
+t_itm_avg	reference_models/tools/benchmark/time_prop.py	/^t_itm_avg = []$/;"	v
+t_hybrid_avg	reference_models/tools/benchmark/time_prop.py	/^t_hybrid_avg = []$/;"	v
+PlotProp	reference_models/tools/benchmark/time_prop.py	/^def PlotProp():$/;"	f
+CalcHybrid	reference_models/tools/benchmark/time_prop.py	/^def CalcHybrid(rel, rx_lat, rx_lng):$/;"	f
+CalcItm	reference_models/tools/benchmark/time_prop.py	/^def CalcItm(rel, rx_lat, rx_lng):$/;"	f
+repeat	reference_models/tools/benchmark/time_prop.py	/^repeat = 3$/;"	v
+num	reference_models/tools/benchmark/time_prop.py	/^num = 1000$/;"	v
+res_last	reference_models/tools/benchmark/time_prop.py	/^  res_last = CalcHybrid(0.5, rx_lats[-1], rx_lngs[-1])$/;"	v
+res_first	reference_models/tools/benchmark/time_prop.py	/^  res_first = CalcHybrid(0.5, rx_lats[-1], rx_lngs[-1])$/;"	v
+times	reference_models/tools/benchmark/time_prop.py	/^    times = timeit.repeat(setup = 'import time_prop',$/;"	v
+stmt	reference_models/tools/benchmark/time_prop.py	/^                          stmt='time_prop.CalcItm(-1,{0},{1})'.format($/;"	v
+times	reference_models/tools/benchmark/time_prop.py	/^    times = timeit.repeat(setup = 'import time_prop',$/;"	v
+stmt	reference_models/tools/benchmark/time_prop.py	/^                          stmt='time_prop.CalcHybrid(-1,{0},{1})'.format($/;"	v
+HTTPError	request_handler.py	/^class HTTPError(Exception):$/;"	c
+__init__	request_handler.py	/^  def __init__(self, error_code):$/;"	m	class:HTTPError
+CurlError	request_handler.py	/^class CurlError(Exception):$/;"	c
+__init__	request_handler.py	/^  def __init__(self, message, error_code):$/;"	m	class:CurlError
+TlsConfig	request_handler.py	/^class TlsConfig(object):$/;"	c
+__init__	request_handler.py	/^  def __init__(self):$/;"	m	class:TlsConfig
+WithClientCertificate	request_handler.py	/^  def WithClientCertificate(self, client_cert, client_key):$/;"	m	class:TlsConfig
+RequestPost	request_handler.py	/^def RequestPost(url, request, config):$/;"	f
+RequestGet	request_handler.py	/^def RequestGet(url, config):$/;"	f
+_Request	request_handler.py	/^def _Request(url, request, config, is_post_method):$/;"	f
 SasInterface	sas_interface.py	/^class SasInterface(object):$/;"	c
 __metaclass__	sas_interface.py	/^  __metaclass__ = abc.ABCMeta$/;"	v	class:SasInterface
 Registration	sas_interface.py	/^  def Registration(self, request, ssl_cert=None, ssl_key=None):$/;"	m	class:SasInterface
@@ -193,6 +1571,65 @@ _GetDefaultAdminSSLKeyPath	sas.py	/^  def _GetDefaultAdminSSLKeyPath(self):$/;"	
 InjectPeerSas	sas.py	/^  def InjectPeerSas(self, request):$/;"	m	class:SasAdminImpl
 GetPpaCreationStatus	sas.py	/^  def GetPpaCreationStatus(self):$/;"	m	class:SasAdminImpl
 InjectDatabaseUrl	sas.py	/^  def InjectDatabaseUrl(self, request):$/;"	m	class:SasAdminImpl
+SasTestCase	sas_testcase.py	/^class SasTestCase(unittest.TestCase):$/;"	c
+setUp	sas_testcase.py	/^  def setUp(self):$/;"	m	class:SasTestCase
+tearDown	sas_testcase.py	/^  def tearDown(self):$/;"	m	class:SasTestCase
+assertContainsRequiredFields	sas_testcase.py	/^  def assertContainsRequiredFields(self, schema_filename, response):$/;"	m	class:SasTestCase
+assertValidResponseFormatForApprovedGrant	sas_testcase.py	/^  def assertValidResponseFormatForApprovedGrant(self, grant_response):$/;"	m	class:SasTestCase
+assertRegistered	sas_testcase.py	/^  def assertRegistered(self, registration_request,$/;"	m	class:SasTestCase
+assertRegisteredAndGranted	sas_testcase.py	/^  def assertRegisteredAndGranted(self, registration_request, grant_request,$/;"	m	class:SasTestCase
+assertHeartbeatsSuccessful	sas_testcase.py	/^  def assertHeartbeatsSuccessful(self, cbsd_ids, grant_ids, operation_states):$/;"	m	class:SasTestCase
+TriggerDailyActivitiesImmediatelyAndWaitUntilComplete	sas_testcase.py	/^  def TriggerDailyActivitiesImmediatelyAndWaitUntilComplete(self):$/;"	m	class:SasTestCase
+assertChannelsContainFrequencyRange	sas_testcase.py	/^  def assertChannelsContainFrequencyRange(self, channels, frequency_range):$/;"	m	class:SasTestCase
+assertChannelsOverlapFrequencyRange	sas_testcase.py	/^  def assertChannelsOverlapFrequencyRange(self, channels, frequency_range,$/;"	m	class:SasTestCase
+assertChannelIncludedInFrequencyRanges	sas_testcase.py	/^  def assertChannelIncludedInFrequencyRanges(self, channel, frequency_ranges):$/;"	m	class:SasTestCase
+assertValidConfig	sas_testcase.py	/^  def assertValidConfig(self, config, required_fields, optional_fields={}):$/;"	m	class:SasTestCase
+TriggerFullActivityDumpAndWaitUntilComplete	sas_testcase.py	/^  def TriggerFullActivityDumpAndWaitUntilComplete(self, server_cert, server_key):$/;"	m	class:SasTestCase
+triggerPpaCreationAndWaitUntilComplete	sas_testcase.py	/^  def triggerPpaCreationAndWaitUntilComplete(self, ppa_creation_request):$/;"	m	class:SasTestCase
+assertPpaCreationFailure	sas_testcase.py	/^  def assertPpaCreationFailure(self, ppa_creation_request):$/;"	m	class:SasTestCase
+ShutdownServers	sas_testcase.py	/^  def ShutdownServers(self):$/;"	m	class:SasTestCase
+InjectTestHarnessFccIds	sas_testcase.py	/^  def InjectTestHarnessFccIds(self, cbsd_records):$/;"	m	class:SasTestCase
+DEFAULT_CERT_FILE	sas_test_harness.py	/^DEFAULT_CERT_FILE = 'certs\/server.cert'$/;"	v
+DEFAULT_KEY_FILE	sas_test_harness.py	/^DEFAULT_KEY_FILE = 'certs\/server.key'$/;"	v
+DEFAULT_CA_CERT	sas_test_harness.py	/^DEFAULT_CA_CERT = 'certs\/ca.cert'$/;"	v
+CIPHERS	sas_test_harness.py	/^CIPHERS = [$/;"	v
+SasTestHarnessServer	sas_test_harness.py	/^class SasTestHarnessServer(threading.Thread):$/;"	c
+__init__	sas_test_harness.py	/^  def __init__(self, name, host_name, port, cert_file=None,$/;"	m	class:SasTestHarnessServer
+__del__	sas_test_harness.py	/^  def __del__(self):$/;"	m	class:SasTestHarnessServer	file:
+generateTempDirectory	sas_test_harness.py	/^  def generateTempDirectory(self):$/;"	m	class:SasTestHarnessServer
+getSasTestHarnessVersion	sas_test_harness.py	/^  def getSasTestHarnessVersion(self):$/;"	m	class:SasTestHarnessServer
+getSasBaseUrl	sas_test_harness.py	/^  def getSasBaseUrl(self):$/;"	m	class:SasTestHarnessServer
+getBaseUrl	sas_test_harness.py	/^  def getBaseUrl(self):$/;"	m	class:SasTestHarnessServer
+getDumpFileDirectory	sas_test_harness.py	/^  def getDumpFileDirectory(self):$/;"	m	class:SasTestHarnessServer
+getSasTestHarnessInterface	sas_test_harness.py	/^  def getSasTestHarnessInterface(self):$/;"	m	class:SasTestHarnessServer
+run	sas_test_harness.py	/^  def run(self):$/;"	m	class:SasTestHarnessServer
+shutdown	sas_test_harness.py	/^  def shutdown(self):$/;"	m	class:SasTestHarnessServer
+cleanDumpFiles	sas_test_harness.py	/^  def cleanDumpFiles(self):$/;"	m	class:SasTestHarnessServer
+__createFadObject	sas_test_harness.py	/^  def __createFadObject(self, all_activity_dump, fad_generation_time):$/;"	m	class:SasTestHarnessServer	file:
+__getFullDumpFilePath	sas_test_harness.py	/^  def __getFullDumpFilePath(self, file_name):$/;"	m	class:SasTestHarnessServer	file:
+__createFadRecord	sas_test_harness.py	/^  def __createFadRecord(self, encoded_url, file_name):$/;"	m	class:SasTestHarnessServer	file:
+__writeDumpFile	sas_test_harness.py	/^  def __writeDumpFile(self, file_name, data):$/;"	m	class:SasTestHarnessServer	file:
+__verifyRecords	sas_test_harness.py	/^  def __verifyRecords(self, dump_records_list):$/;"	m	class:SasTestHarnessServer	file:
+writeFadRecords	sas_test_harness.py	/^  def writeFadRecords(self, dump_records_list):$/;"	m	class:SasTestHarnessServer
+SasHttpServer	sas_test_harness.py	/^class SasHttpServer(HTTPServer):$/;"	c
+__init__	sas_test_harness.py	/^  def __init__(self, base_path, server_address, RequestHandlerClass,$/;"	m	class:SasHttpServer
+readDumpFile	sas_test_harness.py	/^  def readDumpFile(self, filename):$/;"	m	class:SasHttpServer
+SasTestHarnessServerHandler	sas_test_harness.py	/^class SasTestHarnessServerHandler(SimpleHTTPRequestHandler):$/;"	c
+translate_path	sas_test_harness.py	/^  def translate_path(self, path):$/;"	m	class:SasTestHarnessServerHandler
+generateCbsdReferenceId	sas_test_harness.py	/^def generateCbsdReferenceId(fcc_id, serial_number):$/;"	f
+generateCbsdRecords	sas_test_harness.py	/^def generateCbsdRecords(registration_requests, grant_requests_list):$/;"	f
+generatePpaRecords	sas_test_harness.py	/^def generatePpaRecords(ppa_records, cbsd_reference_ids):$/;"	f
+SasTestHarnessInterface	sas_test_harness.py	/^class SasTestHarnessInterface(sas_interface.SasInterface):$/;"	c
+__init__	sas_test_harness.py	/^  def __init__(self, server):$/;"	m	class:SasTestHarnessInterface
+Registration	sas_test_harness.py	/^  def Registration(self, request, ssl_cert=None, ssl_key=None):$/;"	m	class:SasTestHarnessInterface
+SpectrumInquiry	sas_test_harness.py	/^  def SpectrumInquiry(self, request, ssl_cert=None, ssl_key=None):$/;"	m	class:SasTestHarnessInterface
+Grant	sas_test_harness.py	/^  def Grant(self, request, ssl_cert=None, ssl_key=None):$/;"	m	class:SasTestHarnessInterface
+Heartbeat	sas_test_harness.py	/^  def Heartbeat(self, request, ssl_cert=None, ssl_key=None):$/;"	m	class:SasTestHarnessInterface
+Relinquishment	sas_test_harness.py	/^  def Relinquishment(self, request, ssl_cert=None, ssl_key=None):$/;"	m	class:SasTestHarnessInterface
+Deregistration	sas_test_harness.py	/^  def Deregistration(self, request, ssl_cert=None, ssl_key=None):$/;"	m	class:SasTestHarnessInterface
+GetEscSensorRecord	sas_test_harness.py	/^  def GetEscSensorRecord(self, request, ssl_cert=None, ssl_key=None):$/;"	m	class:SasTestHarnessInterface
+GetFullActivityDump	sas_test_harness.py	/^  def GetFullActivityDump(self, ssl_cert=None, ssl_key=None):$/;"	m	class:SasTestHarnessInterface
+DownloadFile	sas_test_harness.py	/^  def DownloadFile(self, url, ssl_cert=None, ssl_key=None):$/;"	m	class:SasTestHarnessInterface
 GrantTestcase	testcases/WINNF_FT_S_GRA_testcase.py	/^class GrantTestcase(sas_testcase.SasTestCase):$/;"	c
 setUp	testcases/WINNF_FT_S_GRA_testcase.py	/^  def setUp(self):$/;"	m	class:GrantTestcase
 tearDown	testcases/WINNF_FT_S_GRA_testcase.py	/^  def tearDown(self):$/;"	m	class:GrantTestcase

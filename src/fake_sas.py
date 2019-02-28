@@ -106,6 +106,7 @@ class FakeSas(sas_interface.SasInterface):
       response['registrationResponse'].append({
         'cbsdId': req['fccId'] + '/' + req['cbsdSerialNumber'],
         'response': self._GetSuccessResponse()
+         #'response': {'responseCode': 100}
     })
     return response
 
@@ -144,6 +145,8 @@ class FakeSas(sas_interface.SasInterface):
           response['grantResponse'].append({
             'cbsdId': req['cbsdId'],
             'grantId': 'fake_grant_id_%s' % datetime.utcnow().isoformat(),
+            'grantExpireTime': 604800,
+            'heartBeatInterval': 10,
             'channelType': 'GAA',
             'response': self._GetSuccessResponse()
           })

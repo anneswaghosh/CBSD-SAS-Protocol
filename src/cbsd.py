@@ -173,3 +173,9 @@ if __name__ == '__main__':
 
   #Registration
   ret = client.registration ()
+
+  if (ret == True):
+    #Spectrum Inquiry
+
+    #Grant
+    client.grant ()
