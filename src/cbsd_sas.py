@@ -38,6 +38,8 @@ class grant_info:
     self.grant_error_code = 0
     self.heartbeat_error_code = 0
     self.grant_state = 0
+    self.grant_renew = False
+    self.transmission = False
 
     self.t_heartbeat_int = 0
     self.heartbeat_interval = None
@@ -47,6 +49,8 @@ class grant_info:
 
     self.t_transmit_exp_timer = 0
     self.transmit_expire_timer = None
+
+    self.t_grant_renew_timer = 0
 
     #back pointer to the client
     self.cbsd = None
@@ -65,14 +69,24 @@ class grant_info:
     
 
   def grant_timer_expiry_handler (self):
-    self.release_grant ()
+    if (self.grant_renew == True):
+        self.t_grant_exp_timer = self.t_grant_renew_timer
+        self.grant_expire_timer = Timer (self.t_grant_exp_timer,
+                                  self.grant_timer_expiry_handler)
+
+        self.grant_expire_timer.start()
+
+    else:
+      self.release_grant ()
+
 
   def transmit_time_expiry_handler (self):
-    #Granted state
-    self.grant_state = 1
+    if (self.grant_state == 2):
+      #stop transmitting within 60 seconds
+      self.transmission = False
 
-    #send a new heartbeat request
-    self.heartbeat ()
+      #Granted state
+      self.grant_state = 1
     
 
   def heartbeat (self):
@@ -90,24 +104,78 @@ class grant_info:
     request = {'heartbeatRequest': [heartbeat_request]}
     response = cbsd.server._sas.Heartbeat(request)['heartbeatResponse'][0]
 
-    #Success
-    if (response['response']['responseCode'] == 0):
-      #Authorized
-      self.grant_state = 2
+    #Success or Suspended_Grant
+    if (response['response']['responseCode'] == 0 or
+        response['response']['responseCode'] == 501):
+
+      if (response['response']['responseCode'] == 0):
+        #Authorized
+        self.grant_state = 2
 
       if (response['transmitExpireTime']):
-
         #If the transmit timer is not started
         if (self.t_transmit_exp_timer == 0):
           self.t_transmit_exp_timer = datetime.strptime(response['transmitExpireTime'],
                                              '%Y-%m-%dT%H:%M:%SZ')
 
-          self.transmit_expire_timer = Thread (self.t_transmit_exp_timer,
+          #change it later (Hardcoded for now)
+          self.transmit_expire_timer = Timer (1000,
                                           self.transmit_time_expiry_handler)
           self.transmit_expire_timer.start()
 
+      if (self.grant_renew == True):
+        if (response['grantExpireTime']):
+          self.t_grant_renew_timer = response['grantExpireTime']
 
-    
+      if ('heartBeatInterval' in response):
+        if (response['heartBeatInterval']):
+          self.t_heartbeat_int = response['heartBeatInterval']
+
+      #schedule for the next heartbeat
+      self.heartbeat_interval = Timer (self.t_heartbeat_int - 5,
+                                              self.heartbeat)
+      self.heartbeat_interval.start()
+
+      if (self.transmission == False and
+          response['response']['responseCode'] == 0):
+        #start transmission
+        self.transmission = True
+
+    #Terminated Grant
+    elif (response['response']['responseCode'] == 500):
+      self.grant_state = 0
+
+      if (response['transmitExpireTime']):
+        #If the transmit timer is not started
+        if (self.t_transmit_exp_timer == 0):
+          self.t_transmit_exp_timer = datetime.strptime(response['transmitExpireTime'],
+                                             '%Y-%m-%dT%H:%M:%SZ')
+
+          #change it later (Hardcoded for now)
+          self.transmit_expire_timer = Timer (1000,
+                                          self.transmit_time_expiry_handler)
+          self.transmit_expire_timer.start()
+
+    #Unsync_op_param
+    elif (response['response']['responseCode'] == 502):
+
+      #stop transmission within 60 sec
+      self.transmission = False
+
+      #send relinqishmentrequest object
+
+    #Faulty parameters
+    else:
+      if ('heartBeatInterval' in response):
+        if (response['heartBeatInterval']):
+          self.t_heartbeat_int = response['heartBeatInterval']
+
+      #schedule for the next heartbeat
+      self.heartbeat_interval = Timer (self.t_heartbeat_int - 5,
+                                              self.heartbeat)
+      self.heartbeat_interval.start()
+
+
 
 class client:
   def __init__ (self):
@@ -219,7 +287,8 @@ class client:
 
       if (response['grantExpireTime']):
         temp_grant.t_grant_exp_timer = response['grantExpireTime']
-        temp_grant.grant_expire_timer = Timer (temp_grant.t_grant_exp_timer, temp_grant.grant_timer_expiry_handler)
+        temp_grant.grant_expire_timer = Timer (temp_grant.t_grant_exp_timer,
+                                        temp_grant.grant_timer_expiry_handler)
         temp_grant.grant_expire_timer.start()
 
       if (response['heartBeatInterval']):
