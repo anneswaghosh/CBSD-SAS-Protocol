@@ -32,7 +32,8 @@ grant_info	cbsd_sas.py	/^class grant_info:$/;"	c
 __init__	cbsd_sas.py	/^  def __init__ (self):$/;"	m	class:grant_info
 release_grant	cbsd_sas.py	/^  def release_grant (self):$/;"	m	class:grant_info
 grant_timer_expiry_handler	cbsd_sas.py	/^  def grant_timer_expiry_handler (self):$/;"	m	class:grant_info
-heart	cbsd_sas.py	/^  def heart$/;"	m	class:grant_info
+transmit_time_expiry_handler	cbsd_sas.py	/^  def transmit_time_expiry_handler (self):$/;"	m	class:grant_info
+heartbeat	cbsd_sas.py	/^  def heartbeat (self):$/;"	m	class:grant_info
 client	cbsd_sas.py	/^class client:$/;"	c
 __init__	cbsd_sas.py	/^  def __init__ (self):$/;"	m	class:client
 registration	cbsd_sas.py	/^  def registration (self):$/;"	m	class:client

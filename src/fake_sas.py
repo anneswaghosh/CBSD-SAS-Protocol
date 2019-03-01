@@ -162,6 +162,7 @@ class FakeSas(sas_interface.SasInterface):
           'grantId': req['grantId'],
           'transmitExpireTime': transmit_expire_time.isoformat() + 'Z',
           'response': self._GetSuccessResponse()
+          #'response': {'responseCode': 500} 
       })
     return response
 

@@ -81,6 +81,8 @@ class grant_info:
 
 
   def transmit_time_expiry_handler (self):
+    logging.info ('Transmission Timer expired for grant_id = %s\n', self.grant_id)
+
     if (self.grant_state == 2):
       #stop transmitting within 60 seconds
       self.transmission = False
@@ -119,7 +121,7 @@ class grant_info:
                                              '%Y-%m-%dT%H:%M:%SZ')
 
           #change it later (Hardcoded for now)
-          self.transmit_expire_timer = Timer (1000,
+          self.transmit_expire_timer = Timer (20,
                                           self.transmit_time_expiry_handler)
           self.transmit_expire_timer.start()
 
@@ -152,7 +154,7 @@ class grant_info:
                                              '%Y-%m-%dT%H:%M:%SZ')
 
           #change it later (Hardcoded for now)
-          self.transmit_expire_timer = Timer (1000,
+          self.transmit_expire_timer = Timer (20,
                                           self.transmit_time_expiry_handler)
           self.transmit_expire_timer.start()
 
@@ -163,6 +165,7 @@ class grant_info:
       self.transmission = False
 
       #send relinqishmentrequest object
+      self.relinquishment ()
 
     #Faulty parameters
     else:
@@ -174,6 +177,33 @@ class grant_info:
       self.heartbeat_interval = Timer (self.t_heartbeat_int - 5,
                                               self.heartbeat)
       self.heartbeat_interval.start()
+
+
+  def relinquishment (self):
+    cbsd_id = self.cbsd.server.reg_id
+    grant_id = self.grant_id
+
+    #Stop transmission
+    self.transmission = False
+
+    #Idle
+    self.grant_state = 0
+
+    request = {
+        'relinquishmentRequest': [{
+            'cbsdId': cbsd_id,
+            'grantId': grant_id
+        }]
+    }
+
+    response = self.cbsd.server._sas.Relinquishment(request)['relinquishmentResponse'][0]
+
+    #Invalid_value
+    if (response['response']['responseCode'] == 103):
+      if ('responseData' in response['response']):
+        if (response['response']['responseData'] == 'cbsdId'):
+          #terminate all transitions
+          self.cbsd.deregistration ()
 
 
 
@@ -300,4 +330,15 @@ class client:
       #back pointer      
       temp_grant.cbsd = self
 
-      self.grant_list.append (temp_grant) 
+      self.grant_list.append (temp_grant)
+
+  def deregistration (self):
+    cbsd_id = self.server.reg_id
+
+    for grant in self.grant_list:
+      grant.relinquishment ()
+
+    self.client_state = 0
+
+    request = {'deregistrationRequest': [{'cbsdId': cbsd_id}]}
+    response = self._sas.Deregistration(request)['deregistrationResponse'] 
